@@ -105,7 +105,6 @@ header{
 .top__nav{
     background: var(--primary-blue);
     width: 100%;
-    position: fixed;
     min-height: var(--header-height);
     top: 0;
     left: 0;
@@ -245,22 +244,23 @@ header{
 .sidebar{
     padding: 1.5rem 0;
     border-radius: 12px;
-    position: fixed;
     width: var(--sidebar-width);
     z-index: 100;
     top: var(--top-nav-height);
-    height: 510px;
     overflow-y: auto;
     overflow-x: hidden;
-    left: 22px;
     background: var(--white);
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.05), 0px 25px 35px rgba(0, 0, 0, 0.03);
     transition: width .5s ease-in-out;
+    margin-left: 2rem;
+    margin-right: 0.5rem;
+    margin-top: -150px;
+    flex-shrink: 0;
+    padding-bottom: 7rem;
 }
 
 .sidebar.close{
     width: 65px;
-    overflow-x: hidden;
 }
 
 .sidebar .toggle__sidebar{
@@ -385,18 +385,11 @@ header{
 
 .main__section{
     width: 100%;
-    padding-left: calc(var(--sidebar-width) + 86px);
     transition: padding-left .5s ease-in-out;
-}
-
-.main__section.minify__pd{
-    padding-left: calc(var(--sidebar-width) - 124px);
+    display: flex;
+    align-items: flex-start;
 }
 
 .top__nav .page__header__breadcrumb.minify__pd{
     margin-left: calc(var(--sidebar-width) - 124px);
-}
-
-main{
-    margin-top: calc(var(--header-height) + 2rem);
 }
