@@ -1,13 +1,13 @@
 const sidebarToggler = document.querySelector('.toggle__sidebar img');
 const sidebar = document.querySelector('.sidebar');
-const main__section = document.querySelector('.main__section');
+const main__content = document.querySelector('.main__content');
 const headerAndBreadcrumb = document.querySelector('.top__nav .page__header__breadcrumb');
 const sidebarLinks = document.querySelectorAll('.sidebar li a');
 const wpPlugin = document.querySelector('.wp__plugin');
 
 // Toggle Sidebar
 const toggleSideBar = () => {
-    if (sidebarToggler && sidebar && main__section && headerAndBreadcrumb) {
+    if (sidebarToggler && sidebar && main__content && headerAndBreadcrumb) {
         // expand or collapse navbar
         sidebar.classList.toggle('close');
         // change WP layout
@@ -22,7 +22,7 @@ const toggleSideBar = () => {
             `;
         }
         // expand or collapse content margin 
-        main__section.classList.toggle('minify__pd');
+        main__content.classList.toggle('minify__pd');
         //expand or collapse generate text on navbar
         headerAndBreadcrumb.classList.toggle('minify__pd');
     }
