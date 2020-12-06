@@ -5,6 +5,7 @@
     --primary-blue: #191847;
     --voog-blue: #443df6;
     --grey: #fbfbfb;
+    --ash: #8d9091;
     --purple: #4834d4;
     --light-purple: #cdc6ff;
     --dark-text-color: #1b2124;
@@ -23,6 +24,8 @@
 
 html,body{
     overflow-x: hidden;
+    scrollbar-width: thin;          /* "auto" or "thin"  */
+    scrollbar-color: var(--light-purple) #e3e3e3;   /* scroll thumb & track */
 }
 
 body{
@@ -40,6 +43,57 @@ ul li{
 a{
     text-decoration: none;
 }
+
+/*============scroll bar==========*/
+/* width */
+::-webkit-scrollbar {
+    width: 6px;
+    margin-bottom: 5px; 
+    margin-top: 2px; 
+  }
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: #e3e3e3;
+    box-shadow: inset 0 0 1px grey;
+}
+
+/* Track piece*/
+::-webkit-scrollbar-track-piece:end {
+    background: transparent;
+    margin-bottom: 2px; 
+}
+
+::-webkit-scrollbar-track-piece:start {
+    background: transparent;
+    margin-top: 2px;
+}
+  
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--light-purple);
+    border-radius: 8px;
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--light-purple);
+}
+
+
+/* =========Search Bar remove default styling=========== */
+
+/* clears the 'X' from Internet Explorer */
+input[type=search]::-ms-clear {  display: none; width : 0; height: 0; }
+input[type=search]::-ms-reveal {  display: none; width : 0; height: 0; }
+
+/* clears the 'X' from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+/* =========Search Bar remove default styling=========== */
 
 /* Section styles */
 header{
@@ -164,10 +218,10 @@ header{
     border-radius: 12px;
     position: fixed;
     width: var(--sidebar-width);
-    /* height: 970px;
-    overflow: auto; */
     z-index: 100;
     top: var(--top-nav-height);
+    height: 560px;
+    overflow-y: auto;
     left: 22px;
     background: var(--white);
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.05), 0px 25px 35px rgba(0, 0, 0, 0.03);
@@ -176,7 +230,7 @@ header{
 
 .sidebar.close{
     width: 50px;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .sidebar .toggle__sidebar{
@@ -191,17 +245,19 @@ header{
     cursor: pointer;
 }
 
-.sidebar .main__links ul li{
+.sidebar .main__links ul li,
+.management__links ul li{
     width: 100%;
 }
 
-.sidebar .main__links ul li a{
+.sidebar .main__links ul li a,
+.management__links ul li a{
     width: 100%;
     padding: .7rem .85rem;
     display: flex;
     align-items: center;
     color: var(--dark-text-color);
-    font-size: 1rem;
+    font-size: .875rem;
     font-weight: 500;
     font-family: 'Avenir Next';
     white-space: nowrap;
@@ -209,26 +265,75 @@ header{
 }
 
 .sidebar .main__links ul li a:hover,
+.sidebar .management__links ul li a:hover,
+.sidebar .management__links ul li a.active,
 .sidebar .main__links ul li a.active{
     background: rgba(68, 61, 246, 0.1);
     color: var(--purple);
 }
 
-.sidebar .main__links ul li a p{
+.sidebar .main__links ul li a p,
+.sidebar .management__links ul li a p{
     visibility: visible;
     opacity: 1;
     transition: opacity .6s ease-out;
 }
 
-.sidebar.close .main__links ul li a p{
+.sidebar.close .main__links ul li a p,
+.sidebar.close .management__links ul li a p{
     visibility: hidden;
     opacity: 0;
 }
 
-.sidebar .main__links ul li a .icons{
+.sidebar .main__links ul li a .icons,
+.sidebar .management__links ul li a .icons{
     width: 24px;
     height: 24px;
     margin-right: 1rem;
+}
+
+.sidebar .wp__plugin{
+    display: flex;
+    padding: 1rem .875rem;
+    justify-content: space-between;
+    font-size: .875rem;
+}
+
+.wp__plugin .wp{
+    color: var(--ash);
+    font-weight: 600;
+}
+
+.wp__plugin .cs{
+    color: var(--purple);
+    background: rgba(72, 52, 212, 0.1);
+    padding: 0 .5rem;
+    border-radius: 5px;
+}
+
+.sidebar.close .wp__plugin{
+    justify-content: center;
+}
+
+.sidebar.close .wp__plugin .wp{
+    color: var(--purple);
+    background:rgba(72, 52, 212, 0.1);
+    padding: .2rem .5rem;
+    border-radius: 5px;
+}
+
+.sidebar .management__links{
+    font-size: .875rem;
+}
+
+.management__links .title{
+    color: #000000;
+    font-weight: bold;
+    padding: 1rem .875rem;
+}
+
+.sidebar.close .management__links .title{
+    display: none;
 }
 
 .main__section{
