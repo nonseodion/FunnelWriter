@@ -393,7 +393,3 @@ header{
 .top__nav .page__header__breadcrumb.minify__pd{
     margin-left: calc(var(--sidebar-width) - 114px);
 }
-
-.main__content {
-    margin-left: 4rem;
-}

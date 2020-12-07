@@ -1,0 +1,168 @@
+/* Variables */
+
+/* --green: #35ec81;
+--ash: #c4c4c4; */
+
+.main__content{
+    margin: 2rem 2rem 2rem 4rem;
+    width: 100%;
+}
+
+.main__content .webinar__script1{
+    display: flex;
+    border: 1px solid #efefef;
+    width: 100%;
+}
+
+.form__checker{
+    min-width: 379px;
+    padding: 2rem;
+}
+
+.form__part__title{
+    display: flex;
+    font-weight: normal;
+    align-items: center;
+    color: #c4c4c4;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.form__part__title .left__text{
+    display: flex;
+    align-items: center;
+}
+
+.form__part__title .left__text svg{
+    height: 20px;
+    width: 20px;
+}
+
+.form__part__title .left__text svg path{
+    stroke: #c4c4c4;
+}
+
+.form__part__title.done{
+    color: #35ec81;
+}
+
+.form__part__title.done .left__text svg path{
+    stroke: #35ec81;
+}
+
+.left__text .text{
+    margin-left: .5rem;
+}
+
+.form{
+    padding: 2rem;
+}
+
+.form2 .title,
+.form3 .title,
+.form4 .title,
+.form5 .title{
+    text-transform: uppercase;
+    color: #191847;
+    font-size: 1rem;
+    line-height: 32px;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.question label p{
+    line-height: 24px;
+}
+
+.question label .title{
+    color: #191847;
+}
+
+.question label .example,
+.example__light{
+    color: #c4c4c4;
+}
+
+.form2 .question label .example,
+.form3 .question label .example,
+.form4 .question label .example,
+.form5 .question label .example{
+    color: #000000;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 24px;
+}
+
+.form2 .question2{
+    margin-bottom: 2rem;
+}
+
+.question input{
+    border: none;
+    outline: none;
+    padding: 1rem;
+    font-size: 1rem;
+    color: var(--dark-text-color);
+    border: 1px solid #efefef;
+    border-radius: 4px;
+    min-width: 296px;
+    height: 48px;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.form2 .question input,
+.form3 .question input,
+.form4 .question input,
+.form5 .question input{
+    min-width: 450px;
+}
+
+.add__exciting__result,
+.add__more__struggles{
+    color: var(--purple);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.add__exciting__result p,
+.add__more__struggles p{
+    margin-left: 1.5rem;
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+    margin-top: 4rem;
+}
+
+.buttons button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 80px;
+    height: 40px;
+    text-align: center;
+    font-size: .875rem;
+    line-height: 24px;
+    border-radius: 8px;
+}
+
+button.normal{
+    background: var(--voog-blue);
+    margin-left: 1rem;
+}
+
+button.normal a{
+    color: var(--white);
+}
+
+button.inverse{
+    background:rgba(72, 52, 212, 0.1);
+    width: 88px;
+}
+
+button.inverse a{
+    color: var(--purple);
+}
