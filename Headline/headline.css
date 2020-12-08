@@ -1,0 +1,119 @@
+/* Header */
+.headline-header {
+    letter-spacing: 2px;
+}
+
+.main__content {
+    border: 1px solid #EFEFEF;
+    border-radius: 4px;
+    margin-top: 23px;
+    width: 1090px;
+    height: 1998px;
+}
+
+.headline-navigation {
+    width: 1090px;
+    height: 58px;
+    background: #e5e9f540
+}
+
+.headline-links {
+    display: flex;
+    color: var(--light-purple);
+    cursor: pointer;
+}
+
+.headline-links li {
+    padding: 15px;
+}
+
+.headline-links .active {
+    color: var(--purple);
+    border-bottom: 2px solid;
+}
+
+/* Headline Main Content */
+.headline-main-content {
+    display: flex;
+}
+
+/* Left Hand Side */
+.left-main-content {
+    width: 100%;
+    padding: 38px;
+    height: 1998px;
+}
+
+.left-main-content li {
+    margin-top: 24px;
+}
+
+.left-main-content input {
+    margin-top: 16px;
+    width: 296px;
+    height: 48px;
+    border-radius: 4px;
+    border: 1px solid #efefef;
+    outline: none;
+}
+
+.left-main-content input::placeholder {
+    color: var(--ash);
+    font-size: 14px;
+    padding: 16px;
+}
+
+.left-main-content .input-hint {
+    padding: 26px;
+    cursor: pointer;
+}
+
+.left-main-content .generate-button {
+    background-color: var(--purple);
+    color: var(--light-purple);
+    /* margin: 40px 116px; */
+    display: block;
+    margin-left: auto;
+    font-size: 16px;
+    border-radius: 8px;
+    width: 116px;
+    height: 40px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+/* Right Hand side */
+.right-main-content {
+    width: 100%;
+    height: 1998px;
+}
+
+.right-main-content .background-image {
+    margin-top: 292px;
+}
+
+/* Headline Page Two */
+/* Right Hand Side of Page Two */
+
+.right-main-content .save-project {
+    background-color: #f6f5fd;
+    width: 161px;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    color: var(--purple);
+    font-size: 16px;
+    margin-top: 32px;
+    display: block;
+    margin-left: 280px;
+}
+
+.right-content {
+    width: 539px;
+    height: 1252px;
+    border: 1px solid black;
+    margin-right: 31px;
+    margin-top: 40px;
+}
