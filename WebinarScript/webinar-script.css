@@ -3,6 +3,14 @@
 /* --green: #35ec81;
 --ash: #c4c4c4; */
 
+.generate p {
+    margin-top: 1.5rem;
+}
+
+.none{
+    display: none;
+}
+
 .main__content{
     margin: 2rem 2rem 2rem 3rem;
     width: 100%;
