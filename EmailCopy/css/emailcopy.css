@@ -38,12 +38,24 @@
    margin-left: auto; 
 }
 .main__content__profile{
+    width: 60%;
+    border-top: 0.5px solid #c4c4c4;
+    border-right: 0.5px solid #c4c4c4;
+    border-bottom: 0.5px solid #c4c4c4;
     background: #ffffff;
+    border-radius: 5px;
     padding: 10px 10px 10px 40px;
+    margin: 0px 30px 10px 10px;
+
 
 }
 .profile__forms label{
+    font-size: 16px;
     color: #191847;
+}
+.profile__forms h3{
+    font-size: 16px;
+
 }
 .profile__forms p{
     color: #c4c4c4;
@@ -80,13 +92,14 @@
     ;
 }
 
-.btn:hover{
+.btn:disabled{
     padding:10px 25px;
-    background: #ffffff;
+    background: #dedde0;
     border-radius: 5px;
     outline-color: none;
     border: 0.5px solid #4834d4;
-    color:#4834d4;
+    color: #443DF6;
+
     ;
 }
 .next__next .buttons{
