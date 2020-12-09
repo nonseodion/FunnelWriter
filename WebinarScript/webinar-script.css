@@ -53,8 +53,16 @@
     color: #35ec81;
 }
 
+.form__part__title.in__progress{
+    color: var(--dark-text-color);
+}
+
 .form__part__title.done .left__text svg path{
     stroke: #35ec81;
+}
+
+.form__part__title.in__progress .left__text svg path{
+    stroke: var(--dark-text-color);
 }
 
 .left__text .text{

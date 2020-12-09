@@ -30,10 +30,9 @@ if(form1) {
             );
             
             if(prospectInformationStatus.innerHTML === prospectInformationTotal.innerHTML) {
-                prospectInformation.classList.add('done');
+                prospectInformation.className = 'form__part__title prospect__information done';
             } else {
-                prospectInformation.classList.contains('done') ? 
-                prospectInformation.classList.remove('done') : null;
+                prospectInformation.className = 'form__part__title prospect__information in__progress'
             }
         });
     });
@@ -63,10 +62,9 @@ if(form2){
                 tellProductStatus.innerHTML = Number(form2Length) + Number(form3Length) + Number(form4Length) + Number(form5Length)
 
                 if(tellProductStatus.innerHTML === tellProductTotal.innerHTML) {
-                    tellProduct.classList.add('done');
+                    tellProduct.className = 'form__part__title tell__product done';
                 } else {
-                    tellProduct.classList.contains('done') ? 
-                    tellProduct.classList.remove('done') : null;
+                    tellProduct.className = 'form__part__title tell__product in__progress'
                 }
             });
         })
@@ -95,10 +93,9 @@ if(form3){
                 tellProductStatus.innerHTML = Number(form2Length) + Number(form3Length) + Number(form4Length) + Number(form5Length)
 
                 if(tellProductStatus.innerHTML === tellProductTotal.innerHTML) {
-                    tellProduct.classList.add('done');
+                    tellProduct.className = 'form__part__title tell__product done';
                 } else {
-                    tellProduct.classList.contains('done') ? 
-                    tellProduct.classList.remove('done') : null;
+                    tellProduct.className = 'form__part__title tell__product in__progress'
                 }
             });
         })
@@ -127,10 +124,9 @@ if(form4){
                 tellProductStatus.innerHTML = Number(form2Length) + Number(form3Length) + Number(form4Length) + Number(form5Length)
 
                 if(tellProductStatus.innerHTML === tellProductTotal.innerHTML) {
-                    tellProduct.classList.add('done');
+                    tellProduct.className = 'form__part__title tell__product done';
                 } else {
-                    tellProduct.classList.contains('done') ? 
-                    tellProduct.classList.remove('done') : null;
+                    tellProduct.className = 'form__part__title tell__product in__progress'
                 }
             });
         })
@@ -159,10 +155,9 @@ if(form5){
                 tellProductStatus.innerHTML = Number(form2Length) + Number(form3Length) + Number(form4Length) + Number(form5Length)
 
                 if(tellProductStatus.innerHTML === tellProductTotal.innerHTML) {
-                    tellProduct.classList.add('done');
+                    tellProduct.className = 'form__part__title tell__product done';
                 } else {
-                    tellProduct.classList.contains('done') ? 
-                    tellProduct.classList.remove('done') : null;
+                    tellProduct.className = 'form__part__title tell__product in__progress'
                 }
             });
         })
