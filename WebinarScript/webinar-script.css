@@ -4,13 +4,12 @@
 --ash: #c4c4c4; */
 
 .main__content{
-    margin: 2rem 2rem 2rem 4rem;
+    margin: 2rem 2rem 2rem 3rem;
     width: 100%;
 }
 
 .main__content .webinar__script1{
     display: flex;
-    border: 1px solid #efefef;
     width: 100%;
 }
 
@@ -55,6 +54,9 @@
 }
 
 .form{
+    border: 1px solid #efefef;
+    border-left: none;
+    border-radius: 4px;
     padding: 2rem;
 }
 
