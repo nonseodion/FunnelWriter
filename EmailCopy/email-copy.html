@@ -10,6 +10,9 @@
     <!-- Header and Sidenav CSS -->
     <link rel="stylesheet" href="../public/header&sidenav.css">
 
+    <!-- EmailCopy styling -->
+    <link rel="stylesheet" href="css/emailcopy.css">
+
     <title>Email copy | Funnel Writer</title>
 </head>
 <body>
@@ -215,17 +218,144 @@
                 </ul>
             </div>
         </nav>
-
         <!-- Main Content -->
         <main class="main__content">
-            <div>
-                Hello There
+            <div class="main__content__contents">
                 <!-- Content Goes in here -->
+                <div class="main__content__information">
+                    <ul>
+                        <li class="checked"><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24"><rect fill="none" height="24" width="24"/><path d="M22,5.18L10.59,16.6l-4.24-4.24l1.41-1.41l2.83,2.83l10-10L22,5.18z M19.79,10.22C19.92,10.79,20,11.39,20,12 c0,4.42-3.58,8-8,8s-8-3.58-8-8c0-4.42,3.58-8,8-8c1.58,0,3.04,0.46,4.28,1.25l1.44-1.44C16.1,2.67,14.13,2,12,2C6.48,2,2,6.48,2,12 c0,5.52,4.48,10,10,10s10-4.48,10-10c0-1.19-0.22-2.33-0.6-3.39L19.79,10.22z" fill="#191847"/></svg>
+        <span>Personal Information</span> <span class="value">4/4</span></li>
+        <li class="next__first"><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24"><rect fill="none" height="24" width="24"/><path d="M22,5.18L10.59,16.6l-4.24-4.24l1.41-1.41l2.83,2.83l10-10L22,5.18z M19.79,10.22C19.92,10.79,20,11.39,20,12 c0,4.42-3.58,8-8,8s-8-3.58-8-8c0-4.42,3.58-8,8-8c1.58,0,3.04,0.46,4.28,1.25l1.44-1.44C16.1,2.67,14.13,2,12,2C6.48,2,2,6.48,2,12 c0,5.52,4.48,10,10,10s10-4.48,10-10c0-1.19-0.22-2.33-0.6-3.39L19.79,10.22z" fill="#c4c4c4"/></svg>
+            <span>Tell me about your product</span> <span class="value">6/6</span></li>
+            <li class="nextNext"><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24"><rect fill="none" height="24" width="24"/><path d="M22,5.18L10.59,16.6l-4.24-4.24l1.41-1.41l2.83,2.83l10-10L22,5.18z M19.79,10.22C19.92,10.79,20,11.39,20,12 c0,4.42-3.58,8-8,8s-8-3.58-8-8c0-4.42,3.58-8,8-8c1.58,0,3.04,0.46,4.28,1.25l1.44-1.44C16.1,2.67,14.13,2,12,2C6.48,2,2,6.48,2,12 c0,5.52,4.48,10,10,10s10-4.48,10-10c0-1.19-0.22-2.33-0.6-3.39L19.79,10.22z" fill="#c4c4c4"/></svg>
+            <span>Product features and benefit</span> <span class="value">1/1</span></li>
+            <li class="final__next"><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24"><rect fill="none" height="24" width="24"/><path d="M22,5.18L10.59,16.6l-4.24-4.24l1.41-1.41l2.83,2.83l10-10L22,5.18z M19.79,10.22C19.92,10.79,20,11.39,20,12 c0,4.42-3.58,8-8,8s-8-3.58-8-8c0-4.42,3.58-8,8-8c1.58,0,3.04,0.46,4.28,1.25l1.44-1.44C16.1,2.67,14.13,2,12,2C6.48,2,2,6.48,2,12 c0,5.52,4.48,10,10,10s10-4.48,10-10c0-1.19-0.22-2.33-0.6-3.39L19.79,10.22z" fill="#c4c4c4"/></svg>
+                <span>Let’s rounnd up</span> <span class="value">2/2</span></li>
+                    </ul>
+                </div>
+                <div class="main__content__profile">
+                    <form class="profile__forms active previous">
+                       <div>
+                        <label for="">NAME OF PROFILE</label>
+                        <p>What name do you want to use in saving this profile ?</p>
+                        <input type="text" name="" id="buzzPro" placeholder="Buzz pro">
+
+                       </div>
+                        <div>
+                            <label for="">YOUR NAME</label>
+                        <p>(Ex: Tarzs Ighor)</p>
+                        <input type="text" name="" id="yourName" placeholder="John Doe">
+                        </div>
+
+                      <div>
+                        <label for="">YOUR TAG LINE</label>
+                        <p>Your title, which will appear on the bottom of sender name</p>
+                        <input type="text" name="" id="yourTag" placeholder="CEO, my buzzapp">
+                      </div>
+
+                       <div>
+                        <label for="">YOUR EXPERIENCE LEVEL</label>
+                        <p>The sender of this email is a/an</p>
+                        <input type="text" name="" id="yourExperience" placeholder="Expert copywriter">
+                       </div>
+                        <Button class="btn btn__next" disabled>Next</Button>
+                    </form>
+
+                    <form class="profile__forms next">
+                        <div>
+                         <label for="">NAME OF PRODUCT</label>
+                         <p>What is the name of the product/service you want to sell?</p>
+                         <input type="text" name="" id="nameProduct">
+ 
+                        </div>
+                         <div>
+                             <label for="">TYPE OF PRODUCT</label>
+                         <p>(Ex: Killer-Sales-Writing-System (KSWS)</p>
+                         <input type="text" name="" id="typeProduct">
+                         </div>
+ 
+                       <div>
+                         <label for="">WHAT IS THE SCARCITY OF THIS PRODUCT?</label>
+                         <p>(Ex: 7 slot left, 3 hours left etc)</p>
+                         <input type="text" name="" id="productScarcity">
+                       </div>
+ 
+                        <div>
+                         <label for="">WHAT IS THE PROSPECT’S BIG STRUGGLE?</label>
+                         <p>(Ex: sales copies that pull in sales)</p>
+                         <input type="text" name="" id="bigStruggle">
+                        </div>
+                        <div>
+                            <label for="">WHAT IS YOUR DESIRE END RESULT (BE SPECIFIC) OF YOUR PRODUCT?</label>
+                            <p>Ex: Write highly converting copies that pull in sales without having to higher expensive copywriter)</p>
+                            <input type="text" name="" id="endResult">
+                           </div>
+                           <div>
+                            <label for="">WHAT DOES YOUR READERS REALLY WANT TO ACHIEVE (MAIN GOAL)</label>
+                            <p>(Ex: write highly converting sales copies that pull in crazy cash system)</p>
+                            <input type="text" name="" id="readers">
+                           </div>
+                        <button class="btn btn__previous">Previous</button>
+                         <button class="btn btn__next__next" disabled>Next</button>
+                     </form>
+
+                     <form class="profile__forms next__next">
+                        <div>
+                            <h3>WHAT ARE THE PRODUCT FEATURES AND BENEFIT?</h3>
+                         <label for="">PRODUCT FEATURE # 1</label>
+                         <p>Ex: Over 200 powerful template in its engine</p>
+                         <input type="text" name="" id="addMoreProducts">
+                        </div>
+                        <ul>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4V7zm-1-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="#4834d4"/></svg></svg>
+                                <span>Add more product features and benefits</span></li>
+                
+                        </ul>
+                        <div class="buttons">
+                            <button class="btn btn__previous__previous">Previous</button>
+                         <button class="btn btn__next__next_Upper" disabled>Next</button>
+                        </div>
+                        </form>
+                        <form class="profile__forms addMore__next__next">
+                            <div>
+                                <h3>WHAT ARE PAST CUSTOMERS SAYING AFTER USING YOUR PRODUCT?</h3>
+                             <label for="">TESTIMONIAL #1</label><br><br>
+                             <input type="text" name="" id="addMore1">
+                            </div>
+                            <div>
+                                <label for="">TESTIMONIAL #1 SOURCE</label><br><br>
+                             <input type="text" name="" id="addMore1">
+                            </div>
+                            <ul>
+                                <li><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4V7zm-1-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="#4834d4"/></svg></svg>
+                                    <span>Add more</span></li>
+                    
+                            </ul>
+                            <div class="buttons">
+                                <button class="btn btn__previous__addMore">Previous</button>
+                             <button class="btn btn__next__next__createEmail">Create email</button>
+                            </div>
+                </div>
             </div>
         </main>
     </section>
-
     <!-- Scripts -->
+    <script src="js/emailform.js"></script>
     <script src="../public/header&sidenav.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
