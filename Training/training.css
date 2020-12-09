@@ -1,0 +1,251 @@
+.main__content{
+    margin: 3rem 2rem 2rem 3rem;
+    border: 1px solid #efefef;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.main__content .training{
+    width: 100%;
+    padding: 2rem 1.5rem;
+}
+
+.generate p{
+    margin-top: 1rem;
+}
+
+.training__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.training__header .title,
+.title{
+    color: var(--primary-blue);
+    font-weight: 700;
+}
+
+.training__header .links ul{
+    display: flex;
+    align-items: center;
+}
+
+.training__header .links ul li{
+    margin-left: 1rem;
+}
+
+.training__header .links ul li a{
+    color: #c4c4c4;
+}
+
+.training__header .links ul li a.active{
+    color: var(--purple);
+}
+
+.training__header .links ul li a.active::after{
+    content: '';
+    width: 42%;
+    border-bottom: 1px solid var(--purple);
+    display: block;
+}
+
+.tutorial__container{
+    width: 100%;
+    padding: 2rem 1rem;
+    display: grid;
+    column-gap: 1rem;
+    row-gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(285px, 1fr));
+}
+
+.tutorial__card{
+    width: 285px;
+    margin: 0 auto;
+}
+
+.tutorial__card__img__top{
+    width: 285px;
+    height: 190px;
+    position: relative;
+    border: 1px solid transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.tutorial__card__img__top  img:nth-child(1){
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.tutorial__card__img__top .play,
+.selected__tutorial__img__top .play{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.tutorial__card__content{
+    background: var(--white);
+    padding: 1rem;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.tutorial__card__content .content__title{
+    font-size: .875rem;
+    font-weight: bold;
+    color: var(--purple);
+}
+
+.tutorial__card__content .content__description{
+    font-size: .75rem;
+    font-weight: normal;
+    color: var(--dark-text-color);
+    margin-top: .3rem;
+}
+
+.video__length{
+    font-size: .75rem;
+    font-weight: 400;
+    color: var(--dark-text-color);
+}
+
+.tutorial__card__content .ctas,
+.selected__tut__ctas{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.tutorial__card__content .ctas{
+    justify-content: space-between;
+}
+
+.ctas .options{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ctas .options .img{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #efefef;
+    border-radius: 4px;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.buttons{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.buttons button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 80px;
+    height: 40px;
+    text-align: center;
+    font-size: .875rem;
+    line-height: 24px;
+    border-radius: 8px;
+}
+
+button.normal{
+    background: var(--voog-blue);
+    margin-left: 1rem;
+}
+
+button.normal a{
+    color: var(--white);
+}
+
+button.inverse{
+    background:rgba(72, 52, 212, 0.1);
+    width: 88px;
+}
+
+button.inverse a{
+    color: var(--purple);
+}
+
+
+.selected__tutorial__section{
+    width: 100%;
+}
+
+.selected__tutorial__img__top{
+    width: 100%;
+    max-width: 917px;
+    height: 351px;
+    margin: 1.5rem auto;
+    position: relative;
+}
+
+.selected__tutorial__img__top img:nth-child(1){
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 4px;
+}
+
+.selected__tut__ctas{
+    width: 100%;
+    max-width: 917px;
+    margin: 2.5rem auto;
+}
+
+.selected__tut__ctas .img{
+    display: flex;
+    align-items: center;
+    height: 30px;
+    padding: 0 .3rem;
+    border: 1px solid #c4c4c4;
+    border-radius: 4px;
+    color: var(--primary-blue);
+    margin-right: .5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.selected__tut__ctas .img p{
+    margin-left: .5rem;
+}
+
+.about__course{
+    margin: 3rem 0;
+    color: #333333;
+}
+
+.about__course .description{
+    font-size: .875rem;
+    font-weight: normal;
+    margin-top: 2.5rem;
+}
+
+.see__more{
+    color: #4070ff;
+    font-weight: 500;
+    font-size: 1.25rem;
+}
+
+.similar__tutorials{
+    margin-top: 4rem;
+}
