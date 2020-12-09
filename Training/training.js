@@ -1,7 +1,7 @@
-const tutorialLinks = document.querySelectorAll('.tutorial__header .links a');
+const tutorialLinks = document.querySelectorAll('.training__header .links a');
 
 // Add active links
-const linkActive = (id) => {
+const tutorialLinkActive = (id) => {
     if(tutorialLinks){
         tutorialLinks.forEach((link, idx) => {
             if(idx === id) {
@@ -14,5 +14,5 @@ const linkActive = (id) => {
 }
 
 tutorialLinks.forEach((link, idx) => {
-    link.addEventListener('click', () => linkActive(idx));
+    link.addEventListener('click', () => tutorialLinkActive(idx));
 })
