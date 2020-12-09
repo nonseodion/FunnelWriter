@@ -7,11 +7,11 @@
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="offerGen1.css">
+    <!-- Header and Sidenav CSS -->
+    <link rel="stylesheet" href="../public/header&sidenav.css">
+    <link rel="stylesheet" href="../OfferGenerator/offer-generator.css">
 
-    <title>Funnel Writer</title>
+    <title>Offer Generator | Funnel Writer</title>
 </head>
 <body>
     <!-- Header Section -->
@@ -20,12 +20,12 @@
             <ul>
                 <li>
                     <a href="#" class="logo">
-                        <img src="./images/logo.svg" alt="logo">
+                        <img src="../public/images/logo.svg" alt="logo">
                     </a>
                 </li>
                 <li class="middle">
                     <div class="search">
-                        <img src="./images/Search.svg" alt="search">
+                        <img src="../public/images/Search.svg" alt="search">
                         <form>
                             <input type="search" id="search" placeholder="Find your scripts & copies" autocomplete="">
                         </form>
@@ -34,11 +34,11 @@
                 </li>
                 <li class="notifications__profile">
                     <a href="#">
-                        <img src="./images/notifications.svg" alt="notifications">
+                        <img src="../public/images/notifications.svg" alt="notifications">
                     </a>
                     <a href="#">
                         <div class="profile">
-                            <img src="./images/profile.svg" alt="profile">
+                            <img src="../public/images/profile.svg" alt="profile">
                             <i class="fas fa-angle-down"></i>
                         </div>
                     </a>
@@ -61,7 +61,7 @@
         <!-- Sidebar -->
         <nav class="sidebar">
             <div class="toggle__sidebar">
-                <img src="./images/close-dash.svg" alt="toggle__sidebar">
+                <img src="../public/images/close-dash.svg" alt="toggle__sidebar">
             </div>
 
             <div class="main__links">
@@ -69,7 +69,7 @@
                     <li>
                         <a href="#">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icons">
-                                <path d="M4 13H10C10.55 13 11 12.55 11 12V4C11 3.45 10.55 3 10 3H4C3.45 3 3 3.45 3 4V12C3 12.55 3.45 13 4 13ZM4 21H10C10.55 21 11 20.55 11 20V16C11 15.45 10.55 15 10 15H4C3.45 15 3 15.45 3 16V20C3 20.55 3.45 21 4 21ZM14 21H20C20.55 21 21 20.55 21 20V12C21 11.45 20.55 11 20 11H14C13.45 11 13 11.45 13 12V20C13 20.55 13.45 21 14 21ZM13 4V8C13 8.55 13.45 9 14 9H20C20.55 9 21 8.55 21 8V4C21 3.45 20.55 3 20 3H14C13.45 3 13 3.45 13 4Z" fill="#4834D4"/>
+                                <path d="M4 13H10C10.55 13 11 12.55 11 12V4C11 3.45 10.55 3 10 3H4C3.45 3 3 3.45 3 4V12C3 12.55 3.45 13 4 13ZM4 21H10C10.55 21 11 20.55 11 20V16C11 15.45 10.55 15 10 15H4C3.45 15 3 15.45 3 16V20C3 20.55 3.45 21 4 21ZM14 21H20C20.55 21 21 20.55 21 20V12C21 11.45 20.55 11 20 11H14C13.45 11 13 11.45 13 12V20C13 20.55 13.45 21 14 21ZM13 4V8C13 8.55 13.45 9 14 9H20C20.55 9 21 8.55 21 8V4C21 3.45 20.55 3 20 3H14C13.45 3 13 3.45 13 4Z" fill="#BDC4DB"/>
                             </svg>                                
                             <p>Dashboard</p>
                         </a>
@@ -146,7 +146,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="#" class="active">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icons">
                                 <path d="M12.1271 2H2.78201C2.35011 2 2 2.35011 2 2.78201V8.99903C2 9.43094 2.35011 9.78105 2.78201 9.78105H6.68188L9.40721 12.1506C9.48396 12.2173 9.57374 12.2473 9.66156 12.2473C9.86328 12.2473 10.0548 12.0892 10.0548 11.8555V9.78105H12.1271C12.559 9.78105 12.9091 9.43094 12.9091 8.99903V2.78201C12.9091 2.35011 12.559 2 12.1271 2ZM4.34604 4.15054H7.55231C7.87622 4.15054 8.13882 4.41314 8.13882 4.73705C8.13882 5.06096 7.87622 5.32356 7.55231 5.32356H4.34604C4.02213 5.32356 3.75953 5.06096 3.75953 4.73705C3.75953 4.41314 4.02213 4.15054 4.34604 4.15054ZM10.5631 7.66961H4.34604C4.02213 7.66961 3.75953 7.40701 3.75953 7.0831C3.75953 6.75919 4.02213 6.49659 4.34604 6.49659H10.5631C10.887 6.49659 11.1496 6.75919 11.1496 7.0831C11.1496 7.40701 10.887 7.66961 10.5631 7.66961Z" fill="#BDC4DB"/>
                                 <path d="M17.1691 15.2571C18.4291 15.2571 19.4505 14.2356 19.4505 12.9757C19.4505 11.7157 18.4291 10.6942 17.1691 10.6942C15.9091 10.6942 14.8877 11.7157 14.8877 12.9757C14.8877 14.2356 15.9091 15.2571 17.1691 15.2571Z" fill="#BDC4DB"/>
@@ -218,19 +218,10 @@
         </nav>
 
         <!-- Main Content -->
-        <main>
-            <div>
-                Hello There
-                <!-- Content Goes in here -->
-            </div>
-        </main>
-    </section>
 
-    <div class="clear"></div>
-
-    <!-- Base Widget section -->
+         <!-- Base Widget section -->
     
-    <main class="base-widget">
+    <main class="main__content">
         <!-- widget -->
         <div class="widget">
             <div class="frame-1 m-size">
@@ -257,7 +248,7 @@
             <div class="frame-3">
                 <div class="circle"><img src="images/Circle chart.png" alt=""></div>
                 <div class="strength">
-                    <p>Offer strength</p>
+                 <p>Offer strength</p>
                     <div class="green"><span>strong</span></div>
                 </div>
             </div>
@@ -266,51 +257,120 @@
             <!-- Base -->
 
             <div class="base">
-                <div class="left">
-                    <table>
-                        <tr>
-                            <td><img src="images/Group 199.png" alt="">Product Tagline</td>
-                            <td>3/3</td>
-                        </tr>
-                        <tr>
-                            <td><img src="images/Group 199.png" alt="">The Product Problem</td>
-                            <td>1/10</td>
-                        </tr>
-                        <tr>
-                            <td><img src="images/Group 199.png" alt="">Product offers</td>
-                            <td>0/7</td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="right">
-                    <form action="">
-                        <label for="">Product name</label>
-                        <br>
-                        <input type="text" id="name" placeholder="Type script name">
-                        <br>
-                        <label for="">Detailed description</label>
-                        <br>
-                        <textarea name="" id="" placeholder="Type script name"></textarea>
-                        <br>
-                        <label for="">One line benefit</label>
-                        <br>
-                        <input type="text" id="benefit" placeholder="Type script name">
-                    </form>
-
-                    <div class="required">Complete this step before proceeding</div>
-
-                    <div class="next-cancel-btn">
-                        <button class="next-btn">Next</button>
-                        <button class="cancel-btn">Cancel</button>
+                <div class="base-container">
+                    <div class="offer-5-btn">
+                        <button class="offer-5-btn-1">Export script</button>
+                        <button class="offer-5-btn-2">Save</button>
                     </div>
-                    
+                    <div class="base-header">
+                        <h3>Product Tagline Goes here</h3>
+                    </div>
+                    <div class="problem-set">
+                        <div class="prob-1">
+                            <input type="checkbox" name="" value="">
+                            <div class="prob-1-text">
+                                <p class="prob-1-text-prob">Problem 1</p>
+                                <p class="prob-1-text-msg">message</p>
+                                <p class="prob-1-text-note">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, illo. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            </div>
+                        </div>
+                        <div class="prob-1">
+                            <input type="checkbox" name="" value="">
+                            <div class="prob-1-text">
+                                <p class="prob-1-text-prob">Problem 2</p>
+                                <p class="prob-1-text-msg">message</p>
+                                <p class="prob-1-text-note">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, illo. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            </div>
+                        </div>
+                        <div class="prob-1">
+                            <input type="checkbox" name="" value="">
+                            <div class="prob-1-text">
+                                <p class="prob-1-text-prob">Problem 3</p>
+                                <p class="prob-1-text-msg">message</p>
+                                <p class="prob-1-text-note">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, illo. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            </div>
+                        </div>
+                        <div class="prob-1">
+                            <input type="checkbox" name="" value="">
+                            <div class="prob-1-text">
+                                <p class="prob-1-text-prob">Problem 4</p>
+                                <p class="prob-1-text-msg">message</p>
+                                <p class="prob-1-text-note">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, illo. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            </div>
+                        </div>
+                    </div>
 
+                    <div class="offer-value-table">
+                        <h3>What will you get</h3>
+                        <div class="table" id="table">
+                            <table>
+                                <tr>
+                                    <th>Offer</th>
+                                    <th>Price</th>
+                                </tr>
+                                <tr>
+                                    <td>Ebook</td>
+                                    <td>$80</td>
+                                </tr>
+                                <tr>
+                                    <td>White Report</td>
+                                    <td>$30</td>
+                                </tr>
+                                <tr>
+                                    <td>Audio File</td>
+                                    <td>$67</td>
+                                </tr>
+                                <tr>
+                                    <td>Binder Notes</td>
+                                    <td>$90</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="1"></td>
+                                    <td>Total offer value: $ 650.00</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="bonus-value-table">
+                        <table>
+                            <tr>
+                                <th>Bonuses</th>
+                                <th>Price</th>
+                            </tr>
+                            <tr>
+                                <td>When You Buy You Also Get [Bonus]</td>
+                                <td>$110</td>
+                            </tr>
+                            <tr>
+                                <td>When You Buy You Also Get [Bonus]</td>
+                                <td>$110</td>
+                            </tr>
+                            <tr>
+                                <td>When You Buy You Also Get [Bonus]</td>
+                                <td>$110</td>
+                            </tr>
+                            <tr>
+                                <td colspan="1"></td>
+                                <td>Bonus values $330</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div id="go-back-btn">
+                        <button class="go-back-btn">Go Back</button>
+                    </div>
                 </div>
+
+                
             </div>
     </main>
+    </section>
 
-      
     <!-- Scripts -->
-    <script src="./index.js"></script>
+    <script src="../public/header&sidenav.js"></script>
 </body>
 </html>
+
+
+
