@@ -3,6 +3,14 @@
 /* --green: #35ec81;
 --ash: #c4c4c4; */
 
+.generate p {
+    margin-top: 1.5rem;
+}
+
+.none{
+    display: none;
+}
+
 .main__content{
     margin: 2rem 2rem 2rem 3rem;
     width: 100%;
@@ -45,8 +53,16 @@
     color: #35ec81;
 }
 
+.form__part__title.in__progress{
+    color: var(--dark-text-color);
+}
+
 .form__part__title.done .left__text svg path{
     stroke: #35ec81;
+}
+
+.form__part__title.in__progress .left__text svg path{
+    stroke: var(--dark-text-color);
 }
 
 .left__text .text{
