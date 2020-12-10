@@ -82,6 +82,32 @@ function showBackNext(e){
 
     e.preventDefault();
 }
+// input.addEventListener("input", (e) => {
+//     updateStatus(e, index);
+//   });
+
+// var inputs = document.querySelectorAll(' .active input');
+// inputs.forEach(input => { input.addEventListener('click', (e) =>{
+//     for (let i = 0; i< document.querySelector('.value').length == 4, i++;);
+//    if (buzzProInput.value.isEmpty=false) {
+//        document.querySelector('.value').textContent = x+=1;
+//         // e.stopImmediatePropagation()
+//         // buzzProInput.e ==false;
+//     }else if(buzzProInput.value.isEmpty=true){
+//         document.querySelector('.value').textContent = x-=1;
+
+//     }else{
+//         document.querySelector('.value').textContent = x--;
+
+//     }
+// })});
+
+
+
+
+
+
+
 
 // FORM FUNCTIONALITIES
 const yourExperience = document.querySelector('#yourExperience');
@@ -95,6 +121,8 @@ yourExperience.addEventListener("keyup", event => {
         document.querySelector('.checked svg path').style.fill = '#35ec81';
    var next = document.querySelector('.btn__next');
     next.disabled = false;
+   
+
       
     }else{
         document.querySelector('.checked span').style.color = '#000000';
@@ -147,6 +175,18 @@ addMoreProducts.addEventListener("keyup", event => {
     event.preventDefault();
 
 });
+var x = 0;
+
+document.getElementById('output-area').innerHTML = x;
+
+function button1() {
+  document.getElementById('output-area').innerHTML = ++x;
+}
+
+function button2() {
+  document.getElementById('output-area').innerHTML = --x;
+}
+
 
 const addMore1 = document.querySelector('#addMore1');
 const addMore2 = document.querySelector('#addMore2');
