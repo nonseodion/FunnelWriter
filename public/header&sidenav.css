@@ -391,7 +391,8 @@ header{
     align-items: flex-start;
 }
 
-.top__nav .page__header__breadcrumb.minify__pd{
+.top__nav .page__header__breadcrumb.minify__pd,
+.page__header__breadcrumb.minify__pd{
     margin-left: calc(var(--sidebar-width) - 114px);
 }
 

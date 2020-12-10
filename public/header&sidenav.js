@@ -1,7 +1,7 @@
 const sidebarToggler = document.querySelector('.toggle__sidebar img');
 const sidebar = document.querySelector('.sidebar');
 const main__content = document.querySelector('.main__content');
-const headerAndBreadcrumb = document.querySelector('.top__nav .page__header__breadcrumb');
+const headerAndBreadcrumb = document.querySelector('.page__header__breadcrumb');
 const sidebarLinks = document.querySelectorAll('.sidebar li a');
 const wpPlugin = document.querySelector('.wp__plugin');
 
