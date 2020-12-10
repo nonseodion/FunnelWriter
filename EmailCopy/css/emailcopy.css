@@ -7,9 +7,9 @@
 }
 
 .main__content__information{
-    width: 45%;
+    /* width: 45%; */
     padding: 0px  20px 0px 20px;
-    background: rgba(251, 251, 251, 1);
+    background: #fbfbfb;
 }
 
 .main__content__information ul li{
@@ -84,23 +84,22 @@
 
 .btn{
     padding:10px 25px;
-    color: #ffffff;
+    color: #443DF6;
     border-radius: 5px;
     outline-color: none;
     border: none;
-    background:#4834d4;
-    ;
+    background:#CDC6FF;
+    border: 1px solid #4834d4;
+
 }
 
 .btn:disabled{
     padding:10px 25px;
-    background: #dedde0;
+    background:#443DF6;
     border-radius: 5px;
     outline-color: none;
     border: 0.5px solid #4834d4;
-    color: #443DF6;
-
-    ;
+    color: #dedde0;;
 }
 .next__next .buttons{
     margin: 180px 0px 0px 0px;
@@ -120,6 +119,31 @@
     color: #4834d4;
     margin: 0px 10px;
     /* fill: #4834d4; */
+}
+
+@media(max-width:700px){
+    .main__content__contents{
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .main__content__information{
+        width: 95%;
+        padding: 10px;
+        margin:10px;
+        border-radius: 5px;
+    }
+    .main__content__profile{
+        width: 95%;
+        margin: auto;
+        padding: 40px 30px 20px 30px;
+        margin: 20px 30px 10px 10px;
+
+
+    }
+    .profile__forms div input{
+        width: 100%;
+    }
 }
 
 
