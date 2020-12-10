@@ -19,15 +19,17 @@
 
 .headline-links {
     display: flex;
-    color: var(--light-purple);
-    cursor: pointer;
 }
 
 .headline-links li {
-    padding: 15px;
+    padding: 20px;
 }
 
-.headline-links .active {
+.headline-links li a {
+    color: var(--light-purple);
+}
+
+.headline-links li a:active {
     color: var(--purple);
     border-bottom: 2px solid;
 }
@@ -71,9 +73,7 @@
 .left-main-content .generate-button {
     background-color: var(--purple);
     color: var(--light-purple);
-    /* margin: 40px 116px; */
-    display: block;
-    margin-left: auto;
+    margin: 66px 0px 0px 250px;
     font-size: 16px;
     border-radius: 8px;
     width: 116px;
@@ -96,7 +96,7 @@
 /* Headline Page Two */
 /* Right Hand Side of Page Two */
 
-.right-main-content .save-project {
+.right-main-content .save-project-btn {
     background-color: #f6f5fd;
     width: 161px;
     height: 40px;
@@ -113,7 +113,34 @@
 .right-content {
     width: 539px;
     height: 1252px;
-    border: 1px solid black;
     margin-right: 31px;
     margin-top: 40px;
 }
+
+.right-content .writer {
+    border: 1px solid #F5F6F9;
+    width: 520px;
+    height: 76px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+}
+
+.writer img {
+    margin-bottom: -14px;
+}
+
+.right-content .writer .output {
+    display: flex;
+    justify-content: space-between;
+}
+
+.right-content .writer p {
+    color: var(--ash);
+    margin: 12px 0px 0px 20px;
+    opacity: 0.5;
+}
+
+
+
+/* Headline Page Three */
+/* Right Hand Side of Page Two */
