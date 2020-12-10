@@ -39,6 +39,10 @@
     color: #c4c4c4;
 }
 
+.training__header .links ul li a:hover{
+    color: var(--purple);
+}
+
 .training__header .links ul li a.active{
     color: var(--purple);
 }
