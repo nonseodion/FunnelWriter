@@ -82,25 +82,62 @@ function showBackNext(e){
 
     e.preventDefault();
 }
+
+
+function setStatuses(e){
+    questions.forEach( (question, index) =>{
+      const inputs = question.querySelectorAll("input[type=text]:first-of-type");
+      statuses[index].textContent = `0/${inputs.length}`;
+      inputs.forEach(input => {
+        input.addEventListener("input", (e) => {
+          updateStatus(e, index);
+        });
+      });
+    }); 
+  }
+  
+  function updateStatus(e, parentIndex){
+    const question = questions[parentIndex];
+    const inputs = question.querySelectorAll("input[type=text]");
+    const total = inputs.length;
+    let filled = [...inputs].reduce((total, input) => {
+      return total + +(input.value.trim() !== "");
+    }, 0);
+    statuses[parentIndex].textContent = `${filled}/${total}`;
+    
+    if(filled === total) {statuses[parentIndex].parentNode.classList.add("filled");}
+    else {statuses[parentIndex].parentNode.classList.remove("filled");}
+  }
+  
+  function clearInputs() {
+    let inputs = document.querySelectorAll("input");
+    inputs.forEach(input => {
+      input.value = "";
+    })
+  }
+  
+
+
+
 // input.addEventListener("input", (e) => {
 //     updateStatus(e, index);
 //   });
 
-// var inputs = document.querySelectorAll(' .active input');
-// inputs.forEach(input => { input.addEventListener('click', (e) =>{
-//     for (let i = 0; i< document.querySelector('.value').length == 4, i++;);
-//    if (buzzProInput.value.isEmpty=false) {
-//        document.querySelector('.value').textContent = x+=1;
-//         // e.stopImmediatePropagation()
-//         // buzzProInput.e ==false;
-//     }else if(buzzProInput.value.isEmpty=true){
-//         document.querySelector('.value').textContent = x-=1;
+var inputs = document.querySelectorAll(' .active input');
+inputs.forEach(input => { input.addEventListener('click', (e) =>{
+    for (let i = 0; i< document.querySelector('.value').length == 4, i++;);
+   if (buzzProInput.value.isEmpty=false) {
+       document.querySelector('.value').textContent = x+=1;
+        // e.stopImmediatePropagation()
+        // buzzProInput.e ==false;
+    }else if(buzzProInput.value.isEmpty=true){
+        document.querySelector('.value').textContent = x-=1;
 
-//     }else{
-//         document.querySelector('.value').textContent = x--;
+    }else{
+        document.querySelector('.value').textContent = x--;
 
-//     }
-// })});
+    }
+})});
 
 
 
