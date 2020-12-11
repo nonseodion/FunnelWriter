@@ -30,6 +30,19 @@ function showNext(e){
     document.querySelector('.next__first .value').style.color = '#191847';
     document.querySelector('.next__first svg path').style.fill = '#191847';
 
+
+
+var myInput = document.querySelectorAll('.next__next input');
+var update = document.querySelector('.next__first .value');
+let input = Array.from(myInput);
+input.forEach(arr => arr.addEventListener('change', (e)=>{
+    if (e.target.value.length >0) {
+    update.textContent ++;
+}else{
+    update.textContent --;
+
+}}))
+
     e.preventDefault();
 
 }
@@ -79,71 +92,46 @@ function showBackNext(e){
     // document.querySelector('.checked span').style.color = '#191847';
     // document.querySelector('.checked svg path').style.fill = '#191847';
     // document.querySelector('.checked .value').style.color = '#191847';
-
     e.preventDefault();
 }
 
 
-function setStatuses(e){
-    questions.forEach( (question, index) =>{
-      const inputs = question.querySelectorAll("input[type=text]:first-of-type");
-      statuses[index].textContent = `0/${inputs.length}`;
-      inputs.forEach(input => {
-        input.addEventListener("input", (e) => {
-          updateStatus(e, index);
-        });
-      });
-    }); 
-  }
-  
-  function updateStatus(e, parentIndex){
-    const question = questions[parentIndex];
-    const inputs = question.querySelectorAll("input[type=text]");
-    const total = inputs.length;
-    let filled = [...inputs].reduce((total, input) => {
-      return total + +(input.value.trim() !== "");
-    }, 0);
-    statuses[parentIndex].textContent = `${filled}/${total}`;
-    
-    if(filled === total) {statuses[parentIndex].parentNode.classList.add("filled");}
-    else {statuses[parentIndex].parentNode.classList.remove("filled");}
-  }
-  
-  function clearInputs() {
-    let inputs = document.querySelectorAll("input");
-    inputs.forEach(input => {
-      input.value = "";
-    })
-  }
-  
+// var inputs = document.querySelectorAll('.active input');
+// function show(){
+//     inputs.forEach(input => { input.addEventListener('click', (e) =>{
+//         console.log('hey')
+//         e.preventDefault();
+// }
+// )});   
+// console.log(inputs);
+// console.log(inputs)
+// var input = Array.from(inputs)
+// console.log(input)
 
 
 
-// input.addEventListener("input", (e) => {
-//     updateStatus(e, index);
-//   });
-
-var inputs = document.querySelectorAll(' .active input');
-inputs.forEach(input => { input.addEventListener('click', (e) =>{
-    for (let i = 0; i< document.querySelector('.value').length == 4, i++;);
-   if (buzzProInput.value.isEmpty=false) {
-       document.querySelector('.value').textContent = x+=1;
-        // e.stopImmediatePropagation()
-        // buzzProInput.e ==false;
-    }else if(buzzProInput.value.isEmpty=true){
-        document.querySelector('.value').textContent = x-=1;
-
-    }else{
-        document.querySelector('.value').textContent = x--;
-
-    }
-})});
+// inputs.forEach(input => { input.addEventListener('input', (e) =>{
+//    if(input.value >= '1') {
+//        document.querySelector('.value').textContent = x+1;
+//            console.log(inputs);
+// }else if(input.value < 1) {
+//     document.querySelector('.value').textContent = x--;
+// }else{
+//      document.querySelector('.value').textContent = x+1;
+// }
+// })});
 
 
+var myInput = parent.document.querySelectorAll('.active input');
+var update = document.querySelector('.checked .value');
+let input = Array.from(myInput);
+input.forEach(arr => arr.addEventListener('change', (e)=>{
+    if (e.target.value.length >0 && e.target.matches(".active input")) {
+    update.textContent ++;
+}else{
+    update.textContent --;
 
-
-
-
+}}))
 
 
 // FORM FUNCTIONALITIES
@@ -159,9 +147,7 @@ yourExperience.addEventListener("keyup", event => {
    var next = document.querySelector('.btn__next');
     next.disabled = false;
    
-
-      
-    }else{
+}else{
         document.querySelector('.checked span').style.color = '#000000';
         document.querySelector('.checked svg path').style.fill = '#000000';
         document.querySelector('.checked .value').style.color = '#000000';
@@ -212,19 +198,6 @@ addMoreProducts.addEventListener("keyup", event => {
     event.preventDefault();
 
 });
-var x = 0;
-
-document.getElementById('output-area').innerHTML = x;
-
-function button1() {
-  document.getElementById('output-area').innerHTML = ++x;
-}
-
-function button2() {
-  document.getElementById('output-area').innerHTML = --x;
-}
-
-
 const addMore1 = document.querySelector('#addMore1');
 const addMore2 = document.querySelector('#addMore2');
 addMore2.addEventListener("keyup", event => {
@@ -241,8 +214,8 @@ addMore2.addEventListener("keyup", event => {
         document.querySelector('.final__next svg path').style.fill = '#000000';
         document.querySelector('.final__next .value').style.color = '#000000';
 
-    }
+    };
     // do something
-    event.preventDefault();
-
-});
+    // event.preventDefault();
+}
+)
