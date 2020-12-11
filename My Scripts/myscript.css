@@ -1,0 +1,135 @@
+.generate p{
+    margin-top: 1rem;
+}
+
+.main__content{
+    margin: 2rem 2rem 2rem 3rem;
+    width: 100%;
+}
+
+.my__projects{
+    margin-top: 1.5rem;
+}
+
+.my__projects__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.2rem;
+}
+
+.my__projects__header .title{
+    color: var(--dark-text-color);
+    font-size: 1.5rem;
+}
+
+.projects__container{
+    width: 100%;
+    display: grid;
+    column-gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(294px, 1fr));
+    row-gap: 2rem;
+}
+
+.project{
+    min-width: 294px;
+    min-height: 160px;
+    padding: 2rem;
+    margin: 0 auto;
+    border: 1px solid #f5f6f9;
+    border-radius: 4px;
+    position: relative;
+}
+
+.project > img{
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    cursor: pointer;
+}
+
+.options{
+    position: absolute;
+    background: var(--white);
+    min-width: 184px;
+    min-height: 136px;
+    font-size: .875rem;
+    font-weight: 500;
+    right: 0;
+    top: 1.5rem;
+    z-index: 10;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.05), 0px 25px 35px rgba(0, 0, 0, 0.03);
+    border-radius: 4px;
+}
+
+.options.none{
+    display: none;
+}
+
+.options ul{
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+}
+
+.options ul li{
+    width: 100%;
+    padding: .7rem 1rem;
+    cursor: pointer;
+}
+
+.options .dark{
+    color: var(--dark-text-color);
+}
+
+.options .red{
+    color: #c5292a;
+}
+
+.project .top{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: .75rem;
+    min-height: 50px;
+}
+
+.project .top .items__created{
+    font-size: .875rem;
+    font-weight: normal;
+}
+
+.project .project__title{
+    margin-bottom: .5rem;
+}
+
+.items__created.orange{
+    color: #f06e3a;
+    background: rgba(255, 92, 0, 0.09);
+    height: 31px;
+    padding: 0 6px;
+    align-items: center;
+    display: flex;
+    border-radius: 8px;
+}
+
+.items__created.blue{
+    color: var(--purple);
+    background: #ecebfb;
+    height: 31px;
+    padding: 0 6px;
+    align-items: center;
+    display: flex;
+    border-radius: 8px;
+}
+
+.text-blue{
+    color: var(--purple);
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+.text-light-blue{
+    color: #96ace1;
+    font-size: .875rem;
+    font-weight: 500;
+}
