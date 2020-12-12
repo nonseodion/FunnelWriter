@@ -25,6 +25,7 @@ else{
 // NEXT FUNCTIONS
 function showNext(e){
     document.querySelector('.previous').style.display ='none';
+
     document.querySelector('.next').style.display ='block';
     document.querySelector('.next__first span').style.color = '#191847';
     document.querySelector('.next__first .value').style.color = '#191847';
@@ -62,7 +63,6 @@ function showBackNextItem(e){
     e.preventDefault();
 
 }
-c4c4c4
 function showPreviousPrevious(e){
     document.querySelector('.previous').style.display ='none';
     document.querySelector('.next').style.display ='block';
