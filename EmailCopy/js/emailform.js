@@ -62,6 +62,7 @@ function showBackNextItem(e){
     e.preventDefault();
 
 }
+c4c4c4
 function showPreviousPrevious(e){
     document.querySelector('.previous').style.display ='none';
     document.querySelector('.next').style.display ='block';
@@ -158,7 +159,7 @@ const yourName = document.querySelector('#yourName');
 const buzzProInput = document.querySelector('#buzzPro');
 yourExperience.addEventListener("keyup", event => {
     if  (yourName.value.length >=2 && yourTag.value.length >=2 && yourExperience.value.length >=2 && buzzProInput.value.length >=2 ) {
-        document.querySelectorAll('.checked span').style.color = '#35ec81';
+        document.querySelector('.checked span').style.color = '#35ec81';
         document.querySelector('.checked').style.color = '#35ec81';
         document.querySelector('.checked svg path').style.fill = '#35ec81';
    var next = document.querySelector('.btn__next');
@@ -182,7 +183,7 @@ const readers = document.querySelector('#readers');
 const bigStruggle = document.querySelector('#bigStruggle');
 readers.addEventListener("keyup", event => {
     if  (nameProduct.value.length >=2 && typeProduct.value.length >=2 && productScarcity.value.length >=2 && bigStruggle.value.length >=2 ) {
-        document.querySelectorAll('.next__first span').style.color = '#35ec81';
+        document.querySelector('.next__first span').style.color = '#35ec81';
         document.querySelector('.next__first .value').style.color = '#35ec81';
         document.querySelector('.next__first svg path').style.fill = '#35ec81';
         var btnnextnext =  document.querySelector('.btn__next__next');

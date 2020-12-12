@@ -24,6 +24,7 @@
     color: #191847;
 
 }
+
 .main__content__information ul li:hover{
     color: #191847;
 }
@@ -82,7 +83,7 @@
     color: #000000;
 }
 
-.btn:hover{
+#previous{
     padding:10px 25px;
     color: #443DF6;
     border-radius: 5px;
