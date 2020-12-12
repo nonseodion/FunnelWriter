@@ -24,6 +24,7 @@
     color: #191847;
 
 }
+
 .main__content__information ul li:hover{
     color: #191847;
 }
@@ -41,7 +42,6 @@
     width: 60%;
     border-top: 0.5px solid #c4c4c4;
     border-right: 0.5px solid #c4c4c4;
-    border-bottom: 0.5px solid #c4c4c4;
     background: #ffffff;
     border-radius: 5px;
     padding: 10px 10px 10px 40px;
@@ -55,6 +55,7 @@
 }
 .profile__forms h3{
     font-size: 16px;
+    margin: 0px 0px 10px 0px;
 
 }
 .profile__forms p{
@@ -82,7 +83,7 @@
     color: #000000;
 }
 
-.btn{
+#previous{
     padding:10px 25px;
     color: #443DF6;
     border-radius: 5px;
@@ -93,7 +94,7 @@
 
 }
 
-.btn:disabled{
+.btn{
     padding:10px 25px;
     background:#443DF6;
     border-radius: 5px;

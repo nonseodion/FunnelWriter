@@ -86,7 +86,7 @@ a {
   margin-right: 1.3rem;
 }
 .form .questions > div {
-  display: none;
+  /* display: none; */
 }
 .form .questions > div.active {
   display: block;
@@ -247,4 +247,4 @@ a {
   color: #4834d4;
 }
 
-/*# sourceMappingURL=sales-letter.css.map */
+/* # sourceMappingURL=sales-letter.css.map */
