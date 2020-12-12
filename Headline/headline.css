@@ -40,8 +40,9 @@
 
 /* Left Hand Side */
 .left-main-content {
-    width: 100%;
+    width: 70%;
     padding: 38px;
+    border-right: 1px solid rgba(141, 144, 145, 0.2);
 }
 
 .left-main-content li {
@@ -84,6 +85,7 @@
 /* Right Hand side */
 .right-main-content {
     width: 100%;
+    padding-left: 60px;
 }
 
 .right-main-content .background-image {
@@ -104,12 +106,10 @@
     font-size: 16px;
     margin-top: 32px;
     display: block;
-    margin-left: 280px;
+    margin-left: 380px;
 }
 
 .right-content {
-    width: 539px;
-    margin-right: 31px;
     margin-top: 40px;
 }
 
