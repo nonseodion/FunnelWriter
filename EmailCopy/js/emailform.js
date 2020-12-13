@@ -1,3 +1,19 @@
+
+
+  function linkAction(){
+      const activeform = document.querySelectorAll('.main__content__information ul li')
+      activeform.forEach(li => li.classList.remove('checked'));
+    this.classList.add('checked');
+  }
+  const navLink = document.querySelectorAll('.btn');   
+  navLink.forEach(n => n.addEventListener('click', linkAction));
+  
+
+
+
+
+
+
 var form = document.querySelector('.next').style.display ='none';
 
 // EVENTLISTENERS
@@ -25,11 +41,18 @@ else{
 // NEXT FUNCTIONS
 function showNext(e){
     document.querySelector('.previous').style.display ='none';
-
     document.querySelector('.next').style.display ='block';
-    document.querySelector('.next__first span').style.color = '#191847';
-    document.querySelector('.next__first .value').style.color = '#191847';
-    document.querySelector('.next__first svg path').style.fill = '#191847';
+    if (document.querySelector('.next').style.display ='block') {
+        document.querySelector('.next__first').classList.add('checked')
+         document.querySelector('.next__first svg path').style.fill = '#191847';
+         document.querySelector('.checked svg path').style.fill = '#c4c4c4 ';
+    }
+    else {
+        document.querySelector('.next__first').classList.remove('checked')
+        // document.querySelector('.checked').classList.add('checked');
+     document.querySelector('.checked svg path').style.fill = '#c4c4c4 '
+    }
+   
 
     e.preventDefault();
 
@@ -37,8 +60,7 @@ function showNext(e){
 function showUpperNextItem(e){
     document.querySelector('.addMore__next__next').style.display ='block';
     document.querySelector('.next__next').style.display = 'none'
-    document.querySelector('.final__next span').style.color = '#191847';
-    document.querySelector('.final__next .value').style.color = '#191847';
+    document.querySelector('.final__next').classList.add('checked')
     document.querySelector('.final__next svg path').style.fill = '#191847';
     e.preventDefault();
 
@@ -48,8 +70,7 @@ function showNextNext(e){
     document.querySelector('.next').style.display ='none';
     document.querySelector('.addMore__next__next').style.display ='none';
     document.querySelector('.next__next').style.display = 'block'
-    document.querySelector('.nextNext span').style.color = '#191847';
-    document.querySelector('.nextNext .value').style.color = '#191847';
+    document.querySelector('.nextNext').classList.add('checked')
     document.querySelector('.nextNext svg path').style.fill = '#191847';
 
     e.preventDefault();
@@ -60,6 +81,9 @@ function showNextNext(e){
 function showBackNextItem(e){
     document.querySelector('.addMore__next__next').style.display ='none';
     document.querySelector('.next__next').style.display = 'block'
+    document.querySelector('.nextNext').classList.add('checked')
+
+
     e.preventDefault();
 
 }
@@ -68,6 +92,10 @@ function showPreviousPrevious(e){
     document.querySelector('.next').style.display ='block';
       document.querySelector('.addMore__next__next').style.display ='none';
     document.querySelector('.next__next').style.display = 'none'
+    document.querySelector('.next__first').classList.add('checked')
+    // document.querySelector('.next__first svg path').style.fill = '#c4c4c4 '
+
+
     // console.log('hey');
 
     e.preventDefault();
@@ -76,39 +104,16 @@ function showPreviousPrevious(e){
 function showBackNext(e){
     document.querySelector('.previous').style.display ='block';
     document.querySelector('.next').style.display ='none';
+    if (document.querySelector('.previous').style.display ='block') {
+        document.querySelector('.checked').classList.add('checked');
+        // document.querySelector('ul .next__first svg path').style.fill = '#c4c4c4 '
+
+    }
     // console.log('hey');
-    // document.querySelector('.checked span').style.color = '#191847';
     // document.querySelector('.checked svg path').style.fill = '#191847';
-    // document.querySelector('.checked .value').style.color = '#191847';
+    document.querySelector('.checked .value').style.color = '#191847';
     e.preventDefault();
 }
-
-
-// var inputs = document.querySelectorAll('.active input');
-// function show(){
-//     inputs.forEach(input => { input.addEventListener('click', (e) =>{
-//         console.log('hey')
-//         e.preventDefault();
-// }
-// )});   
-// console.log(inputs);
-// console.log(inputs)
-// var input = Array.from(inputs)
-// console.log(input)
-
-
-
-// inputs.forEach(input => { input.addEventListener('input', (e) =>{
-//    if(input.value >= '1') {
-//        document.querySelector('.value').textContent = x+1;
-//            console.log(inputs);
-// }else if(input.value < 1) {
-//     document.querySelector('.value').textContent = x--;
-// }else{
-//      document.querySelector('.value').textContent = x+1;
-// }
-// })});
-
 
 var myInput = parent.document.querySelectorAll('.active input');
 var update = document.querySelector('.checked .value');
@@ -126,7 +131,7 @@ var update1 = document.querySelector('.next__first .value');
 let input1 = Array.from(myInput1);
 input1.forEach(arr => arr.addEventListener('change', (e)=>{
     if (e.target.value.length >0 && e.target.matches(".next input")) {
-    update1.textContent ++;
+    update1.textContent ++ + '' + arr.length;
     }else{
     update1.textContent --;
     }}))
