@@ -17,6 +17,12 @@
     padding: 26px 0px;
     color:#c4c4c4 ;
 }
+.main__content__information ul li p{
+    margin:  0px 20px 0px 0px;
+   }
+.main__content__information ul li svg{
+ margin:  0px 20px 0px 0px;
+}
 .main__content__information ul li:hover svg path{
    fill: #191847;
 }
@@ -24,13 +30,14 @@
     color: #191847;
 
 }
+
 .main__content__information ul li:hover{
     color: #191847;
 }
 
 
 .main__content__information ul li span{
-    margin: 0px 10px;
+    /* margin: 0px 10px; */
 }
 
 
@@ -41,7 +48,6 @@
     width: 60%;
     border-top: 0.5px solid #c4c4c4;
     border-right: 0.5px solid #c4c4c4;
-    border-bottom: 0.5px solid #c4c4c4;
     background: #ffffff;
     border-radius: 5px;
     padding: 10px 10px 10px 40px;
@@ -55,6 +61,7 @@
 }
 .profile__forms h3{
     font-size: 16px;
+    margin: 0px 0px 10px 0px;
 
 }
 .profile__forms p{
@@ -78,28 +85,25 @@
     border-radius: 5px;
 }
 
-.profile__forms input::placeholder{
-    color: #000000;
-}
 
-.btn{
-    padding:10px 25px;
+#previous{
+    padding:10px 20px;
     color: #443DF6;
     border-radius: 5px;
     outline-color: none;
     border: none;
     background:#CDC6FF;
-    border: 1px solid #4834d4;
 
 }
 
-.btn:disabled{
-    padding:10px 25px;
+.btn{
+    padding:10px 20px;
     background:#443DF6;
     border-radius: 5px;
     outline-color: none;
-    border: 0.5px solid #4834d4;
-    color: #dedde0;;
+    color: #dedde0;
+    margin: 0px 20px 0px 0px;
+    border: none;
 }
 .next__next .buttons{
     margin: 180px 0px 0px 0px;
@@ -138,25 +142,8 @@
         margin: auto;
         padding: 40px 30px 20px 30px;
         margin: 20px 30px 10px 10px;
-
-
     }
     .profile__forms div input{
         width: 100%;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

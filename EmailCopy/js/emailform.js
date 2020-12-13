@@ -1,3 +1,19 @@
+
+
+  function linkAction(){
+      const activeform = document.querySelectorAll('.main__content__information ul li')
+      activeform.forEach(li => li.classList.remove('checked'));
+    this.classList.add('checked');
+  }
+  const navLink = document.querySelectorAll('.btn');   
+  navLink.forEach(n => n.addEventListener('click', linkAction));
+  
+
+
+
+
+
+
 var form = document.querySelector('.next').style.display ='none';
 
 // EVENTLISTENERS
@@ -26,9 +42,17 @@ else{
 function showNext(e){
     document.querySelector('.previous').style.display ='none';
     document.querySelector('.next').style.display ='block';
-    document.querySelector('.next__first span').style.color = '#191847';
-    document.querySelector('.next__first .value').style.color = '#191847';
-    document.querySelector('.next__first svg path').style.fill = '#191847';
+    if (document.querySelector('.next').style.display ='block') {
+        document.querySelector('.next__first').classList.add('checked')
+         document.querySelector('.next__first svg path').style.fill = '#191847';
+         document.querySelector('.checked svg path').style.fill = '#c4c4c4 ';
+    }
+    else {
+        document.querySelector('.next__first').classList.remove('checked')
+        // document.querySelector('.checked').classList.add('checked');
+     document.querySelector('.checked svg path').style.fill = '#c4c4c4 '
+    }
+   
 
     e.preventDefault();
 
@@ -36,8 +60,7 @@ function showNext(e){
 function showUpperNextItem(e){
     document.querySelector('.addMore__next__next').style.display ='block';
     document.querySelector('.next__next').style.display = 'none'
-    document.querySelector('.final__next span').style.color = '#191847';
-    document.querySelector('.final__next .value').style.color = '#191847';
+    document.querySelector('.final__next').classList.add('checked')
     document.querySelector('.final__next svg path').style.fill = '#191847';
     e.preventDefault();
 
@@ -47,8 +70,7 @@ function showNextNext(e){
     document.querySelector('.next').style.display ='none';
     document.querySelector('.addMore__next__next').style.display ='none';
     document.querySelector('.next__next').style.display = 'block'
-    document.querySelector('.nextNext span').style.color = '#191847';
-    document.querySelector('.nextNext .value').style.color = '#191847';
+    document.querySelector('.nextNext').classList.add('checked')
     document.querySelector('.nextNext svg path').style.fill = '#191847';
 
     e.preventDefault();
@@ -59,6 +81,9 @@ function showNextNext(e){
 function showBackNextItem(e){
     document.querySelector('.addMore__next__next').style.display ='none';
     document.querySelector('.next__next').style.display = 'block'
+    document.querySelector('.nextNext').classList.add('checked')
+
+
     e.preventDefault();
 
 }
@@ -67,6 +92,10 @@ function showPreviousPrevious(e){
     document.querySelector('.next').style.display ='block';
       document.querySelector('.addMore__next__next').style.display ='none';
     document.querySelector('.next__next').style.display = 'none'
+    document.querySelector('.next__first').classList.add('checked')
+    // document.querySelector('.next__first svg path').style.fill = '#c4c4c4 '
+
+
     // console.log('hey');
 
     e.preventDefault();
@@ -75,39 +104,58 @@ function showPreviousPrevious(e){
 function showBackNext(e){
     document.querySelector('.previous').style.display ='block';
     document.querySelector('.next').style.display ='none';
-    // console.log('hey');
-    // document.querySelector('.checked span').style.color = '#191847';
-    // document.querySelector('.checked svg path').style.fill = '#191847';
-    // document.querySelector('.checked .value').style.color = '#191847';
+    if (document.querySelector('.previous').style.display ='block') {
+        document.querySelector('.checked').classList.add('checked');
+        // document.querySelector('ul .next__first svg path').style.fill = '#c4c4c4 '
 
+    }
+    // console.log('hey');
+    // document.querySelector('.checked svg path').style.fill = '#191847';
+    document.querySelector('.checked .value').style.color = '#191847';
     e.preventDefault();
 }
-// input.addEventListener("input", (e) => {
-//     updateStatus(e, index);
-//   });
 
-// var inputs = document.querySelectorAll(' .active input');
-// inputs.forEach(input => { input.addEventListener('click', (e) =>{
-//     for (let i = 0; i< document.querySelector('.value').length == 4, i++;);
-//    if (buzzProInput.value.isEmpty=false) {
-//        document.querySelector('.value').textContent = x+=1;
-//         // e.stopImmediatePropagation()
-//         // buzzProInput.e ==false;
-//     }else if(buzzProInput.value.isEmpty=true){
-//         document.querySelector('.value').textContent = x-=1;
+var myInput = parent.document.querySelectorAll('.active input');
+var update = document.querySelector('.checked .value');
+let input = Array.from(myInput);
+input.forEach(arr => arr.addEventListener('change', (e)=>{
+    if (e.target.value.length >0 && e.target.matches(".active input")) {
+    update.textContent ++ + '' + arr.length;
+}else{
+    update.textContent --;
 
-//     }else{
-//         document.querySelector('.value').textContent = x--;
+}}))
 
-//     }
-// })});
+var myInput1 = document.querySelectorAll('.next input');
+var update1 = document.querySelector('.next__first .value');
+let input1 = Array.from(myInput1);
+input1.forEach(arr => arr.addEventListener('change', (e)=>{
+    if (e.target.value.length >0 && e.target.matches(".next input")) {
+    update1.textContent ++ + '' + arr.length;
+    }else{
+    update1.textContent --;
+    }}))
+
+    var myInput2 = document.querySelectorAll('.next__next input');
+    var update2 = document.querySelector('.nextNext .value');
+    let input2 = Array.from(myInput2);
+    input2.forEach(arr => arr.addEventListener('change', (e)=>{
+        if (e.target.value.length >0 && e.target.matches(".next__next input")) {
+        update2.textContent ++;
+        }else{
+        update2.textContent --;
+        }}))
 
 
-
-
-
-
-
+    var myInput3 = document.querySelectorAll('.addMore__next__next input');
+    var update3 = document.querySelector('.final__next .value');
+    let input3 = Array.from(myInput3);
+    input3.forEach(arr => arr.addEventListener('change', (e)=>{
+        if (e.target.value.length >0 && e.target.matches(".addMore__next__next input")) {
+        update3.textContent ++;
+        }else{
+        update3.textContent --;
+        }}))
 
 // FORM FUNCTIONALITIES
 const yourExperience = document.querySelector('#yourExperience');
@@ -117,14 +165,12 @@ const buzzProInput = document.querySelector('#buzzPro');
 yourExperience.addEventListener("keyup", event => {
     if  (yourName.value.length >=2 && yourTag.value.length >=2 && yourExperience.value.length >=2 && buzzProInput.value.length >=2 ) {
         document.querySelector('.checked span').style.color = '#35ec81';
-        document.querySelector('.checked .value').style.color = '#35ec81';
+        document.querySelector('.checked').style.color = '#35ec81';
         document.querySelector('.checked svg path').style.fill = '#35ec81';
    var next = document.querySelector('.btn__next');
     next.disabled = false;
    
-
-      
-    }else{
+}else{
         document.querySelector('.checked span').style.color = '#000000';
         document.querySelector('.checked svg path').style.fill = '#000000';
         document.querySelector('.checked .value').style.color = '#000000';
@@ -175,19 +221,6 @@ addMoreProducts.addEventListener("keyup", event => {
     event.preventDefault();
 
 });
-var x = 0;
-
-document.getElementById('output-area').innerHTML = x;
-
-function button1() {
-  document.getElementById('output-area').innerHTML = ++x;
-}
-
-function button2() {
-  document.getElementById('output-area').innerHTML = --x;
-}
-
-
 const addMore1 = document.querySelector('#addMore1');
 const addMore2 = document.querySelector('#addMore2');
 addMore2.addEventListener("keyup", event => {
@@ -204,8 +237,8 @@ addMore2.addEventListener("keyup", event => {
         document.querySelector('.final__next svg path').style.fill = '#000000';
         document.querySelector('.final__next .value').style.color = '#000000';
 
-    }
+    };
     // do something
-    event.preventDefault();
-
-});
+    // event.preventDefault();
+}
+)
