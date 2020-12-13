@@ -17,6 +17,9 @@
     padding: 26px 0px;
     color:#c4c4c4 ;
 }
+.main__content__information ul li p{
+    margin:  0px 20px 0px 0px;
+   }
 .main__content__information ul li svg{
  margin:  0px 20px 0px 0px;
 }
