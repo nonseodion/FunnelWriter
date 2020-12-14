@@ -1,3 +1,5 @@
+const addInputs = document.querySelectorAll(".form .add");
+addInputs.forEach(addInput => addInput.addEventListener("click", insertInput));
 const formNavs = document.querySelectorAll(".form-nav");
 formNavs.forEach(formNav => formNav.addEventListener("click", navigate));
 let active;
@@ -5,8 +7,11 @@ const statuses = [...document.querySelectorAll(".status")];
 const questions = [...document.querySelectorAll(".questions>div")];
 
 
-function scrollToTop(){
-  document.documentElement.scrollTop = 0;
+function insertInput (e){
+  const parent = this.parentNode;
+  const inputNode = parent.querySelector("input[type=text]").cloneNode();
+  inputNode.value = "";
+  parent.insertBefore(inputNode, this);
 }
 
 function navigate(e){
@@ -18,20 +23,18 @@ function navigate(e){
   active.classList.add("active");
   if(this.hash === "#summary") return;
   statuses[questions.indexOf(active)].parentNode.classList.add("active");
-  scrollToTop();
 }
 
 function setStatuses(e){
   questions.forEach( (question, index) =>{
-    const inputs = question.querySelectorAll("input[type=text]");
+    const inputs = question.querySelectorAll("input[type=text]:first-of-type");
     statuses[index].textContent = `0/${inputs.length}`;
     inputs.forEach(input => {
       input.addEventListener("input", (e) => {
         updateStatus(e, index);
       });
     });
-    updateStatus("", index);
-  });
+  }); 
 }
 
 function updateStatus(e, parentIndex){
@@ -54,14 +57,38 @@ function clearInputs() {
   })
 }
 
-
+function storeInputs() {
+  try{
+    const listItems = document.querySelectorAll("form li");
+    const form = Object.create(null);
+    listItems.forEach(listItem => {
+      const inputs = [...listItem.querySelectorAll("input[type=text]")];
+      if(inputs.length === 1){ 
+        form[`${listItem.id}`] = inputs[0].value 
+      }
+      else{
+        debugger;
+        form[`${listItem.id}`] = inputs.map(input => input.value);
+      }
+    })
+    
+    window.sessionStorage.setItem(
+      document.querySelector("form.questions").id,
+      JSON.stringify(form));
+  }
+  catch(err){
+    console.error(err);
+  }
+}
 
 window.onload = () => {
   active = document.querySelector(".questions>div");
   statuses[0].parentNode.classList.add("active");
   active.classList.add("active");
-  clearInputs();
   setStatuses();
+  clearInputs();
 }
 
 window.onpopstate = clearInputs;
+
+window.onunload = storeInputs;

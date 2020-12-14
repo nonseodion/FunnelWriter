@@ -76,12 +76,12 @@ a {
 .form .btns {
   margin-top: 4rem;
 }
-.form .add, .form .tripleAdd {
+.form .add {
   cursor: pointer;
   display: inline-block;
   color: #4834d4;
 }
-.form .add svg, .form .tripleAdd svg {
+.form .add svg{
   vertical-align: middle;
   margin-right: 1.3rem;
 }
