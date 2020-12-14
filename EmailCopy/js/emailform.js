@@ -1,5 +1,4 @@
 
-
   function linkAction(){
       const activeform = document.querySelectorAll('.main__content__information ul li')
       activeform.forEach(li => li.classList.remove('checked'));
@@ -9,12 +8,7 @@
   navLink.forEach(n => n.addEventListener('click', linkAction));
   
 
-
-
-
-
-
-var form = document.querySelector('.next').style.display ='none';
+  
 
 // EVENTLISTENERS
 document.querySelector('.btn__next').addEventListener('click', showNext);
@@ -23,6 +17,8 @@ document.querySelector('.btn__next__next').addEventListener('click', showNextNex
 document.querySelector('.btn__previous__previous').addEventListener('click', showPreviousPrevious);
 document.querySelector('.btn__next__next_Upper').addEventListener('click', showUpperNextItem);
 document.querySelector('.btn__previous__addMore').addEventListener('click', showBackNextItem);
+
+var form = document.querySelector('.next').style.display ='none';
 
 // SIMPLE IF STATEMENT TO HIDE SOME ELEMENTS
 if (document.querySelector('.next').style.display =='none' && 
@@ -38,30 +34,40 @@ else{
 
 // FUNCTION DECLERATIONS
 
+// SHOWING ACTIVE FORM
+
 // NEXT FUNCTIONS
 function showNext(e){
     document.querySelector('.previous').style.display ='none';
     document.querySelector('.next').style.display ='block';
-    if (document.querySelector('.next').style.display ='block') {
+    // if (document.querySelector('.next').style.display ='block') {
+        document.querySelector('.active__form svg path').classList.add('checked')
         document.querySelector('.next__first').classList.add('checked')
-         document.querySelector('.next__first svg path').style.fill = '#191847';
-         document.querySelector('.checked svg path').style.fill = '#c4c4c4 ';
-    }
-    else {
-        document.querySelector('.next__first').classList.remove('checked')
-        // document.querySelector('.checked').classList.add('checked');
-     document.querySelector('.checked svg path').style.fill = '#c4c4c4 '
-    }
-   
+        //  document.querySelector('.next__first svg path').style.fill = '#191847';
+        var stringData = document.querySelector('ul li svg path');
+stringData.classList.add('checked');
+console.log(stringData)
+    // }
+    // else {
+        // document.querySelector('.next__first').classList.remove('checked')
+        // document.querySelector('.next__first svg path').style.fill = '#c4c4c4 '
+    // }
 
     e.preventDefault();
 
 }
+
+var stringData = document.querySelector('ul li svg path');
+stringData.classList.add('checked');
+console.log(stringData)
+
 function showUpperNextItem(e){
     document.querySelector('.addMore__next__next').style.display ='block';
     document.querySelector('.next__next').style.display = 'none'
     document.querySelector('.final__next').classList.add('checked')
     document.querySelector('.final__next svg path').style.fill = '#191847';
+    document.querySelector('.nextNext svg path').style.fill = '#c4c4c4';
+
     e.preventDefault();
 
 }
@@ -72,9 +78,8 @@ function showNextNext(e){
     document.querySelector('.next__next').style.display = 'block'
     document.querySelector('.nextNext').classList.add('checked')
     document.querySelector('.nextNext svg path').style.fill = '#191847';
-
+    document.querySelector('.next__first svg path').style.fill = '#c4c4c4'
     e.preventDefault();
-
 }
 
 // BACK/PREVIOUS NEXT FUNCTIONS
@@ -82,8 +87,8 @@ function showBackNextItem(e){
     document.querySelector('.addMore__next__next').style.display ='none';
     document.querySelector('.next__next').style.display = 'block'
     document.querySelector('.nextNext').classList.add('checked')
-
-
+    // document.querySelector('.nextNext svg path').style.fill = '#191847';
+    // document.querySelector('.final__next svg path').style.fill = '#c4c4c4';
     e.preventDefault();
 
 }
@@ -93,25 +98,24 @@ function showPreviousPrevious(e){
       document.querySelector('.addMore__next__next').style.display ='none';
     document.querySelector('.next__next').style.display = 'none'
     document.querySelector('.next__first').classList.add('checked')
-    // document.querySelector('.next__first svg path').style.fill = '#c4c4c4 '
-
+    // document.querySelector('.next__first svg path').style.fill = '#191847'
+    // document.querySelector('.nextNext svg path').style.fill = '#c4c4c4';
 
     // console.log('hey');
 
     e.preventDefault();
 
 }
+
 function showBackNext(e){
     document.querySelector('.previous').style.display ='block';
     document.querySelector('.next').style.display ='none';
     if (document.querySelector('.previous').style.display ='block') {
-        document.querySelector('.checked').classList.add('checked');
-        // document.querySelector('ul .next__first svg path').style.fill = '#c4c4c4 '
-
+        document.querySelector('.active__form').classList.add('checked');
+        // document.querySelector('.active__form svg path').style.fill= '#191847';
+        // document.querySelector('.next__first svg path').style.fill = '#c4c4c4 '
     }
-    // console.log('hey');
-    // document.querySelector('.checked svg path').style.fill = '#191847';
-    document.querySelector('.checked .value').style.color = '#191847';
+
     e.preventDefault();
 }
 
@@ -157,6 +161,10 @@ input1.forEach(arr => arr.addEventListener('change', (e)=>{
         update3.textContent --;
         }}))
 
+
+
+// SHOWING COMPLETED INPUT
+
 // FORM FUNCTIONALITIES
 const yourExperience = document.querySelector('#yourExperience');
 const yourTag = document.querySelector('#yourTag');
@@ -164,16 +172,14 @@ const yourName = document.querySelector('#yourName');
 const buzzProInput = document.querySelector('#buzzPro');
 yourExperience.addEventListener("keyup", event => {
     if  (yourName.value.length >=2 && yourTag.value.length >=2 && yourExperience.value.length >=2 && buzzProInput.value.length >=2 ) {
-        document.querySelector('.checked span').style.color = '#35ec81';
         document.querySelector('.checked').style.color = '#35ec81';
+        // document.querySelector('.checked').style.color = '#35ec81';
         document.querySelector('.checked svg path').style.fill = '#35ec81';
-   var next = document.querySelector('.btn__next');
-    next.disabled = false;
-   
+
 }else{
         document.querySelector('.checked span').style.color = '#000000';
-        document.querySelector('.checked svg path').style.fill = '#000000';
-        document.querySelector('.checked .value').style.color = '#000000';
+        document.querySelector('.checked svg path').style.fill = '#35ec81';
+        // document.querySelector('.checked .value').style.color = '#000000';
 
     }
     event.preventDefault();
@@ -188,15 +194,15 @@ const readers = document.querySelector('#readers');
 const bigStruggle = document.querySelector('#bigStruggle');
 readers.addEventListener("keyup", event => {
     if  (nameProduct.value.length >=2 && typeProduct.value.length >=2 && productScarcity.value.length >=2 && bigStruggle.value.length >=2 ) {
-        document.querySelector('.next__first span').style.color = '#35ec81';
-        document.querySelector('.next__first .value').style.color = '#35ec81';
+        document.querySelector('.next__first').style.color = '#35ec81';
+        // document.querySelector('.next__first .value').style.color = '#35ec81';
         document.querySelector('.next__first svg path').style.fill = '#35ec81';
         var btnnextnext =  document.querySelector('.btn__next__next');
         btnnextnext.disabled = false;
     }else{
-        document.querySelector('.next__next span').style.color = '#000000';
+        document.querySelector('.next__next').style.color = '#000000';
         document.querySelector('.next__next svg path').style.fill = '#000000';
-        document.querySelector('.next__next .value').style.color = '#000000';
+        // document.querySelector('.next__next .value').style.color = '#000000';
 
     }
     event.preventDefault();
@@ -206,8 +212,8 @@ readers.addEventListener("keyup", event => {
 const addMoreProducts = document.querySelector('#addMoreProducts');
 addMoreProducts.addEventListener("keyup", event => {
     if  (addMoreProducts.value.length >=2) {
-        document.querySelector('.nextNext span').style.color = '#35ec81';
-        document.querySelector('.nextNext .value').style.color = '#35ec81';
+        document.querySelector('.nextNext').style.color = '#35ec81';
+        // document.querySelector('.nextNext .value').style.color = '#35ec81';
         document.querySelector('.nextNext svg path').style.fill = '#35ec81';
         var btnnextnextUpper =  document.querySelector('.btn__next__next_Upper');
         btnnextnextUpper.disabled = false;
@@ -225,20 +231,15 @@ const addMore1 = document.querySelector('#addMore1');
 const addMore2 = document.querySelector('#addMore2');
 addMore2.addEventListener("keyup", event => {
     if  (addMore1.value.length >=2 && addMore2.value.length >=2) {
-        document.querySelector('.final__next span').style.color = '#35ec81';
-        document.querySelector('.final__next .value').style.color = '#35ec81';
+        document.querySelector('.final__next').style.color = '#35ec81';
+        // document.querySelector('.final__next .value').style.color = '#35ec81';
         document.querySelector('.final__next svg path').style.fill = '#35ec81';
-        // console.log(buzzProInput.value);
-
-        // return buzzProInput.value
-      
+       
     }else{
-        document.querySelector('.final__next span').style.color = '#000000';
+        document.querySelector('.final__next').style.color = '#000000';
         document.querySelector('.final__next svg path').style.fill = '#000000';
-        document.querySelector('.final__next .value').style.color = '#000000';
+        // document.querySelector('.final__next .value').style.color = '#000000';
 
     };
-    // do something
-    // event.preventDefault();
-}
-)
+    event.preventDefault();
+})
