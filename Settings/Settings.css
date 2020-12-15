@@ -1,0 +1,299 @@
+.none{
+    display: none;
+}
+
+.generate p{
+    margin-top: 1rem;
+}
+
+.main__content{
+    margin: 2rem 2rem 2rem 3rem;
+    width: 100%;
+}
+
+.settings{
+    display: flex;
+}
+
+.settings button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0 1.5rem;
+    height: 40px;
+    text-align: center;
+    font-size: .875rem;
+    line-height: 24px;
+    border-radius: 8px;
+}
+
+.settings__links{
+    min-width: 268px;
+    border: 1px solid #efefef;
+    border-radius: 4px;
+    padding: 2rem 0;
+    color: #c4c4c4;
+}
+
+.settings__links ul li{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+}
+
+.settings__links ul li svg{
+    margin-right: .875rem;
+}
+
+.settings__links ul li:hover,
+.settings__links li.active {
+    cursor: pointer;
+    color: var(--primary-blue);
+}
+
+.settings__links ul li:hover svg path,
+.settings__links li.active svg path{
+    fill: var(--primary-blue);
+}
+
+.settings__links ul .upgrade:hover svg path,
+.settings__links ul .upgrade.active svg path{
+    stroke: var(--primary-blue);
+    fill: none;
+}
+
+.settings__pages{
+    border: 1px solid #efefef;
+    border-radius: 4px;
+    margin-left: .25rem;
+    width: 100%;
+}
+
+.settings__pages .account{
+    padding: 3rem;
+}
+
+.account .title{
+    font-size: 1.125rem;
+    color: var(--dark-text-color);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.account .profile__photo{
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.profile__photo img{
+    width: 112px;
+    height: 112px;
+}
+
+.profile__photo .normal,
+.normal{
+    margin-left: 2rem;
+    background: var(--voog-blue);
+    color: var(--white);
+}
+
+.profile__photo .inverse{
+    margin-left: 1.25rem;
+    background:rgba(72, 52, 212, 0.1);
+    color: var(--purple);
+}
+
+.settings form{
+    width: 100%;
+}
+
+.settings form .inputs{
+    width: 1005;
+    display: grid;
+    column-gap: 1rem;
+    row-gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(296px, 1fr));
+}
+
+form .inputs div{
+    display: flex;
+    flex-direction: column;
+    width: 296px;
+}
+
+form .inputs div label{
+    color: var(--primary-blue);
+    font-weight: 400;
+}
+
+form .inputs div input{
+    width: 100%;
+    height: 48px;
+    border: none;
+    outline: none;
+    border: 1px solid #efefef;
+    border-radius: 4px;
+    padding: 1rem;
+    font-size: .875rem;
+    color: #8d9091;
+    margin-top: 1rem;
+}
+
+form .inputs div input::placeholder{
+    font-size: .875rem;
+    color: #8d9091;
+}
+
+.settings .save{
+    margin-left: 0;
+    margin-top: 4rem;
+}
+
+
+.settings__pages .notifications{
+    padding-top: 3rem;
+}
+
+.notifications .title__top{
+    padding: 0 3rem;
+    padding-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.notifications .title__top > p{
+    color: var(--dark-text-color);
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.notifications .title__top .DND{
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: var(--voog-blue);
+    font-weight: 600;
+}
+
+/* Togggle DND */
+
+.custom--checkbox {
+    margin-left: 1rem;
+}
+
+.custom--checkbox input{
+    display: none;
+}
+
+.custom--checkbox .toggle {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 20px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transform: translate3d(0, 0, 0);
+}
+
+.custom--checkbox .toggle:before {
+  content: "";
+  position: relative;
+  top: 4px;
+  left: 3px;
+  width: 40px;
+  height: 17px;
+  display: block;
+  background: rgba(34, 31, 31, 0.26);
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.custom--checkbox .toggle span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  display: block;
+  border-radius: 50%;
+  background: #f1f1f1;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.2s ease;
+}
+
+.custom--checkbox .toggle span:before {
+  content: "";
+  position: absolute;
+  display: block;
+  margin: -18px;
+  width: 56px;
+  height: 56px;
+  background: rgba(68, 61, 246, 0.1);
+  border-radius: 50%;
+  transform: scale(0);
+  opacity: 1;
+  pointer-events: none;
+}
+
+.custom--checkbox #toggle:checked + .toggle:before{
+  background: rgba(68, 61, 246, 0.1);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12);
+}
+
+.custom--checkbox #toggle:checked + .toggle span{
+  background: var(--voog-blue);
+  transform: translateX(20px);
+  transition: all 0.2s cubic-bezier(0.8, 0.4, 0.3, 1.25), background 0.15s ease;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.24), 0px 0px 2px rgba(0, 0, 0, 0.12);
+}
+
+.custom--checkbox #toggle:checked + .toggle span:before{
+  transform: scale(1);
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+  
+
+/* Toggle DND End */
+
+.notification,
+.mark__all__read{
+    display: flex;
+    padding: 1.5rem;
+    border-top: 1px solid #efefef;
+    cursor: pointer;
+}
+
+.notification.unread{
+    background: rgba(72, 52, 212, 0.1);
+    border-color: #dcdcdc;
+}
+
+.notification .dot{
+    margin-top: .5rem;
+    width: 8px;
+    height: 8px;
+    background: var(--purple);
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.notification__details p:first-child{
+    color: var(--dark-text-color);
+}
+
+.notification__details .ago{
+    align-self: center;
+    color: #c4c4c4;
+    margin-top: .5rem;
+}
+
+.mark__all__read p{
+    color: var(--dark-text-color);
+    font-weight: 600;
+    cursor: pointer;
+}
