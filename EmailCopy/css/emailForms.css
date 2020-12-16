@@ -27,7 +27,19 @@ a {
     color: #4834d4;
     background: rgba(68, 61, 246, 0.2);
   }
-  
+  .btn-generate{
+    color: #ffffff;
+    background: #443df6;
+    border-radius: 8px;
+    padding: 8px 10px;
+    display: inline-block;
+    text-align: center;
+    min-width: 5rem;
+    margin-right: 1rem;
+    border: none;
+    line-height: 24px;
+    cursor: pointer;
+  }
   .cards {
     border: 1px solid #efefef;
     margin: -2rem;
