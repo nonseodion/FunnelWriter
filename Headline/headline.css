@@ -7,11 +7,11 @@
     border: 1px solid #EFEFEF;
     border-radius: 4px;
     margin-top: 23px;
-    width: 1090px;
+    width: 1040px;
 }
 
 .headline-navigation {
-    width: 1090px;
+    width: 100%;
     height: 58px;
     background: #e5e9f540
 }
@@ -28,9 +28,9 @@
     color: var(--light-purple);
 }
 
-.headline-links li a:active {
+.headline-links li .active-link, .headline-links li a:hover {
     color: var(--purple);
-    border-bottom: 2px solid;
+    border-bottom: 2px solid var(--purple);
 }
 
 /* Headline Main Content */
@@ -40,7 +40,7 @@
 
 /* Left Hand Side */
 .left-main-content {
-    width: 70%;
+    width: 75%;
     padding: 38px;
     border-right: 1px solid rgba(141, 144, 145, 0.2);
 }
@@ -69,7 +69,7 @@
     cursor: pointer;
 }
 
-.left-main-content .generate-button {
+/* .left-main-content .generate-button {
     background-color: var(--purple);
     color: var(--light-purple);
     margin: 66px 0px 0px 250px;
@@ -80,7 +80,7 @@
     cursor: pointer;
     outline: none;
     border: none;
-}
+} */
 
 /* Right Hand side */
 .right-main-content {
@@ -89,7 +89,10 @@
 }
 
 .right-main-content .background-image {
-    margin-top: 292px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 200px;
 }
 
 /* Headline Page Two */
@@ -106,7 +109,8 @@
     font-size: 16px;
     margin-top: 32px;
     display: block;
-    margin-left: 380px;
+    margin-left: 350px;
+    cursor: pointer;
 }
 
 .right-content {
@@ -123,11 +127,16 @@
 
 .writer img {
     margin-bottom: -14px;
+    cursor: pointer;
 }
 
 .right-content .writer .output {
     display: flex;
     justify-content: space-between;
+}
+
+.output .copy-image {
+    outline-color: var(--purple);
 }
 
 .right-content .writer p {
@@ -136,7 +145,6 @@
     opacity: 0.5;
 }
 
-
-
-/* Headline Page Three */
-/* Right Hand Side of Page Two */
+/* .right-main-content .right-content .checked {
+    opacity: 0;
+} */
