@@ -21,6 +21,7 @@
 .funnel__header__top .title__left{
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 .title__left .title{
@@ -257,7 +258,8 @@
   }
 }
 
-.funnel__top .options{
+.funnel__top .options,
+.title__left .options{
     position: absolute;
     background: var(--white);
     max-width: 184px;
@@ -269,6 +271,12 @@
     z-index: 10;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.05), 0px 25px 35px rgba(0, 0, 0, 0.03);
     border-radius: 4px;
+}
+
+.title__left .options{
+    right: 0;
+    top: 1rem;
+    min-width: 184px;
 }
 
 .options.none{
