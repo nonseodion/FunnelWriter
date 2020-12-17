@@ -243,7 +243,7 @@
               </li>
             </ul>
             
-            <form class="questions" id="short">
+           <form class="questions" id="short">
               <div id="product">
                 <ul>
                   <li class="question" id="q4">
@@ -260,7 +260,7 @@
                     <label class="label">Unique selling point of your product</label>
                     <div class="example">"using a proven framework</div>
                     <input type="text">
-                  </li>
+                   </li>
                   <li class="question" id="q10">
                     <label class="label">What is the name of your product?</label>
                     <div class="example">(Ex: Daily info Product Sales System)</div>
@@ -361,6 +361,7 @@
           const inputNode = parent.querySelector("input[type=text]").cloneNode();
           inputNode.value = "";
           parent.insertBefore(inputNode, this);
+          setStatuses();
         }
     
         function storeInputs() {

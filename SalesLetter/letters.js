@@ -54,8 +54,6 @@ function clearInputs() {
   })
 }
 
-
-
 window.onload = () => {
   active = document.querySelector(".questions>div");
   statuses[0].parentNode.classList.add("active");

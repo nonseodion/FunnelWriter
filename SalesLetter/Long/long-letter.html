@@ -490,6 +490,7 @@
       const inputNode = parent.querySelector("input[type=text]").cloneNode();
       inputNode.value = "";
       parent.insertBefore(inputNode, this);
+      setStatuses();
     }
 
     function storeInputs() {
