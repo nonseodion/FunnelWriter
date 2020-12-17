@@ -1,12 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
-.main__content {
-    position: absolute;
-    width: 75%;
-    top: 300px;
-    right: 0px;
-    /* z-index: -1; */
+button, a{
+    cursor: pointer;
 }
+
+.hide{
+    display: none !important;
+}
+
+.main__content>div{
+    padding: 2rem;
+}
+
+
 .widget {
     display: flex;
     justify-content: space-around;
@@ -61,9 +66,24 @@
     background: #4834D4;
     border-radius: 12px;
 }
-.circle, .strength {
+
+.strength {
     padding: 0px 10px;
 }
+
+.circle{
+    width: 4rem;
+    transform: rotate(-90deg);
+}
+.circle text{
+    transform: rotate(90deg);
+    transform-origin: center;
+}
+.superscript{
+    font-size: 7px;
+    transform: translateY(-2px);
+}
+
 .strength p {
     font-family: "Poppins" sans-serif;
     font-size: 16px;
@@ -74,7 +94,8 @@
     text-align: left;
     color: #ffffff;
 }
-.green {
+text{ fill: white;}
+.strength-text {
     font-family: "Poppins" Sans;
     font-size: 14px;
     font-style: normal;
@@ -82,16 +103,24 @@
     line-height: 20px;
     letter-spacing: 0.4399999976158142px;
     text-align: left;
-    color: #5EFF5A;
 }
+
+
+.strength-text .excellent{ color: #5EFF5A; }
+.strength-text .weak{ color: #F2C94C }
+.strength-text .empty{ color: white}
+.strength-text .poor{ color: #FF5C00}
+
+.base, .base-container{
+    margin-top: 2rem;
+    display: grid;
+    border: 1px solid #efefef;
+}
+.base{ grid-template-columns: 40% 60%; }
+
 .left {
-    height: 727px;
-    width: 379px;
     background: #FBFBFB;
     border-radius: 4px;
-    position: absolute;
-    top: 170px;
-    /* float: left; */
 }
 .left table td {
     padding: 15px;
@@ -99,14 +128,48 @@
 .left table td img {
     padding: 0px 10px;
 }
+.titles {
+    background: #FBFBFB;
+    border-radius: 4px;
+    padding: 2rem 1rem;
+    max-height: 120vh;
+  }
+  .titles li {
+    display: flex;
+    justify-content: space-between;
+    color: #C4C4C4;
+    margin: 2rem 0;
+    max-height: 100vh;
+  }
+  .titles li svg {
+    vertical-align: middle;
+  }
+  .titles li path {
+    stroke: #C4C4C4;
+  }
+  .titles li.active {
+    color: #191847;
+  }
+  .titles li.active path {
+    stroke: #191847;
+  }
+  .titles li.filled {
+    color: #35EC81;
+  }
+  .titles li.filled path {
+    stroke: #35EC81;
+  }
+  li.filled{
+    color: #35EC81;
+}
+li.filled path{
+    stroke: #35EC81;
+}
+
+
+
 .right {
-    position: absolute;
-    width: 661px;
-    height: 920px;
-    right: 0px;
-    top: 170px;
-    background: white;
-    padding: 50px;
+    padding: 2rem;
 }
 .right form label {
     font-family: "Poppins" sans-serif;
@@ -147,7 +210,7 @@
 }
 .next-cancel-btn {
     display: flex;
-    margin-top: 30px;
+    margin-top: 3rem;
 }
 .next-btn {
     font-family: Poppins;
@@ -163,9 +226,11 @@
     width: 80px;
     border-radius: 8px;
     margin-right: 30px;
-    outline: none;
+    border: none;
+    cursor: pointer;
 }
 .cancel-btn {
+    cursor: pointer;
     font-family: Poppins;
     font-style: normal;
     font-weight: normal;
@@ -178,7 +243,10 @@
     border-radius: 8px;
     height: 40px;
     width: 88px;
-    outline: none;
+    border: none;
+}
+.cancel-btn{
+    background: #e3e3e3;
 }
 .right #form-2 #label-1 {
     width: 422px;
@@ -192,12 +260,19 @@
     text-align: left;
     margin: 30px 0px;
 } 
+
 fieldset {
-    margin: 20px 0px;
-   padding: 0px;
+    margin: 20px 0px 0;
+    padding: 0 0.5rem;
    border: 1px solid #EFEFEF;
-   width: 512px;
    border-radius: 4px;
+   display: flex;
+   justify-content: space-between;
+   cursor: pointer;
+}
+fieldset svg{
+    align-self: center;
+    height: 2.5rem;
 }
 legend {
     font-family: "Poppins" sans-serif;
@@ -205,14 +280,14 @@ legend {
     font-weight: 600;
     font-size: 12px;
     line-height: 16px;
+    
 }
-#select-offer {
-    width: 512px;
-    height: 40px;
-    border: none; 
-    background: transparent;
-    outline: none;
+.choose{
+    display: inline-block;
+    vertical-align: center;
+    align-self: center;
 }
+
 #offer-label {
     font-family: Avenir;
     font-style: normal;
@@ -242,39 +317,36 @@ legend {
     font-size: 14px;
     line-height: 19px;
     color: #FF725E;
-    position: absolute;
-    right: 100px;
-    bottom: 535px;
 }
-.add-bonus {
-    display: flex;
-    padding: 30px 0px;
+
+.bonus-value-table{
+    margin: 0 3rem 10rem;
 }
-.add-bonus .add-bonus-btn {
-    width: 24px;
-    height: 24px;
-    border: 1px solid #4834D4;
-    box-sizing: border-box;
-    border-radius: 5px;
-    color:  #4834D4;
-    margin-right: 50px;
+.bonus-heading{
+    margin-bottom: 2rem;
 }
-.add-bonus .add-bonus-text {
-    font-family: "Poppins" sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 24px;
-    color: #4834D4;    
+
+.add-btn{
+    margin-top: 2rem;
+    cursor: pointer;
+    background-color: white;
+    border: none;
+    color: rgba(72, 52, 212, 1);
 }
+.add-btn:hover{ background-color: none;}
+.add-btn svg{
+    vertical-align: middle;
+}
+
 .btn-btn {
     border: 1px solid #efefef;
-    width: 512px;
-    height: 495px;
-    margin: 8px 0px;
+    display: none;
+    position: absolute;
+    background-color: white;
 }
 .btn {
     font-family: "Poppins" sans-serif;
+    background-color: white;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -287,6 +359,11 @@ legend {
     border: none;
     outline: none;
 }
+
+.btn.active{
+    background-color:rgba(72, 52, 212, 0.1);
+    cursor: pointer;
+}
 #remove-4 {
     font-family: Avenir;
     font-style: normal;
@@ -294,21 +371,15 @@ legend {
     font-size: 14px;
     line-height: 19px;
     color: #FF725E;
-    position: absolute;
-    right: 100px;
-    bottom: 680px;
 }
-.base-container {
-    position: absolute;
-    top: 170px;
-    height: 1845px;
-    width: 966px;   
-    border-radius: 4px;
+
+.offer-5-btn{
+    display: flex;
+    padding: 2rem;
+    justify-content: end;
 }
-.offer-5-btn {
-    position: absolute;
-    right: 32px;
-    top: 32px;
+.offer-5-btn button{
+    border: none;
 }
 .offer-5-btn-1 {
     height: 40px;
@@ -323,12 +394,9 @@ legend {
     border-radius: 8px;
     color: #443DF6;
     margin: 0px 10px;
+    background: rgba(68, 61, 246, 0.2);
 }
 .base-header {
-    position: absolute;
-    height: 64px;
-    width: 966px;
-    top: 93px;
     border-radius: 0px;
     background: linear-gradient(0deg, rgba(68, 61, 246, 0.1), rgba(68, 61, 246, 0.1)), #FFFFFF;
     text-align: center;
@@ -340,13 +408,7 @@ legend {
     line-height: 24px;
     color: #1B2124;
 }
-.problem-set {
-    width: 771px;
-    height: 640px;
-    position: absolute;
-    top: 200px;
-    left: 48px;
-}
+
 .prob-1 {
     width: 771px;
     height: 160px;
@@ -385,17 +447,9 @@ legend {
     font-size: 14px;
     line-height: 20px;
 }
-.offer-value-table {
-    width: 923px;
-    height: 392px;
-    position: absolute;
-    top: 930px;
-}
-.bonus-value-table {
- width: 923px;
- height: 300px;
- position: absolute;
- top: 1262px;   
+
+.offer-value-table{
+    margin: 4rem 3rem 8rem;
 }
 .offer-value-table h3 {
     font-family: Poppins;
@@ -417,6 +471,7 @@ table {
 }
 table th {
     color: #8D9091;
+    background-color: white;
 }
 th, td {
     text-align: center;
@@ -428,8 +483,12 @@ th, td {
     line-height: 24px;
     color: #000000;
   }
-tr:nth-child(even) {
-    background-color: #f2f2f2;
+
+tr{
+    border-bottom: 1px solid rgba(239, 239, 239, 1);
+}
+tr:nth-child(2n+1) {
+    background: #FBFBFB;
 }
 .go-back-btn {
     font-family: "Poppins" sans-serif;
@@ -442,8 +501,201 @@ tr:nth-child(even) {
     outline: none;
     border: none;
     padding: 10px 8px;
-    position: absolute;
-    bottom: 140px;
+    transform: translateY(8rem);
+    background: rgba(68, 61, 246, 0.2);
 } 
 
+.dropdown{
+    position: relative;
+}
+.dropdown.active .arrow{
+    transform: rotate(180deg);
+}
+.dropdown.active + .btn-btn{ display: block;}
+.questions{display: none}
+.questions.active{
+    display: block;
+}
+
+.question{
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+.question textarea{
+    width: 80%;
+    height: 9rem;
+    border: 1px solid #EFEFEF;
+    padding: 1rem;
+    font-size: 14px;
+}
+.question input{
+    border: 1px solid #EFEFEF;
+    padding: 1rem;
+}
+
+
+.offer, 
+.bonus{
+    border-bottom: 1px solid #efefef;
+}
+.offer::before,
+.bonus::before,
+.offer::after,
+.bonus::after{
+    content: "";
+    display: block ;
+    clear: both;
+}
+.offer__label{
+    font-size: 12px;
+    margin-top: 0.5rem;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid #efefef;
+}
+.offer__body{
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+.offer__title{
+    width: 70%;
+}
+.offer__price{
+    width: 30%;
+}
+.offer label
+.bonus label{
+    display: block;
+    margin: 1rem 0;
+}
+.offer input,
+bonus input{
+    padding: 0.8rem;
+    background-color: #ffffff;
+    border: 1px solid #efefef;
+    width: 80%;
+}
+.offer__remove, .bonus__remove{
+    float: right;
+    border: none;
+    background-color: #ffffff;
+    color: rgba(255, 114, 94, 1);
+    padding: 1rem 0;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.base-container{
+    padding: 1.3rem 0;
+    margin-bottom: 10rem;
+}
+
+
+.custom-checkbox input{
+    display: none;
+}
   
+.custom-checkbox .checkboxx {
+    margin: auto;
+    user-select: none;
+    cursor: pointer;
+}
+  
+.custom-checkbox .checkboxx span {
+  display: inline-block;
+  vertical-align: middle;
+  transform: translate3d(0, 0, 0);
+}
+
+.custom-checkbox .checkboxx span:first-child {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  border-radius: 3px;
+  transform: scale(1);
+  vertical-align: middle;
+  background: var(--white);
+  border: 1px solid #cccccc;
+  transition: all 0.2s ease;
+}
+
+.custom-checkbox .checkboxx span:first-child svg {
+  position: absolute;
+  top: 6.7px;
+  left: 5.25px;
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 3px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 24px;
+  stroke-dashoffset: 16px;
+  transition: all 0.3s ease;
+  transition-delay: 0.1s;
+  transform: translate3d(0, 0, 0);
+}
+
+.custom-checkbox .checkboxx span:first-child:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: var(--purple);
+  display: block;
+  transform: scale(0);
+  opacity: 1;
+  border-radius: 50%;
+}
+
+.custom-checkbox .checkboxx span:first-child {
+  border-color: #cccccc;
+}
+
+.custom-checkbox .checkboxx span:last-child {
+  padding-left: 8px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  color: #000000;
+}
+
+.custom-checkbox .inp-checkboxx:checked + .checkboxx span:first-child {
+  background: var(--purple);
+  border-color: var(--purple);
+  animation: wave 0.4s ease;
+}
+
+.custom-checkbox .inp-checkboxx:checked + .checkboxx span:first-child svg {
+  stroke-dashoffset: 0;
+}
+
+.custom-checkbox .inp-checkboxx:checked + .checkboxx span:first-child:before {
+  transform: scale(1.2);
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+
+@keyframes wave {
+  50% {
+    transform: scale(0.9);
+  }
+}
+
+.left__check{
+    width: 6rem;
+    text-align: center;
+    transform: translateY(1.7rem);
+}
+
