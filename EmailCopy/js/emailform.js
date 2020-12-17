@@ -1,244 +1,96 @@
+const addInputs = document.querySelectorAll(".form .add");
+addInputs.forEach(addInput => addInput.addEventListener("click", insertInput));
+const formNavs = document.querySelectorAll(".form-nav");
+const nextbtns = document.querySelectorAll(".btn-blue");
+nextbtns.forEach(nextbtn => nextbtn.addEventListener("click", navigate));
+formNavs.forEach(formNav => formNav.addEventListener("click", navigate));
+let active;
+const statuses = [...document.querySelectorAll(".status")];
+const questions = [...document.querySelectorAll(".questions>div")];
 
 
-  function linkAction(){
-      const activeform = document.querySelectorAll('.main__content__information ul li')
-      activeform.forEach(li => li.classList.remove('checked'));
-    this.classList.add('checked');
-  }
-  const navLink = document.querySelectorAll('.btn');   
-  navLink.forEach(n => n.addEventListener('click', linkAction));
+function insertInput (e){
+  const parent = this.parentNode;
+  const inputNode = parent.querySelector("input[type=text]").cloneNode();
+  inputNode.value = "";
+  parent.insertBefore(inputNode, this);
+}
+
+function navigate(e){
+  e.preventDefault();
+  active.classList.remove("active");
+  statuses[questions.indexOf(active)].parentNode.classList.remove("active");
+
+  active = document.querySelector(`${this.hash}`);
+  active.classList.add("active");
+  if(this.hash === "#summary") return;
+  statuses[questions.indexOf(active)].parentNode.classList.add("active");
+}
+
+function setStatuses(e){
+  questions.forEach( (question, index) =>{
+    const inputs = question.querySelectorAll("input[type=text]:first-of-type");
+    statuses[index].textContent = `0/${inputs.length}`;
+    inputs.forEach(input => {
+      input.addEventListener("input", (e) => {
+        updateStatus(e, index);
+      });
+    });
+  }); 
+}
+
+function updateStatus(e, parentIndex){
+  const question = questions[parentIndex];
+  const inputs = question.querySelectorAll("input[type=text]");
+  const total = inputs.length;
+  let filled = [...inputs].reduce((total, input) => {
+    return total + +(input.value.trim() !== "");
+  }, 0);
+  statuses[parentIndex].textContent = `${filled}/${total}`;
   
-
-
-
-
-
-
-var form = document.querySelector('.next').style.display ='none';
-
-// EVENTLISTENERS
-document.querySelector('.btn__next').addEventListener('click', showNext);
-document.querySelector('.btn__previous').addEventListener('click', showBackNext);
-document.querySelector('.btn__next__next').addEventListener('click', showNextNext);
-document.querySelector('.btn__previous__previous').addEventListener('click', showPreviousPrevious);
-document.querySelector('.btn__next__next_Upper').addEventListener('click', showUpperNextItem);
-document.querySelector('.btn__previous__addMore').addEventListener('click', showBackNextItem);
-
-// SIMPLE IF STATEMENT TO HIDE SOME ELEMENTS
-if (document.querySelector('.next').style.display =='none' && 
-    document.querySelector('.previous').style.display =='none') 
-    {
-    document.querySelector('.next__next').style.display = 'none'
-    }
-else{
-    document.querySelector('.next__next').style.display = 'none'
-    document.querySelector('.addMore__next__next').style.display = 'none'
-}
-    document.querySelector('.next__next').style.display = 'none'
-
-// FUNCTION DECLERATIONS
-
-// NEXT FUNCTIONS
-function showNext(e){
-    document.querySelector('.previous').style.display ='none';
-    document.querySelector('.next').style.display ='block';
-    if (document.querySelector('.next').style.display ='block') {
-        document.querySelector('.next__first').classList.add('checked')
-         document.querySelector('.next__first svg path').style.fill = '#191847';
-         document.querySelector('.checked svg path').style.fill = '#c4c4c4 ';
-    }
-    else {
-        document.querySelector('.next__first').classList.remove('checked')
-        // document.querySelector('.checked').classList.add('checked');
-     document.querySelector('.checked svg path').style.fill = '#c4c4c4 '
-    }
-   
-
-    e.preventDefault();
-
-}
-function showUpperNextItem(e){
-    document.querySelector('.addMore__next__next').style.display ='block';
-    document.querySelector('.next__next').style.display = 'none'
-    document.querySelector('.final__next').classList.add('checked')
-    document.querySelector('.final__next svg path').style.fill = '#191847';
-    e.preventDefault();
-
-}
-function showNextNext(e){
-    document.querySelector('.previous').style.display ='none';
-    document.querySelector('.next').style.display ='none';
-    document.querySelector('.addMore__next__next').style.display ='none';
-    document.querySelector('.next__next').style.display = 'block'
-    document.querySelector('.nextNext').classList.add('checked')
-    document.querySelector('.nextNext svg path').style.fill = '#191847';
-
-    e.preventDefault();
-
+  if(filled === total) {statuses[parentIndex].parentNode.classList.add("filled");}
+  else {statuses[parentIndex].parentNode.classList.remove("filled");}
 }
 
-// BACK/PREVIOUS NEXT FUNCTIONS
-function showBackNextItem(e){
-    document.querySelector('.addMore__next__next').style.display ='none';
-    document.querySelector('.next__next').style.display = 'block'
-    document.querySelector('.nextNext').classList.add('checked')
-
-
-    e.preventDefault();
-
-}
-function showPreviousPrevious(e){
-    document.querySelector('.previous').style.display ='none';
-    document.querySelector('.next').style.display ='block';
-      document.querySelector('.addMore__next__next').style.display ='none';
-    document.querySelector('.next__next').style.display = 'none'
-    document.querySelector('.next__first').classList.add('checked')
-    // document.querySelector('.next__first svg path').style.fill = '#c4c4c4 '
-
-
-    // console.log('hey');
-
-    e.preventDefault();
-
-}
-function showBackNext(e){
-    document.querySelector('.previous').style.display ='block';
-    document.querySelector('.next').style.display ='none';
-    if (document.querySelector('.previous').style.display ='block') {
-        document.querySelector('.checked').classList.add('checked');
-        // document.querySelector('ul .next__first svg path').style.fill = '#c4c4c4 '
-
-    }
-    // console.log('hey');
-    // document.querySelector('.checked svg path').style.fill = '#191847';
-    document.querySelector('.checked .value').style.color = '#191847';
-    e.preventDefault();
+function clearInputs() {
+  let inputs = document.querySelectorAll("input");
+  inputs.forEach(input => {
+    input.value = "";
+  })
 }
 
-var myInput = parent.document.querySelectorAll('.active input');
-var update = document.querySelector('.checked .value');
-let input = Array.from(myInput);
-input.forEach(arr => arr.addEventListener('change', (e)=>{
-    if (e.target.value.length >0 && e.target.matches(".active input")) {
-    update.textContent ++ + '' + arr.length;
-}else{
-    update.textContent --;
-
-}}))
-
-var myInput1 = document.querySelectorAll('.next input');
-var update1 = document.querySelector('.next__first .value');
-let input1 = Array.from(myInput1);
-input1.forEach(arr => arr.addEventListener('change', (e)=>{
-    if (e.target.value.length >0 && e.target.matches(".next input")) {
-    update1.textContent ++ + '' + arr.length;
-    }else{
-    update1.textContent --;
-    }}))
-
-    var myInput2 = document.querySelectorAll('.next__next input');
-    var update2 = document.querySelector('.nextNext .value');
-    let input2 = Array.from(myInput2);
-    input2.forEach(arr => arr.addEventListener('change', (e)=>{
-        if (e.target.value.length >0 && e.target.matches(".next__next input")) {
-        update2.textContent ++;
-        }else{
-        update2.textContent --;
-        }}))
-
-
-    var myInput3 = document.querySelectorAll('.addMore__next__next input');
-    var update3 = document.querySelector('.final__next .value');
-    let input3 = Array.from(myInput3);
-    input3.forEach(arr => arr.addEventListener('change', (e)=>{
-        if (e.target.value.length >0 && e.target.matches(".addMore__next__next input")) {
-        update3.textContent ++;
-        }else{
-        update3.textContent --;
-        }}))
-
-// FORM FUNCTIONALITIES
-const yourExperience = document.querySelector('#yourExperience');
-const yourTag = document.querySelector('#yourTag');
-const yourName = document.querySelector('#yourName');
-const buzzProInput = document.querySelector('#buzzPro');
-yourExperience.addEventListener("keyup", event => {
-    if  (yourName.value.length >=2 && yourTag.value.length >=2 && yourExperience.value.length >=2 && buzzProInput.value.length >=2 ) {
-        document.querySelector('.checked span').style.color = '#35ec81';
-        document.querySelector('.checked').style.color = '#35ec81';
-        document.querySelector('.checked svg path').style.fill = '#35ec81';
-   var next = document.querySelector('.btn__next');
-    next.disabled = false;
-   
-}else{
-        document.querySelector('.checked span').style.color = '#000000';
-        document.querySelector('.checked svg path').style.fill = '#000000';
-        document.querySelector('.checked .value').style.color = '#000000';
-
-    }
-    event.preventDefault();
-
-});
-
-const nameProduct = document.querySelector('#nameProduct');
-const typeProduct = document.querySelector('#typeProduct');
-const productScarcity = document.querySelector('#productScarcity');
-const endResult = document.querySelector('#endResult');
-const readers = document.querySelector('#readers');
-const bigStruggle = document.querySelector('#bigStruggle');
-readers.addEventListener("keyup", event => {
-    if  (nameProduct.value.length >=2 && typeProduct.value.length >=2 && productScarcity.value.length >=2 && bigStruggle.value.length >=2 ) {
-        document.querySelector('.next__first span').style.color = '#35ec81';
-        document.querySelector('.next__first .value').style.color = '#35ec81';
-        document.querySelector('.next__first svg path').style.fill = '#35ec81';
-        var btnnextnext =  document.querySelector('.btn__next__next');
-        btnnextnext.disabled = false;
-    }else{
-        document.querySelector('.next__next span').style.color = '#000000';
-        document.querySelector('.next__next svg path').style.fill = '#000000';
-        document.querySelector('.next__next .value').style.color = '#000000';
-
-    }
-    event.preventDefault();
-
-});
-
-const addMoreProducts = document.querySelector('#addMoreProducts');
-addMoreProducts.addEventListener("keyup", event => {
-    if  (addMoreProducts.value.length >=2) {
-        document.querySelector('.nextNext span').style.color = '#35ec81';
-        document.querySelector('.nextNext .value').style.color = '#35ec81';
-        document.querySelector('.nextNext svg path').style.fill = '#35ec81';
-        var btnnextnextUpper =  document.querySelector('.btn__next__next_Upper');
-        btnnextnextUpper.disabled = false;
-      
-    }else{
-        document.querySelector('.nextNext span').style.color = '#000000';
-        document.querySelector('.nextNext svg path').style.fill = '#000000';
-        document.querySelector('.nextNext .value').style.color = '#000000';
-
-    }
-    event.preventDefault();
-
-});
-const addMore1 = document.querySelector('#addMore1');
-const addMore2 = document.querySelector('#addMore2');
-addMore2.addEventListener("keyup", event => {
-    if  (addMore1.value.length >=2 && addMore2.value.length >=2) {
-        document.querySelector('.final__next span').style.color = '#35ec81';
-        document.querySelector('.final__next .value').style.color = '#35ec81';
-        document.querySelector('.final__next svg path').style.fill = '#35ec81';
-        // console.log(buzzProInput.value);
-
-        // return buzzProInput.value
-      
-    }else{
-        document.querySelector('.final__next span').style.color = '#000000';
-        document.querySelector('.final__next svg path').style.fill = '#000000';
-        document.querySelector('.final__next .value').style.color = '#000000';
-
-    };
-    // do something
-    // event.preventDefault();
+function storeInputs() {
+  try{
+    const listItems = document.querySelectorAll("form li");
+    const form = Object.create(null);
+    listItems.forEach(listItem => {
+      const inputs = [...listItem.querySelectorAll("input[type=text]")];
+      if(inputs.length === 1){ 
+        form[`${listItem.id}`] = inputs[0].value 
+      }
+      else{
+        debugger;
+        form[`${listItem.id}`] = inputs.map(input => input.value);
+      }
+    })
+    
+    window.sessionStorage.setItem(
+      document.querySelector("form.questions").id,
+      JSON.stringify(form));
+  }
+  catch(err){
+    console.error(err);
+  }
 }
-)
+
+window.onload = () => {
+  active = document.querySelector(".questions>div");
+  statuses[0].parentNode.classList.add("active");
+  active.classList.add("active");
+  setStatuses();
+  clearInputs();
+}
+
+window.onpopstate = clearInputs;
+
+window.onunload = storeInputs;
