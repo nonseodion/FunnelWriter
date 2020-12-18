@@ -1,6 +1,7 @@
 const funnelLinks = document.querySelectorAll('.navigation ul li');
 const funnels = document.querySelectorAll('.funnel');
 const generalOptions = document.querySelector('.title__left .toggle__option__menu')
+const normalRow = document.querySelectorAll('.normal__row');
 const body = document.querySelector('body');
 
 // Add active links
@@ -18,7 +19,6 @@ const funnelLinkActive = (id) => {
 
 // CheckAll for funnels and nested elements
 const checkAll = (funnel, evt) => {
-    console.log(evt.target.tagName);
     let funnelOptions = funnel.querySelector('.funnel__top .options');
     // Check all
     if(evt.target.classList.contains('check-all')){
@@ -43,6 +43,12 @@ const checkAll = (funnel, evt) => {
     } else {
         !funnelOptions.classList.contains('none') ? funnelOptions.classList.add('none') : null;
     }
+
+    [...normalRow].forEach(row => {
+        if(row.querySelector('input') && row.querySelector('input').checked === true){
+            row.querySelector('.funnel__row__text').classList.toggle('strike');
+        }
+    })
 }
 
 // Event listeners for generalOptions

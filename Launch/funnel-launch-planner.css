@@ -158,6 +158,10 @@
     font-weight: 500;
 }
 
+.funnel__row .funnel__row__text.strike{
+    text-decoration: line-through;
+}
+
 .nested__row__body{
     margin-left: 5.5rem;
 }
