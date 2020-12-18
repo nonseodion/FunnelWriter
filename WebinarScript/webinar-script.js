@@ -21,6 +21,9 @@ const process5 = document.querySelector('.tell__product');
 const process5Status = process5.querySelector('.completed');
 const process5Total = process5.querySelector('.total');
 
+document.querySelectorAll('form').forEach(form => {
+    form.addEventListener('submit', (e) => e.preventDefault())
+});
 
 // first form checker
 if(form1) {
@@ -163,10 +166,21 @@ if(form5){
 }
 
 
+const checkActive = (id) => {
+    document.querySelectorAll('.form__part__title').forEach((checker, idx) => {
+        if(idx + 1 === id){
+            checker.classList.add('in__progress');
+        } else{
+            checker.classList.remove('in__progress');
+        }
+    })
+}
+
 // Change formstep
 const goToForm = (formNumber) => {
     const forms = document.querySelectorAll('.form');
-    forms.forEach(form => {
+    forms.forEach((form, idx) => {
+        checkActive(formNumber)
         if (form.classList.contains(`form${formNumber}`)){
             form.classList.remove('none');
         } else {
@@ -174,3 +188,6 @@ const goToForm = (formNumber) => {
         }
     })
 }
+
+
+window.addEventListener('load', checkActive(1));

@@ -177,7 +177,7 @@ button.normal{
     margin-left: 1rem;
 }
 
-button.normal a{
+button.normal p{
     color: var(--white);
 }
 
@@ -186,6 +186,6 @@ button.inverse{
     width: 88px;
 }
 
-button.inverse a{
+button.inverse p{
     color: var(--purple);
 }
