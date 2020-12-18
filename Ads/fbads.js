@@ -12,6 +12,7 @@ function insertInput (e){
   const inputNode = parent.querySelector("input[type=text]").cloneNode();
   inputNode.value = "";
   parent.insertBefore(inputNode, this);
+  setStatuses();
 }
 
 function navigate(e){
@@ -27,13 +28,14 @@ function navigate(e){
 
 function setStatuses(e){
   questions.forEach( (question, index) =>{
-    const inputs = question.querySelectorAll("input[type=text]:first-of-type");
+    const inputs = question.querySelectorAll("input[type=text]");
     statuses[index].textContent = `0/${inputs.length}`;
     inputs.forEach(input => {
       input.addEventListener("input", (e) => {
         updateStatus(e, index);
-      });
+      });      
     });
+    updateStatus("", index);
   }); 
 }
 
@@ -67,7 +69,6 @@ function storeInputs() {
         form[`${listItem.id}`] = inputs[0].value 
       }
       else{
-        debugger;
         form[`${listItem.id}`] = inputs.map(input => input.value);
       }
     })
@@ -85,8 +86,8 @@ window.onload = () => {
   active = document.querySelector(".questions>div");
   statuses[0].parentNode.classList.add("active");
   active.classList.add("active");
-  setStatuses();
   clearInputs();
+  setStatuses();
 }
 
 window.onpopstate = clearInputs;
