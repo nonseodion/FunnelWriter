@@ -1,3 +1,7 @@
+.none{
+    display: none;
+}
+
 .generate p{
     margin-top: 1rem;
 }
@@ -156,6 +160,10 @@
     color: var(--dark-text-color);
     font-size: .875rem;
     font-weight: 500;
+}
+
+.funnel__row .funnel__row__text.strike{
+    text-decoration: line-through;
 }
 
 .nested__row__body{
