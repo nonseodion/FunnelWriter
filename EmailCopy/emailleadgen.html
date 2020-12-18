@@ -7,9 +7,18 @@
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
 
+    <!--Summernote-->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+
+    <!-- Modal-->
+    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+
     <!-- Header and Sidenav CSS -->
     <link rel="stylesheet" href="../public/header&sidenav.css">
     <link rel="stylesheet" href="./css/emailForms.css">
+
     <title>Short Form Sales Letter | Funnel Writer</title>
 </head>
 <body>
@@ -99,7 +108,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="../SalesLetter/sales-letter.html" class="active">
+                        <a href="../SalesLetter/sales-letter.html">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icons">
                                 <path d="M14.5935 2.66667H5.22017C4.89008 2.67541 4.57678 2.81405 4.34834 3.05248C4.1199 3.2909 3.99478 3.60985 4.00017 3.94V20.06C3.99478 20.3902 4.1199 20.7091 4.34834 20.9475C4.57678 21.1859 4.89008 21.3246 5.22017 21.3333H18.7802C19.1102 21.3246 19.4235 21.1859 19.652 20.9475C19.8804 20.7091 20.0056 20.3902 20.0002 20.06V7.94667L14.5935 2.66667ZM14.0002 8.66667V3.89333L18.8668 8.66667H14.0002Z" fill="#BDC4DB"/>
                             </svg>                                
@@ -261,9 +270,9 @@
                 </li>
               </ul>
                   
-            <form class="questions" id="short">
-              <div id="product">
-                <ul>
+            <form id="short">
+              <div id="products" class="questions">
+                <ul >
                   <li class="question" id="q4">
                     <label class="label">NAME OF PROFILE</label>
                     <div class="example">What name do you want to use in saving this profile?</div>
@@ -289,8 +298,8 @@
                   <a href="#prospects" class="btn-blue form-nav">Next</a>
                 </div>
               </div>
-              <div id="prospects">
-                <ul>
+              <div id="prospects" class="questions">
+                <ul >
                   <li class="question" id="q1">
                     <label class="label" >NAME OF PRODUCT</label>
                     <div class="example">What is the name of the product/service you want to sell?</div>
@@ -325,10 +334,10 @@
                 </ul>
                 <div class="btns">
                     <a href="#products" class="btn-light-blue form-nav">Previous</a>
-                  <a href="#proposals" class="btn-blue">Next</a>
+                  <a href="#proposals" class="btn-blue  form-nav">Next</a>
                 </div>
               </div>
-              <div id="proposals">
+              <div id="proposals" class="questions">
                 <ul>
                   <li class="question" id="q1">
                       <h3>WHAT ARE THE PRODUCT FEATURES AND BENEFIT?</h3>
@@ -347,11 +356,11 @@
                 </ul>
                 <div class="btns">
                     <a href="#prospects" class="btn-light-blue form-nav">Previous</a>
-                  <a href="#preorganised" class="btn-blue">Next</a>
+                  <a href="#preorganised" class="btn-blue form-nav">Next</a>
                 </div>
               </div>
 
-              <div id="preorganised">
+              <div id="preorganised" class="questions">
                 <ul>
                     <li class="question" id="q1">
                       <label class="label">WHAT IS NOT WORKING FOR YOUR PROSPECT THROUGH PAST SOLUTION?</label>
@@ -397,13 +406,44 @@
                   </ul>
                 <div class="btns">
                     <a href="#proposals" class="btn-light-blue form-nav">Previous</a>
-                  <a href="#" class="btn-blue">Generate Email</a>
+                    <button data-micromodal-trigger="modal-1" class="btn-blue">Generate Email</button>
                 </div>
               </div>
             </form>
           </div>
         </main>
     </section>
+
+    <div id="modal-1" aria-hidden="true" class="modal">
+        <div tabindex="-1" data-micromodal-close class>
+          <div role="dialog" aria-modal="true" aria-labelledby="export-script" class="modal-body">
+            <header>
+              <h2 id="export-script">
+                Editor
+              </h2>
+              <button aria-label="Close modal" data-micromodal-close class="close-btn">
+                <svg data-micromodal-close width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.2414 6.34311L6.34187 16.2426C5.95135 16.6331 5.95135 17.2663 6.34187 17.6568C6.7324 18.0473 7.36556 18.0473 7.75609 17.6568L17.6556 7.75732C18.0461 7.36679 18.0461 6.73363 17.6556 6.34311C17.2651 5.95258 16.6319 5.95258 16.2414 6.34311Z" fill="black"/>
+                  <path d="M17.6554 16.2426L7.75593 6.34309C7.36541 5.95257 6.73225 5.95257 6.34172 6.34309C5.9512 6.73362 5.9512 7.36678 6.34172 7.75731L16.2412 17.6568C16.6317 18.0473 17.2649 18.0473 17.6554 17.6568C18.046 17.2663 18.046 16.6331 17.6554 16.2426Z" fill="black"/>
+                </svg>                
+              </button>
+            </header>
+            <div id="modal-1-content">
+              <div id="summernote">
+            
+              </div>
+              <div class="modal-btns">
+                <button class="btn-blue">
+                  Save
+                </button>
+                <button class="btn-light-blue" data-micromodal-close>
+                  Cancel
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
 
     <!-- Scripts -->
     <script src="../public/header&sidenav.js"></script>
