@@ -1,7 +1,10 @@
 const funnelLinks = document.querySelectorAll('.navigation ul li');
-const funnels = document.querySelectorAll('.funnel');
+const funnelContainers = document.querySelectorAll('.funnel__container');
+const Todofunnels = document.querySelectorAll('.todo__funnels .funnel');
+const completedFunnels = document.querySelectorAll('.completed__funnels .funnel');
 const generalOptions = document.querySelector('.title__left .toggle__option__menu')
-const normalRow = document.querySelectorAll('.normal__row');
+const TodoNormalRow = document.querySelectorAll('.todo__funnels .normal__row');
+const completedNormalRow = document.querySelectorAll('.completed__funnels .normal__row');
 const body = document.querySelector('body');
 
 // Add active links
@@ -10,15 +13,17 @@ const funnelLinkActive = (id) => {
         funnelLinks.forEach((funnelLink, idx) => {
             if(idx === id) {
                 funnelLink.classList.add('active');
+                [...funnelContainers].filter((container, idx) => idx === id)[0].classList.remove('none')
             } else{
                 funnelLink.classList.remove('active');
+                [...funnelContainers].filter((container, idx) => idx !== id)[0].classList.add('none')
             }
         });
     }
 }
 
 // CheckAll for funnels and nested elements
-const checkAll = (funnel, evt) => {
+const checkAllTodos = (funnel, evt) => {
     let funnelOptions = funnel.querySelector('.funnel__top .options');
     // Check all
     if(evt.target.classList.contains('check-all')){
@@ -44,11 +49,39 @@ const checkAll = (funnel, evt) => {
         !funnelOptions.classList.contains('none') ? funnelOptions.classList.add('none') : null;
     }
 
-    [...normalRow].forEach(row => {
+    [...TodoNormalRow].forEach((row, todoId) => {
         if(row.querySelector('input') && row.querySelector('input').checked === true){
             row.querySelector('.funnel__row__text').classList.toggle('strike');
+
+            [...completedNormalRow].forEach((row, completedId) => {
+                if(completedId === todoId){
+                    row.querySelector('.funnel__row__text').classList.toggle('none');
+                    checkCompeletedFunnels();
+                }
+            })
         }
     })
+}
+
+
+const completedFunnelsEvents = (funnel, evt) => {
+    let funnelOptions = funnel.querySelector('.funnel__top .options');
+    
+    if(evt.target.tagName === 'IMG'){
+        funnelOptions.classList.toggle('none');
+    } else {
+        !funnelOptions.classList.contains('none') ? funnelOptions.classList.add('none') : null;
+    }
+}
+
+const checkCompeletedFunnels = () => {
+    completedFunnels.forEach(funnel => {
+        if([...funnel.querySelectorAll('.funnel__row__text')].filter(text => !text.classList.contains('none')).length === 0){
+            funnel.querySelector('.funnel__body').style.display = 'none';
+        }else{
+            funnel.querySelector('.funnel__body').style.display = 'block';
+        } 
+    });
 }
 
 // Event listeners for generalOptions
@@ -62,8 +95,12 @@ funnelLinks.forEach((funnelLink, idx) => {
 });
 
 // Event listeners for checkboxes
-funnels.forEach(funnel => {
-    funnel.addEventListener('click', (evt) => checkAll(funnel, evt));
+Todofunnels.forEach(funnel => {
+    funnel.addEventListener('click', (evt) => checkAllTodos(funnel, evt));
+});
+
+completedFunnels.forEach(funnel => {
+    funnel.addEventListener('click', (evt) => completedFunnelsEvents(funnel, evt));
 });
 
 // close any option if open
@@ -74,3 +111,5 @@ body.addEventListener('click', (evt) => {
         })
     }
 });
+
+checkCompeletedFunnels();
