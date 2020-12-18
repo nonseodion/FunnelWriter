@@ -8,7 +8,7 @@ const completedNormalRow = document.querySelectorAll('.completed__funnels .norma
 const body = document.querySelector('body');
 
 window.addEventListener('load', () => {
-    document.querySelectorAll('input').forEach(input => input.checked === false);
+    document.querySelectorAll('input').forEach(input => input.checked = false);
     console.log('me');
 })
 
