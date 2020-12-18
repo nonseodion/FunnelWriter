@@ -155,6 +155,10 @@
     margin-bottom: 1rem;
 }
 
+.funnel__body .funnel__row .normal__row.none{
+    display: none;
+}
+
 .funnel__row .funnel__row__text{
     margin-left: 4rem;
     color: var(--dark-text-color);
