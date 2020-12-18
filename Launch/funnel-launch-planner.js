@@ -7,6 +7,11 @@ const TodoNormalRow = document.querySelectorAll('.todo__funnels .normal__row');
 const completedNormalRow = document.querySelectorAll('.completed__funnels .normal__row');
 const body = document.querySelector('body');
 
+window.addEventListener('load', () => {
+    document.querySelectorAll('input').forEach(input => input.checked === false);
+    console.log('me');
+})
+
 // Add active links
 const funnelLinkActive = (id) => {
     if(funnelLinks){
@@ -53,9 +58,9 @@ const checkAllTodos = (funnel, evt) => {
         if(row.querySelector('input') && row.querySelector('input').checked === true){
             row.querySelector('.funnel__row__text').classList.toggle('strike');
 
-            [...completedNormalRow].forEach((row, completedId) => {
+            [...completedNormalRow].forEach((cRow, completedId) => {
                 if(completedId === todoId){
-                    row.querySelector('.funnel__row__text').classList.toggle('none');
+                    cRow.classList.toggle('none');
                     checkCompeletedFunnels();
                 }
             })
@@ -76,7 +81,7 @@ const completedFunnelsEvents = (funnel, evt) => {
 
 const checkCompeletedFunnels = () => {
     completedFunnels.forEach(funnel => {
-        if([...funnel.querySelectorAll('.funnel__row__text')].filter(text => !text.classList.contains('none')).length === 0){
+        if([...funnel.querySelectorAll('.normal__row')].filter(row => !row.classList.contains('none')).length === 0){
             funnel.querySelector('.funnel__body').style.display = 'none';
         }else{
             funnel.querySelector('.funnel__body').style.display = 'block';
