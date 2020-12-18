@@ -1,55 +1,100 @@
 const addInputs = document.querySelectorAll(".form .add");
-addInputs.forEach(addInput => addInput.addEventListener("click", insertInput));
+addInputs.forEach(addInput => addInput.addEventListener("click", addElement));
 const formNavs = document.querySelectorAll(".form-nav");
 const nextbtns = document.querySelectorAll(".btn-blue");
 nextbtns.forEach(nextbtn => nextbtn.addEventListener("click", navigate));
 formNavs.forEach(formNav => formNav.addEventListener("click", navigate));
-let active;
+let activeQuestion = document.querySelector(".questions");
 const statuses = [...document.querySelectorAll(".status")];
-const questions = [...document.querySelectorAll(".questions>div")];
+const questions = [...document.querySelectorAll(".questions")]; 
+const form = select(".main__content form");
+bind(form, "input", updateStatus);
+const generateBtn = document.querySelector("button.btn-blue");
+bind(generateBtn, "click", fillEditor);
 
 
-function insertInput (e){
-  const parent = this.parentNode;
-  const inputNode = parent.querySelector("input[type=text]").cloneNode();
-  inputNode.value = "";
-  parent.insertBefore(inputNode, this);
+//On Document Load
+clearInputs();
+questions.forEach(question => { updateStatus({target: question}); })
+if(MicroModal) MicroModal.init();
+
+summerConfig = {
+  tabsize: 2,
+  toolbar: [
+    ['style', ['style']],
+    ['font', ['bold', 'underline', 'italic',]],
+    ['insert', ['lin""k']],
+    ['para', ['ul', 'ol']],
+    ['font', [ 'superscript', 'subscript']]
+  ]
+};
+$('#summernote').summernote(summerConfig);
+$('#summernote').summernote('poppins', 'Arial')
+
+
+function select(el){
+  return document.querySelector(el);
+}
+
+function bind(el, event, callback){
+  el.addEventListener(event, callback);
+}
+
+function scrollToTop(){
+  document.documentElement.scrollTop = 0;
+}
+
+
+function addElement (e){
+  const questions = this.previousElementSibling.cloneNode(true);
+  if(questions.querySelector(".no")){
+    const position = 1 + +questions.querySelector(".no").textContent;
+    questions.querySelectorAll(".no").forEach( no => no.textContent = position);
+    questions.querySelectorAll("input").forEach( input => input.value = "");
+  }
+  else{
+    questions.value = "";
+  }
+
+  this.parentNode.insertBefore(questions, this);
+  updateStatus({target: this});
 }
 
 function navigate(e){
   e.preventDefault();
-  active.classList.remove("active");
-  statuses[questions.indexOf(active)].parentNode.classList.remove("active");
+  if(!this.classList.contains("form-nav")) return;
+  activeQuestion.classList.remove("active");
+  statuses[questions.indexOf(activeQuestion)].parentNode.classList.remove("active");
 
-  active = document.querySelector(`${this.hash}`);
-  active.classList.add("active");
+  activeQuestion = document.querySelector(`${this.hash}`);
+  activeQuestion.classList.add("active");
   if(this.hash === "#summary") return;
-  statuses[questions.indexOf(active)].parentNode.classList.add("active");
+  statuses[questions.indexOf(activeQuestion)].parentNode.classList.add("active");
+  scrollToTop();
 }
 
-function setStatuses(e){
-  questions.forEach( (question, index) =>{
-    const inputs = question.querySelectorAll("input[type=text]:first-of-type");
-    statuses[index].textContent = `0/${inputs.length}`;
-    inputs.forEach(input => {
-      input.addEventListener("input", (e) => {
-        updateStatus(e, index);
-      });
-    });
-  }); 
-}
 
-function updateStatus(e, parentIndex){
-  const question = questions[parentIndex];
-  const inputs = question.querySelectorAll("input[type=text]");
-  const total = inputs.length;
-  let filled = [...inputs].reduce((total, input) => {
-    return total + +(input.value.trim() !== "");
+function updateStatus({ target }){
+  const questionSet = target.closest(".questions");
+  if(!questionSet) return;
+  let [filled, total] = [0, 0];
+
+  const inputs = [...questionSet.querySelectorAll("input")];
+  filled = inputs.reduce((filled, input) => {
+    let value = input.value.trim()
+    return filled + ( value ? 1 : 0);
   }, 0);
-  statuses[parentIndex].textContent = `${filled}/${total}`;
-  
-  if(filled === total) {statuses[parentIndex].parentNode.classList.add("filled");}
-  else {statuses[parentIndex].parentNode.classList.remove("filled");}
+  total = inputs.length;
+
+  const progress = statuses[questions.indexOf(questionSet)];
+  progress.textContent = `${filled}/${total}`;
+
+  if(filled === total && filled !== 0){
+    progress.parentNode.classList.add("filled");
+  }
+  else{
+    progress.parentNode.classList.remove("filled");
+  }
 }
 
 function clearInputs() {
@@ -59,38 +104,9 @@ function clearInputs() {
   })
 }
 
-function storeInputs() {
-  try{
-    const listItems = document.querySelectorAll("form li");
-    const form = Object.create(null);
-    listItems.forEach(listItem => {
-      const inputs = [...listItem.querySelectorAll("input[type=text]")];
-      if(inputs.length === 1){ 
-        form[`${listItem.id}`] = inputs[0].value 
-      }
-      else{
-        debugger;
-        form[`${listItem.id}`] = inputs.map(input => input.value);
-      }
-    })
-    
-    window.sessionStorage.setItem(
-      document.querySelector("form.questions").id,
-      JSON.stringify(form));
-  }
-  catch(err){
-    console.error(err);
-  }
+function fillEditor() {
+  let answers = [...document.querySelectorAll("li input")].map(input => input.value ? `<p>${input.value}</p><br>` : "");
+  document.querySelector(".note-editable").innerHTML = answers.join(" ");
 }
 
-window.onload = () => {
-  active = document.querySelector(".questions>div");
-  statuses[0].parentNode.classList.add("active");
-  active.classList.add("active");
-  setStatuses();
-  clearInputs();
-}
-
-window.onpopstate = clearInputs;
-
-window.onunload = storeInputs;
+//window.onunload = storeInputs;

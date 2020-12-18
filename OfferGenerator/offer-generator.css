@@ -3,6 +3,17 @@ button, a{
     cursor: pointer;
 }
 
+::-webkit-input-placeholder,
+:-ms-input-placeholder,
+:-moz-placeholder,
+::-moz-placeholder  {
+    font-family: 'Poppins', sans-serif;
+}
+
+::placeholder{
+    font-family: 'Poppins', sans-serif;
+}
+
 .hide{
     display: none !important;
 }
@@ -17,6 +28,7 @@ button, a{
     justify-content: space-around;
     flex-wrap: wrap;
 }
+.widget>div{ margin-bottom: 1rem;}
 .m-size {
     display: flex;
     align-items: center;
@@ -266,13 +278,10 @@ fieldset {
     padding: 0 0.5rem;
    border: 1px solid #EFEFEF;
    border-radius: 4px;
-   display: flex;
-   justify-content: space-between;
    cursor: pointer;
 }
 fieldset svg{
     align-self: center;
-    height: 2.5rem;
 }
 legend {
     font-family: "Poppins" sans-serif;
@@ -376,7 +385,7 @@ legend {
 .offer-5-btn{
     display: flex;
     padding: 2rem;
-    justify-content: end;
+    justify-content: flex-end;
 }
 .offer-5-btn button{
     border: none;
@@ -410,16 +419,11 @@ legend {
 }
 
 .prob-1 {
-    width: 771px;
-    height: 160px;
     display: flex;
+    text-align: center;
+    padding: 0 2rem;
 }
-.prob-1 input[type=checkbox] {
-    height: 24px;
-    width: 24px;
-    border-radius: 4px; 
-    margin: 24px;
-}
+.prob-1-text{width: 100%;}
 .prob-1-text-prob {
     font-family: "Poppins" sans-serif;
     font-style: normal;
@@ -437,7 +441,6 @@ legend {
     color: #8D9091;
 }
 .prob-1-text-note {
-    width: 448px;
     height: 41px;
     left: 64px;
     top: 96px;
@@ -516,6 +519,11 @@ tr:nth-child(2n+1) {
 .questions.active{
     display: block;
 }
+.dropdown fieldset>div{
+    display: flex;
+    padding: 0.3rem 0;
+    justify-content: space-between;
+}
 
 .question{
     margin: 1rem 0;
@@ -563,6 +571,9 @@ tr:nth-child(2n+1) {
 .offer__title{
     width: 70%;
 }
+.offer__title>*{
+    display: block;
+}
 .offer__price{
     width: 30%;
 }
@@ -603,89 +614,6 @@ input[type=number] {
     margin-bottom: 10rem;
 }
 
-
-.custom-checkbox input{
-    display: none;
-}
-  
-.custom-checkbox .checkboxx {
-    margin: auto;
-    user-select: none;
-    cursor: pointer;
-}
-  
-.custom-checkbox .checkboxx span {
-  display: inline-block;
-  vertical-align: middle;
-  transform: translate3d(0, 0, 0);
-}
-
-.custom-checkbox .checkboxx span:first-child {
-  position: relative;
-  width: 24px;
-  height: 24px;
-  border-radius: 3px;
-  transform: scale(1);
-  vertical-align: middle;
-  background: var(--white);
-  border: 1px solid #cccccc;
-  transition: all 0.2s ease;
-}
-
-.custom-checkbox .checkboxx span:first-child svg {
-  position: absolute;
-  top: 6.7px;
-  left: 5.25px;
-  fill: none;
-  stroke: #ffffff;
-  stroke-width: 3px;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-dasharray: 24px;
-  stroke-dashoffset: 16px;
-  transition: all 0.3s ease;
-  transition-delay: 0.1s;
-  transform: translate3d(0, 0, 0);
-}
-
-.custom-checkbox .checkboxx span:first-child:before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  background: var(--purple);
-  display: block;
-  transform: scale(0);
-  opacity: 1;
-  border-radius: 50%;
-}
-
-.custom-checkbox .checkboxx span:first-child {
-  border-color: #cccccc;
-}
-
-.custom-checkbox .checkboxx span:last-child {
-  padding-left: 8px;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 18px;
-  color: #000000;
-}
-
-.custom-checkbox .inp-checkboxx:checked + .checkboxx span:first-child {
-  background: var(--purple);
-  border-color: var(--purple);
-  animation: wave 0.4s ease;
-}
-
-.custom-checkbox .inp-checkboxx:checked + .checkboxx span:first-child svg {
-  stroke-dashoffset: 0;
-}
-
-.custom-checkbox .inp-checkboxx:checked + .checkboxx span:first-child:before {
-  transform: scale(1.2);
-  opacity: 0;
-  transition: all 0.6s ease;
-}
 
 @keyframes wave {
   50% {

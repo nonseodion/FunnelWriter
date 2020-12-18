@@ -85,10 +85,10 @@ a {
     vertical-align: middle;
     margin-right: 1.3rem;
   }
-  .form .questions > div {
+  .form .questions{
     display: none;
   }
-  .form .questions > div.active {
+  .form .questions.active {
     display: block;
   }
   
@@ -124,7 +124,7 @@ a {
     stroke: #35EC81;
   }
   
-  .questions {
+  form {
     padding: 2.5rem 0.5rem 2.5rem 2rem;
   }
   .questions .label {
@@ -164,7 +164,6 @@ a {
     top: 0;
     bottom: 0;
     z-index: 200;
-    background: rgba(25, 24, 71, 0.5);
   }
   .modal > div {
     height: 100%;
@@ -177,14 +176,16 @@ a {
     left: 50%;
     top: 50%;
     background: #ffffff;
-    padding: 2rem;
+    padding: 0.5rem;
+    border: 1px solid #c4c4c4;
   }
   .modal header {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 1rem;
   }
   .modal header .close-btn {
-    background: #ffffff;
+    background: none;
     border: none;
     transform: translateY(-30%);
     cursor: pointer;
@@ -194,6 +195,9 @@ a {
   }
   .modal.is-open {
     display: block;
+  }
+  .modal-btns{
+    margin-top: 2rem;
   }
   
   .export-options {
@@ -253,6 +257,26 @@ a {
   .summary .text-purple {
     color: #4834d4;
   }
-  
-  /*# sourceMappingURL=sales-letter.css.map */
-  
+
+
+.note-toolbar {
+  background: #191847;
+  border-radius: 0;
+}
+.note-toolbar button {
+  background: #191847 !important;
+  color: white !important;
+  border: none !important;
+}
+.note-editor.note-frame .note-editing-area {
+  overflow: auto;
+  height: 50vh;
+  width: 50vw;
+  min-width: 390px;
+}
+.note-editor.note-frame .note-statusbar {
+  display: none;
+}
+.note-editor.note-frame {
+  border: none;
+}
