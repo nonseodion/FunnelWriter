@@ -212,6 +212,13 @@ function updateProgress({ target }){
 function fillTable(){
   fillOffers();
   fillBonuses();
+  fillProductInfo();
+}
+
+function fillProductInfo(){
+  select("#table-tagline").textContent = select("#tagline").value;
+  select("#table-description").textContent = select("#description").value;
+  select("#table-benefit").textContent = select("#one-benefit").value;
 }
 
 function fillOffers(){

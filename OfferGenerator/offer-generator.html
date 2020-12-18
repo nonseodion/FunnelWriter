@@ -270,10 +270,6 @@
                         <div class="strength-text"><span class="empty">&#9662;  Empty</span></div>
                     </div>
                 </div>
-                <div class="frame-4">
-
-
-                </div>
             </div>
                 <!-- Base -->
             <div class="base">
@@ -316,18 +312,18 @@
                     <div class="questions questions-1 active">
                         <div id="product"></div>
                             <ul>
-                            <li class="question">
-                                <label class="label">Product name</label>
-                                <input type="text" class="input"  placeholder="Type script name">
-                            </li>
-                            <li class="question">
-                                <label class="label">Detailed Description</label>
-                                <textarea name="" id=""  class="input" placeholder="Type script name" cols="30" rows="10"></textarea>
-                            </li>
-                            <li class="question"> 
-                                <label class="label">One line benefit</label>
-                                <input type="text" placeholder="Type script name"  class="input" >
-                            </li>
+                                <li class="question">
+                                    <label class="label">Product name</label>
+                                    <input type="text" class="input"  placeholder="Type script name" id="tagline">
+                                </li>
+                                <li class="question">
+                                    <label class="label">Detailed Description</label>
+                                    <textarea name="" id="description"  class="input" placeholder="Type script name" cols="30" rows="10"></textarea>
+                                </li>
+                                <li class="question"> 
+                                    <label class="label">One line benefit</label>
+                                    <input type="text" placeholder="Type script name"  class="input" id="one-benefit">
+                                </li>
                             </ul>
                             <span class="required hide">Complete step before proceeding</span>
                             <div class="next-cancel-btn">
@@ -340,10 +336,12 @@
                             <div class="dropdown">
                                 <fieldset>
                                     <legend>Select an offer:</legend>
-                                    <span style="color:#777777" class="choose">Choose</span>
-                                    <svg class="arrow" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12.2929 0.292892C12.6834 -0.0976315 13.3166 -0.0976315 13.7071 0.292892C14.0976 0.683417 14.0976 1.31658 13.7071 1.70711L7.70711 7.70711C7.32853 8.08568 6.71894 8.09893 6.32428 7.73715L0.324276 2.23715C-0.0828428 1.86396 -0.110347 1.23139 0.262846 0.824274C0.636039 0.417155 1.26861 0.389653 1.67572 0.762845L6.96992 5.61586L12.2929 0.292892Z" fill="black"/>
-                                    </svg>                                
+                                    <div>
+                                        <span style="color:#777777" class="choose">Choose</span>
+                                        <svg class="arrow" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12.2929 0.292892C12.6834 -0.0976315 13.3166 -0.0976315 13.7071 0.292892C14.0976 0.683417 14.0976 1.31658 13.7071 1.70711L7.70711 7.70711C7.32853 8.08568 6.71894 8.09893 6.32428 7.73715L0.324276 2.23715C-0.0828428 1.86396 -0.110347 1.23139 0.262846 0.824274C0.636039 0.417155 1.26861 0.389653 1.67572 0.762845L6.96992 5.61586L12.2929 0.292892Z" fill="black"/>
+                                        </svg>                                
+                                    </div>
                                 </fieldset>
                             </div>
                             <div class="btn-btn" id="btn-btn">
@@ -449,75 +447,19 @@
                     <button class="offer-5-btn-2">Save</button>
                 </div>
                 <div class="base-header">
-                    <h3>Product Tagline Goes here</h3>
+                    <h3 id="table-tagline">Product Tagline Goes here</h3>
                 </div>
                 <div class="problem-set">
                     <div class="prob-1">
-                        <div class="left__check custom-checkbox check-all">
-                            <input class="check-all inp-checkboxx" id="check-1" type="checkbox" onclick="click">
-                            <label class="checkboxx" for="check-1">
-                                <span>
-                                <svg width="12px" height="10px" viewBox="0 0 12 10">
-                                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-                                </svg>
-                                </span>
-                            </label>
-                        </div>
                         <div class="prob-1-text">
-                            <p class="prob-1-text-prob">Problem 1</p>
-                            <p class="prob-1-text-msg">message</p>
-                            <p class="prob-1-text-note">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, illo. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p class="prob-1-text-prob">Description</p>
+                            <p class="prob-1-text-note" id="table-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, illo. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                         </div>
                     </div>
                     <div class="prob-1">
-                        <div class="left__check custom-checkbox check-all">
-                            <input class="check-all inp-checkboxx" id="check-2" type="checkbox" onclick="click">
-                            <label class="checkboxx" for="check-2">
-                                <span>
-                                <svg width="12px" height="10px" viewBox="0 0 12 10">
-                                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-                                </svg>
-                                </span>
-                            </label>
-                        </div>
                         <div class="prob-1-text">
-                            <p class="prob-1-text-prob">Problem 2</p>
-                            <p class="prob-1-text-msg">message</p>
-                            <p class="prob-1-text-note">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, illo. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        </div>
-                    </div>
-                    <div class="prob-1">
-                        <div class="left__check custom-checkbox check-all">
-                            <input class="check-all inp-checkboxx" id="check-3" type="checkbox" onclick="click">
-                            <label class="checkboxx" for="check-3">
-                                <span>
-                                <svg width="12px" height="10px" viewBox="0 0 12 10">
-                                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-                                </svg>
-                                </span>
-                            </label>
-                        </div>
-                        <div class="prob-1-text">
-                            <p class="prob-1-text-prob">Problem 3</p>
-                            <p class="prob-1-text-msg">message</p>
-                            <p class="prob-1-text-note">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, illo. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        </div>
-                    </div>
-                    <div class="prob-1">
-                        <div class="left__check custom-checkbox check-all">
-                            <input class="check-all inp-checkboxx" id="check-4" type="checkbox" onclick="click">
-                            <label class="checkboxx" for="check-4">
-                                <span>
-                                <svg width="12px" height="10px" viewBox="0 0 12 10">
-                                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
-                                </svg>
-                                </span>
-                            </label>
-                        </div>
-                        <div class="prob-1-text">
-                            <p class="prob-1-text-prob">Problem 4</p>
-                            <p class="prob-1-text-msg">message</p>
-                            <p class="prob-1-text-note">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, illo. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p class="prob-1-text-prob">Benefit</p>
+                            <p class="prob-1-text-note" id="table-benefit">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, illo. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                         </div>
                     </div>
                 </div>
