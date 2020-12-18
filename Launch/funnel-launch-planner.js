@@ -51,16 +51,31 @@ const checkAllTodos = (funnel, evt) => {
     } else if(evt.target.tagName === 'IMG'){
         funnelOptions.classList.toggle('none');
     } else {
+
+        [...funnel.querySelectorAll('input')].filter(input => {
+            return input.checked === false && !input.classList.contains('check-all')
+        }).length !== 0 ?  funnel.querySelector('input.check-all').checked = false : funnel.querySelector('input.check-all').checked = true;
+        
         !funnelOptions.classList.contains('none') ? funnelOptions.classList.add('none') : null;
+    
     }
 
     [...TodoNormalRow].forEach((row, todoId) => {
         if(row.querySelector('input') && row.querySelector('input').checked === true){
-            row.querySelector('.funnel__row__text').classList.toggle('strike');
+            row.querySelector('.funnel__row__text').className = 'funnel__row__text strike';
 
             [...completedNormalRow].forEach((cRow, completedId) => {
                 if(completedId === todoId){
-                    cRow.classList.toggle('none');
+                    cRow.classList.remove('none');
+                    checkCompeletedFunnels();
+                }
+            })
+        } else{
+            row.querySelector('.funnel__row__text').className = 'funnel__row__text';
+
+            [...completedNormalRow].forEach((cRow, completedId) => {
+                if(completedId === todoId){
+                    cRow.classList.add('none');
                     checkCompeletedFunnels();
                 }
             })
