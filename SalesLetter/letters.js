@@ -61,5 +61,3 @@ window.onload = () => {
   clearInputs();
   setStatuses();
 }
-
-window.onpopstate = clearInputs;
