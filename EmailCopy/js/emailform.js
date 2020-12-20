@@ -108,5 +108,3 @@ function fillEditor() {
   let answers = [...document.querySelectorAll("li input")].map(input => input.value ? `<p>${input.value}</p><br>` : "");
   document.querySelector(".note-editable").innerHTML = answers.join(" ");
 }
-
-//window.onunload = storeInputs;
