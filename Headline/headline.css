@@ -129,7 +129,7 @@
     border: 1px solid #F5F6F9;
     width: 520px;
     max-width: 520px;
-    height: 76px;
+    height: 70px;
     border-radius: 8px;
     margin-bottom: 40px;
 }
@@ -141,8 +141,9 @@
 }
 
 .right-content legend{
-    display: flex;
-    align-items: center;
+    display: table;
+    float: none;
+    margin: 0;
     padding-right: .3rem;
     color: var(--primary-blue);
 }
@@ -150,6 +151,24 @@
 .right-content legend img{
     margin-left: -1rem;
     margin-right: .3rem;
+}
+
+@media screen and (-moz-images-in-menus: 0) {
+    fieldset {
+      position: relative;
+    }
+    fieldset>legend {
+      position: absolute;
+      left: 50%;
+      top: -12px; /* depends on font size and border */
+      background: white; /* depends on background */
+      transform: translate(-50%, 0);
+    }
+}
+
+.right-content legend p{
+    margin-top: -35px;
+    margin-left: 20px;
 }
 
 .right-content .writer .output {
