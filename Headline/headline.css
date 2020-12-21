@@ -18,24 +18,40 @@
 
 .headline-links {
     display: flex;
+    align-items: center;
 }
 
 .headline-links li {
-    padding: 20px;
+    padding: 0 10px;
+    height: 58px;
 }
 
 .headline-links li a {
     color: var(--light-purple);
+    padding: 0 10px;
+    height: 100%;
+    padding-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .headline-links li .active-link, .headline-links li a:hover {
     color: var(--purple);
+    
+}
+
+.headline-links li .active-link{
     border-bottom: 2px solid var(--purple);
 }
 
 /* Headline Main Content */
 .headline-main-content {
     display: flex;
+}
+
+.none{
+    display: none;
 }
 
 /* Left Hand Side */
@@ -49,20 +65,24 @@
     margin-top: 24px;
 }
 
+.left-main-content li p {
+    color: var(--primary-blue);
+}
+
 .left-main-content input {
     margin-top: 16px;
     width: 296px;
     height: 48px;
     border-radius: 4px;
+    color: var(--ash);
     border: 1px solid #efefef;
     outline: none;
-    padding-left: 15px;
+    padding: 1rem;
 }
 
 .left-main-content input::placeholder {
     color: var(--ash);
     font-size: 14px;
-    padding: 16px;
 }
 
 .left-main-content .input-hint {
@@ -108,25 +128,43 @@
 .right-content .writer {
     border: 1px solid #F5F6F9;
     width: 520px;
+    max-width: 520px;
     height: 76px;
     border-radius: 8px;
     margin-bottom: 40px;
 }
 
-.right-content .writer:hover {
+.right-content .writer:hover,
+.right-content .writer:focus {
     color: var(--purple);
     border: 2px solid var(--purple);
 }
 
-.writer img {
-    margin-bottom: -14px;
-    cursor: pointer;
+.right-content legend{
+    display: flex;
+    align-items: center;
+    padding-right: .3rem;
+    color: var(--primary-blue);
+}
+
+.right-content legend img{
+    margin-left: -1rem;
+    margin-right: .3rem;
 }
 
 .right-content .writer .output {
+    position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+}
+
+.output .copy-output{
+    position: absolute;
+    cursor: pointer;
+    bottom: 15px;
+    right: 25px;
+    z-index: 100;
 }
 
 .output form {
@@ -135,23 +173,93 @@
 }
 
 .show-output {
+    display: flex;
+    align-items: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     width: 100%;
+    max-width: 456px;
     height: 40px;
     background: none;
     outline: none;
     border: none;
-    color: var(--ash);
+    color: var(--ash) !important;
     font-size: 1rem;
-    padding-left: 13px;
+    padding: 1rem 3rem 1rem 1.4rem;
+}
 
+.show-output span{
+    margin-left: .5rem;
+}
+
+.edit{
+    /* max-width: 100px; */
+    text-overflow: clip;
+    white-space: nowrap;
+    text-decoration: underline;
+    outline: none;
+    border: none;
 }
 
 .show-output::placeholder {
-    padding-left: 13px;
+    padding: 0 2.1rem 1rem 0;
     color: var(--ash);
     opacity: 0.5;
 }
 
-.show-output:hover {
-    color: var(--purple);
+.show-output.content-edit{
+    padding-top: 0;
+}
+
+.writer:hover legend{
+    color: var(--purple) !important;
+}
+
+.copy-output:hover .stroke{
+    stroke: var(--purple);
+}
+
+.copy-output:hover .fill{
+    fill: var(--purple);
+}
+
+
+/* Tool-tip */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltiptext {
+  font-size: 12px;
+  visibility: hidden;
+  width: 140px;
+  background-color: var(--voog-blue);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 50px;
+  right: -25px;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: var(--voog-blue) transparent transparent transparent;
+}
+
+.tool-tip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
 }
