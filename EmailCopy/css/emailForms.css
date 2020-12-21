@@ -5,6 +5,10 @@ a {
   .main__content {
     margin: 2.5rem;
   }
+
+  .hide{
+    display: none;
+  }
   
   .btn-light-blue, .btn-blue {
     border-radius: 8px;
@@ -261,4 +265,9 @@ a {
 }
 .note-editor.note-frame {
   border: none;
+}
+
+
+.text-bold{
+  font-weight: 600;
 }

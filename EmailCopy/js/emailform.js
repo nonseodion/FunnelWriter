@@ -11,6 +11,7 @@ const form = select(".main__content form");
 bind(form, "input", updateStatus);
 const generateBtn = document.querySelector("button.btn-blue");
 bind(generateBtn, "click", fillEditor);
+const emailTemplates = select(".email-templates");
 
 
 //On Document Load
@@ -46,14 +47,23 @@ function scrollToTop(){
 
 
 function addElement (e){
+  const regex = /(\d+)/;
   const questions = this.previousElementSibling.cloneNode(true);
+
   if(questions.querySelector(".no")){
+    let nextId = [...questions.querySelectorAll("input")].pop().id;
     const position = 1 + +questions.querySelector(".no").textContent;
     questions.querySelectorAll(".no").forEach( no => no.textContent = position);
-    questions.querySelectorAll("input").forEach( input => input.value = "");
+    questions.querySelectorAll("input").forEach( input => {
+      input.value = "";
+      nextId = nextId[0] + ++nextId.match(regex)[0];
+      input.id = nextId;
+    });
   }
   else{
     questions.value = "";
+    let nextId = questions.id[0] + ++questions.id.match(regex)[0];
+    questions.id = nextId;
   }
 
   this.parentNode.insertBefore(questions, this);
@@ -105,6 +115,20 @@ function clearInputs() {
 }
 
 function fillEditor() {
-  let answers = [...document.querySelectorAll("li input")].map(input => input.value ? `<p>${input.value}</p><br>` : "");
-  document.querySelector(".note-editable").innerHTML = answers.join(" ");
+    const inputs = document.querySelectorAll(".questions .question>input");
+    console.log(inputs);
+    inputs.forEach(input => {
+      console.log(input);
+      console.log(input.id)
+      const emailPlaceholders = [...emailTemplates.querySelectorAll(`.${input.id}`)];
+      emailPlaceholders.forEach(placeholder => {
+        console.log(placeholder);
+        placeholder.innerHTML = input.value;
+        const hider = placeholder.closest(".hide");
+        if(hider && !hider.matches(".email-templates")) hider.classList.remove("hide");
+      })
+    })
+    const emailsClone = emailTemplates.cloneNode(true);
+    emailsClone.classList.remove("hide");
+    document.querySelector(".note-editable").innerHTML = emailsClone.innerHTML;
 }
