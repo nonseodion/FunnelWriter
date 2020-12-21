@@ -1,17 +1,51 @@
 const addInputs = document.querySelectorAll(".form .add");
-addInputs.forEach(addInput => addInput.addEventListener("click", insertInput));
+addInputs.forEach(addInput => addInput.addEventListener("click", insertElement));
 const formNavs = document.querySelectorAll(".form-nav");
 formNavs.forEach(formNav => formNav.addEventListener("click", navigate));
 let active;
 const statuses = [...document.querySelectorAll(".status")];
 const questions = [...document.querySelectorAll(".questions>div")];
+const adTemplates = document.querySelector(".ad-templates");
+document.querySelector(".show-summary").addEventListener("click", fillTemplates);
 
 
-function insertInput (e){
-  const parent = this.parentNode;
-  const inputNode = parent.querySelector("input[type=text]").cloneNode();
-  inputNode.value = "";
-  parent.insertBefore(inputNode, this);
+if(MicroModal) MicroModal.init();
+
+summerConfig = {
+  tabsize: 2,
+  toolbar: [
+    ['style', ['style']],
+    ['font', ['bold', 'underline', 'italic',]],
+    ['insert', ['link']],
+    ['para', ['ul', 'ol']],
+    ['font', [ 'superscript', 'subscript']]
+  ]
+};
+$('#summernote').summernote(summerConfig);
+$('#summernote').summernote('poppins', 'Arial')
+
+
+function insertElement (e){
+  const regex = /(\d+)/;
+  const questions = this.previousElementSibling.cloneNode(true);
+
+  if(questions.querySelector(".no")){
+    let nextId = [...questions.querySelectorAll("input")].pop().id;
+    const position = 1 + +questions.querySelector(".no").textContent;
+    questions.querySelectorAll(".no").forEach( no => no.textContent = position);
+    questions.querySelectorAll("input").forEach( input => {
+      input.value = "";
+      nextId = nextId[0] + ++nextId.match(regex)[0];
+      input.id = nextId;
+    });
+  }
+  else{
+    questions.value = "";
+    let nextId = questions.id[0] + ++questions.id.match(regex)[0];
+    questions.id = nextId;
+  }
+
+  this.parentNode.insertBefore(questions, this);
   setStatuses();
 }
 
@@ -24,6 +58,11 @@ function navigate(e){
   active.classList.add("active");
   if(this.hash === "#summary") return;
   statuses[questions.indexOf(active)].parentNode.classList.add("active");
+  scrollToTop();
+}
+
+function scrollToTop(){
+  document.documentElement.scrollTop = 0;
 }
 
 function setStatuses(e){
@@ -52,6 +91,25 @@ function updateStatus(e, parentIndex){
   else {statuses[parentIndex].parentNode.classList.remove("filled");}
 }
 
+function fillTemplates(){
+
+  const inputs = document.querySelectorAll(".questions .question>input");
+  console.log(inputs);
+  inputs.forEach(input => {
+    const adPlaceholders = [...adTemplates.querySelectorAll(`.${input.id}`)];
+    console.log(adPlaceholders);
+    adPlaceholders.forEach(placeholder => {
+      placeholder.innerHTML = input.value;
+      const hider = placeholder.closest(".hide");
+      if(hider && !hider.matches(".ad-templates")) hider.classList.remove("hide");
+    })
+  })
+  const adsClone = adTemplates.cloneNode(true);
+  adsClone.classList.remove("hide");
+  console.log(adsClone);
+  document.querySelector(".note-editable").innerHTML = adsClone.innerHTML;
+}
+
 function clearInputs() {
   let inputs = document.querySelectorAll("input");
   inputs.forEach(input => {
@@ -59,28 +117,6 @@ function clearInputs() {
   })
 }
 
-function storeInputs() {
-  try{
-    const listItems = document.querySelectorAll("form li");
-    const form = Object.create(null);
-    listItems.forEach(listItem => {
-      const inputs = [...listItem.querySelectorAll("input[type=text]")];
-      if(inputs.length === 1){ 
-        form[`${listItem.id}`] = inputs[0].value 
-      }
-      else{
-        form[`${listItem.id}`] = inputs.map(input => input.value);
-      }
-    })
-    
-    window.sessionStorage.setItem(
-      document.querySelector("form.questions").id,
-      JSON.stringify(form));
-  }
-  catch(err){
-    console.error(err);
-  }
-}
 
 window.onload = () => {
   active = document.querySelector(".questions>div");
@@ -91,5 +127,3 @@ window.onload = () => {
 }
 
 window.onpopstate = clearInputs;
-
-window.onunload = storeInputs;

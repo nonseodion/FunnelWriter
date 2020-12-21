@@ -6,6 +6,10 @@ a {
     margin: 2.5rem;
   }
   
+  .hide{
+    display: none;
+  }
+
   .btn-light-blue, .btn-blue {
     border-radius: 8px;
     padding: 8px 10px;
@@ -247,5 +251,69 @@ a {
     color: #4834d4;
   }
   
-  /*# sourceMappingURL=sales-letter.css.map */
+  .note-toolbar {
+    background: #191847;
+    border-radius: 0;
+  }
+  .note-toolbar button {
+    background: #191847 !important;
+    color: white !important;
+    border: none !important;
+  }
+  .note-editor.note-frame .note-editing-area {
+    overflow: auto;
+    height: 50vh;
+    width: 50vw;
+    min-width: 390px;
+  }
+  .note-editor.note-frame .note-statusbar {
+    display: none;
+  }
+  .note-editor.note-frame {
+    border: none;
+  }
+
+  .modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 200;
+  }
+  .modal > div {
+    height: 100%;
+    width: 100%;
+  }
+  .modal .modal-body {
+    transform: translate(-50%, -50%);
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    top: 50%;
+    background: #ffffff;
+    padding: 0.5rem;
+    border: 1px solid #c4c4c4;
+  }
+  .modal header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+  .modal header .close-btn {
+    background: none;
+    border: none;
+    transform: translateY(-30%);
+    cursor: pointer;
+  }
+  .modal button {
+    font-weight: 600;
+  }
+  .modal.is-open {
+    display: block;
+  }
+  .modal-btns{
+    margin-top: 2rem;
+  }
   
