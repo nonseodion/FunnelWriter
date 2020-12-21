@@ -1,0 +1,179 @@
+:root{
+    --white: #ffffff;
+    --purple: #4834d4;
+}
+
+/* Base Styles */
+*,
+::before,
+::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    overflow-x: hidden;
+    scrollbar-width: thin;          /* "auto" or "thin"  */
+    scrollbar-color: var(--light-purple) #e3e3e3;   /* scroll thumb & track */
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    background: url('images/signin-bg.png');
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+ul li{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+/*============scroll bar==========*/
+/* width */
+::-webkit-scrollbar {
+    width: 6px;
+    margin-bottom: 5px; 
+    margin-top: 2px; 
+  }
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: #e3e3e3;
+    box-shadow: inset 0 0 1px grey;
+}
+
+/* Track piece*/
+::-webkit-scrollbar-track-piece:end {
+    background: transparent;
+    margin-bottom: 2px; 
+}
+
+::-webkit-scrollbar-track-piece:start {
+    background: transparent;
+    margin-top: 2px;
+}
+  
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--light-purple);
+    border-radius: 8px;
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--light-purple);
+}
+
+/* Section Styles */
+header{
+    width: 100%;
+}
+
+header nav{
+    width: 100%;
+    padding: 2rem 8rem;
+}
+
+main{
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.signin__form{
+    max-width: 362px;
+}
+
+.signin__form h2{
+    font-size: 2rem;
+    font-weight: 700;
+    color: #f5f6f9;
+    line-height: 48px;
+    margin-bottom: .5rem;
+}
+
+.signin__form p{
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 24px;
+    color: #f5f6f9;
+}
+
+.signin__form form{
+    margin-top: 3rem;
+}
+
+.signin__form .email,
+.signin__form .password{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: #f5f6f9;
+    font-size: 1rem;
+}
+
+.email input,
+.password input{
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    outline: none;
+    border: none;
+    border: 1px solid #efefef;
+    border-radius: 4px;
+    max-width: 296px;
+    height: 48px;
+    background: transparent;
+    color: #8d9091;
+    font-size: .875rem;
+}
+
+.email input:hover,
+.password input:hover,
+.email input:focus,
+.password input:focus{
+    border-width: 2px;
+}
+
+.email input::placeholder,
+.password input::placeholder{
+    color: #8d9091;
+    font-size: .875rem;
+}
+
+.password a{
+    width: 296px;
+    text-align: right;
+    color: #f5f6f9;
+    font-size: .875rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+}
+
+.signin__form .normal__login{
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    font-size: .875rem;
+    font-weight: 600;
+    width: 296px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--purple);
+    color: var(--white);
+}
