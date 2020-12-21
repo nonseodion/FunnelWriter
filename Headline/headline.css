@@ -130,7 +130,6 @@
     border: 2px solid #ffffff;
     width: 520px;
     max-width: 520px;
-    height: 70px;
     border-radius: 8px;
     margin-bottom: 40px;
 }
@@ -194,12 +193,10 @@
 
 .show-output {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    text-overflow: ellipsis;
-    white-space: nowrap;
     width: 100%;
     max-width: 456px;
-    height: 40px;
     background: none;
     outline: none;
     border: none;
@@ -214,8 +211,6 @@
 
 .edit{
     /* max-width: 100px; */
-    text-overflow: clip;
-    white-space: nowrap;
     text-decoration: underline;
     outline: none;
     border: none;
@@ -229,6 +224,7 @@
 
 .show-output.content-edit{
     padding-top: 0;
+    hyphens: auto;
 }
 
 .writer:hover legend{
