@@ -86,8 +86,10 @@
 }
 
 .left-main-content .input-hint {
-    padding: 26px;
-    cursor: pointer;
+    margin-left: 6px;     
+    display: inline-block;     
+    cursor: pointer;     
+    margin-top: 6px;
 }
 
 /* Right Hand side */
@@ -148,10 +150,22 @@
     color: var(--primary-blue);
 }
 
-.right-content legend img{
+.right-content legend svg{
     margin-left: -1rem;
     margin-right: .3rem;
+    background-color: white;
 }
+.right-content .writer:hover legend svg circle,
+.right-content .writer:focus legend svg circle{
+    fill: #CDC6FF;
+    opacity: 0.25;
+}
+
+.right-content .writer:hover legend svg path,
+.right-content .writer:focus legend svg path{
+    fill: #4834D4;
+}
+
 
 @media screen and (-moz-images-in-menus: 0) {
     fieldset {
