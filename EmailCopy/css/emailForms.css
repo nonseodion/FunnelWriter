@@ -239,24 +239,6 @@ a {
   .export-options .export-option div {
     text-align: center;
   }
-  
-  .summary {
-    border: 1px solid #efefef;
-    margin: 2rem 0;
-    padding: 3rem;
-  }
-  .summary .text-center {
-    text-align: center;
-  }
-  .summary .text-red {
-    color: #eb5757;
-  }
-  .summary .text-bold {
-    font-weight: 600;
-  }
-  .summary .text-purple {
-    color: #4834d4;
-  }
 
 
 .note-toolbar {

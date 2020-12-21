@@ -71,7 +71,7 @@ a {
   .form {
     display: grid;
     grid-template-columns: 10.5fr 3.5fr;
-    border: 1px solid #998b8b;
+    border: 1px solid #efefef;
   }
   .form .btns {
     margin-top: 4rem;
@@ -85,45 +85,11 @@ a {
     vertical-align: middle;
     margin-right: 1.3rem;
   }
-  /* .form .questions > div {
-    display: none;
-  } */
+
   .form .questions > div.active {
     display: block;
   }
   
-  /* .titles {
-    background: #FBFBFB;
-    border-radius: 4px;
-    padding: 2rem 1rem;
-    max-height: 120vh;
-  }
-  .titles li {
-    display: flex;
-    justify-content: space-between;
-    color: #C4C4C4;
-    margin: 2rem 0;
-    max-height: 100vh;
-  }
-  .titles li svg {
-    vertical-align: middle;
-  }
-  .titles li path {
-    stroke: #C4C4C4;
-  }
-  .titles li.active {
-    color: #191847;
-  }
-  .titles li.active path {
-    stroke: #191847;
-  }
-  .titles li.filled {
-    color: #35EC81;
-  }
-  .titles li.filled path {
-    stroke: #35EC81;
-  }
-   */
   .questions {
     padding: 2.5rem 0.5rem 2.5rem 2rem;
   }
@@ -148,6 +114,71 @@ a {
     display: flex;
     justify-content: flex-end;
   }
+
+
+  .modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 200;
+  }
+  .modal > div {
+    height: 100%;
+    width: 100%;
+  }
+  .modal .modal-body {
+    transform: translate(-50%, -50%);
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    top: 50%;
+    background: #ffffff;
+    padding: 0.5rem;
+    border: 1px solid #c4c4c4;
+  }
+  .modal header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+  .modal header .close-btn {
+    background: none;
+    border: none;
+    transform: translateY(-30%);
+    cursor: pointer;
+  }
+  .modal button {
+    font-weight: 600;
+  }
+  .modal.is-open {
+    display: block;
+  }
+  .modal-btns{
+    margin-top: 2rem;
+  }
   
-  /*# sourceMappingURL=sales-letter.css.map */
+  .note-toolbar {
+    background: #191847;
+    border-radius: 0;
+  }
+  .note-toolbar button {
+    background: #191847 !important;
+    color: white !important;
+    border: none !important;
+  }
+  .note-editor.note-frame .note-editing-area {
+    overflow: auto;
+    height: 50vh;
+    width: 50vw;
+    min-width: 390px;
+  }
+  .note-editor.note-frame .note-statusbar {
+    display: none;
+  }
+  .note-editor.note-frame {
+    border: none;
+  }
   
