@@ -25,6 +25,10 @@ document.querySelectorAll('form').forEach(form => {
     form.addEventListener('submit', (e) => e.preventDefault())
 });
 
+window.addEventListener('load', () => {
+    document.querySelectorAll('input').forEach(input => input.value = '');
+})
+
 // first form checker
 if(form1) {
     form1.addEventListener('keyup', (evt) => {

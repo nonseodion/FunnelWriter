@@ -225,35 +225,35 @@
             <div class="headline-navigation">
                 <ul class="headline-links">
                     <li>
-                        <a class="active-link link" href="./headline2.html">DIY Headline Formulas</a>
+                        <a onclick="goToHeadline(1)" class="active-link link" href="#">DIY Headline Formulas</a>
                     </li>
 
                     <li>
-                        <a class="link" href="./headline3.html">Explanatory/Why</a>
+                        <a onclick="goToHeadline(2)" class="link" href="#">Explanatory/Why</a>
                     </li>
 
                     <li>
-                        <a class="link" href="./headline4.html">Fun/Playful</a>
+                        <a onclick="goToHeadline(3)" class="link" href="#">Fun/Playful</a>
                     </li>
                     
                     <li>
-                        <a class="link" href="./headline5.html">How To</a>
+                        <a onclick="goToHeadline(4)" class="link" href="#">How To</a>
                     </li>
 
                     <li>
-                        <a class="link" href="./headline6.html">Numbered Lists</a>
+                        <a onclick="goToHeadline(5)" class="link" href="#">Numbered Lists</a>
                     </li>
 
                     <li>
-                        <a class="link" href="./headline7.html">Strong/Controversial</a>
+                        <a onclick="goToHeadline(6)" class="link" href="#">Strong/Controversial</a>
                     </li>
                 </ul>
             </div>
 
-            <!-- Headline Main Content -->
-            <div class="headline-main-content">
+            <!--First Headline Main Content -->
+            <!-- <div class="headline-main-content first-content"> -->
                 <!-- Left hand side of the Main Content -->
-                <div class="left-main-content">
+                <!-- <div class="left-main-content">
                     <ul class="">
                         <li>
                             <p>Desired outcome</p>
@@ -375,12 +375,2427 @@
                             </span>
                         </li>
                     </ul>
+                </div> -->
+
+                <!-- Right hand side of the Main Content -->
+                <!-- <div class="right-main-content">
+                    <div class="background-image">
+                        <img src="./images/Group 167.svg" alt="">
+                    </div>
+                </div> -->
+            <!-- </div> -->
+
+            <!-- Second Headline Main Content -->
+            <div class="headline-main-content second-content">
+                <!-- Left hand side of the Main Content -->
+                <div class="left-main-content">
+                    <ul class="">
+                        <li>
+                            <p>Desired outcome</p>
+                            <input class="input input-desired" type="text" value="Make Money Online">
+                            <span class="input-hint">
+                                <img src="./images/Vector.svg" alt="">
+                            </span>
+                        </li>
+
+                        <li>
+                            <p>Your Headline Branding</p>
+                            <input class="input input-headline" type="text" value="Your GetRich.com Guide">
+                            <span class="input-hint">
+                                <img src="./images/Vector.svg" alt="">
+                            </span>
+                        </li>
+
+                        <li>
+                            <p>Keyword(s)</p>
+                            <input class="input input-keyword" type="text" value="How To Make Money">
+                            <span class="input-hint">
+                                <img src="./images/Vector.svg" alt="">
+                            </span>
+                        </li>
+
+                        <li>
+                            <p>Supporting keywords</p>
+                            <input class="input input-support-keyword" type="text" value="Make Money Quickly">
+                            <span class="input-hint">
+                                <img src="./images/Vector.svg" alt="">
+                            </span>
+                        </li>
+
+                        <li>
+                            <p>Comparison 1</p>
+                            <input class="input input-comparison1" type="text" value="Richard Branson">
+                            <span class="input-hint">
+                                <img src="./images/Vector.svg" alt="">
+                            </span>
+                        </li>
+
+                        <li>
+                            <p>Comparison 2</p>
+                            <input class="input input-comparison2" type="text" value="David Rockefeller">
+                            <span class="input-hint">
+                                <img src="./images/Vector.svg" alt="">
+                            </span>
+                        </li>
+
+                        <li>
+                            <p>Number of Experts in Roundup</p>
+                            <input class="input input-expert-number" type="text" value="15">
+                            <span class="input-hint">
+                                <img src="./images/Vector.svg" alt="">
+                            </span>
+                        </li>
+
+                        <li>
+                            <p>Experts Roundup Topic</p>
+                            <input class="input input-expert-roundup" type="text" value="Online Investment Opportunities">
+                            <span class="input-hint">
+                                <img src="./images/Vector.svg" alt="">
+                            </span>
+                        </li>
+
+                        <li>
+                            <p>Summary of Topic in Under 4 Words</p>
+                            <input class="input input-summary" type="text" value="Making Money Rocks">
+                            <span class="input-hint">
+                                <img src="./images/Vector.svg" alt="">
+                            </span>
+                        </li>
+
+                        <li>
+                            <p>Event in Topic</p>
+                            <input class="input input-event" type="text" value="David Rockefeller Loses Fortune">
+                            <span class="input-hint">
+                                <img src="./images/Vector.svg" alt="">
+                            </span>
+                        </li>
+
+                        <li>
+                            <p>Hot Button Issue in Topic</p>
+                            <input class="input input-hot-button" type="text" value="David Rockefeller Gambled Away Family Fortune">
+                            <span class="input-hint">
+                                <img src="./images/Vector.svg" alt="">
+                            </span>
+                        </li>
+
+                        <li>
+                            <p>Ridiculous WTF Sentence</p>
+                            <input class="input input-ridiculous" type="text" value="ecommerce">
+                            <span class="input-hint">
+                                <img src="./images/Vector.svg" alt="">
+                            </span>
+                        </li>
+
+                        <li>
+                            <p>Industry</p>
+                            <input class="input input-industry" type="text" value="ecommerce">
+                            <span class="input-hint">
+                                <img src="./images/Vector.svg" alt="">
+                            </span>
+                        </li>
+
+                        <li>
+                            <p>Short Quotable Testimonial</p>
+                            <input class="input input-short-quote" type="text" value="GetRich.com Helped me Make $1,000 a Day">
+                            <span class="input-hint">
+                                <img src="./images/Vector.svg" alt="">
+                            </span>
+                        </li>
+
+                        <li>
+                            <p>Impressive Number From Your Business</p>
+                            <input class="input input-impressive" type="text" value="14,000 Users Helped">
+                            <span class="input-hint">
+                                <img src="./images/Vector.svg" alt="">
+                            </span>
+                        </li>
+                    </ul>
                 </div>
 
                 <!-- Right hand side of the Main Content -->
                 <div class="right-main-content">
-                    <div class="background-image">
-                        <img src="./images/Group 167.svg" alt="">
+                    <div>
+                        <button class="save-project-btn">Save to project</button>
+                    </div>
+
+                    <div class="right-content">
+                        <fieldset class="writer">
+                            <legend> <img src="./images/num1.svg" alt="">
+                                <p>
+                                    The Social Proof Headline
+                                </p>
+                            </legend>
+                            <div class="output">
+                                <form>
+                                   <div class="show-output content-edit">
+                                        <span class="impressive edit" contenteditable="true"></span>
+                                        <span class="default-text" contenteditable="false">Helped Me To</span>
+                                        <span class="desirable-outcome edit" contenteditable="true"></span>
+                                    </div>
+                                </form>
+                                <div class="tool-tip">
+                                    <svg class="copy-output" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="18" height="20" fill="#E5E5E5"/>
+                                        <g clip-path="url(#clip0)">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        <rect class="fill" opacity="0.05" x="-1337" y="-224" width="1440" height="2205" rx="4" fill="#F5F6F9"/>
+                                        <rect class="stroke" x="-1008.5" y="-197.5" width="1089" height="1997" rx="3.5" fill="white" stroke="#EFEFEF"/>
+                                        <path class="stroke" d="M-469.5 -20C-469.5 -24.1421 -466.142 -27.5 -462 -27.5H42C46.1422 -27.5 49.5 -24.1421 49.5 -20V40C49.5 44.1421 46.1422 47.5 42 47.5H-462C-466.142 47.5 -469.5 44.1421 -469.5 40V-20Z" stroke="#F5F6F9"/>
+                                        <path class="fill" d="M4 4V1C4 0.734784 4.10536 0.48043 4.29289 0.292893C4.48043 0.105357 4.73478 0 5 0H17C17.2652 0 17.5196 0.105357 17.7071 0.292893C17.8946 0.48043 18 0.734784 18 1V15C18 15.2652 17.8946 15.5196 17.7071 15.7071C17.5196 15.8946 17.2652 16 17 16H14V19C14 19.552 13.55 20 12.993 20H1.007C0.875127 20.0008 0.744397 19.9755 0.622322 19.9256C0.500247 19.8757 0.389233 19.8022 0.295659 19.7093C0.202084 19.6164 0.127793 19.5059 0.0770543 19.3841C0.0263156 19.2624 0.000129374 19.1319 0 19L0.00300002 5C0.00300002 4.448 0.453 4 1.01 4H4ZM2.003 6L2 18H12V6H2.003ZM6 4H14V14H16V2H6V4Z" fill="#F5F6F9"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="writer">
+                            <legend> <img src="./images/num2.svg" alt="">
+                                <p>
+                                    The Testimonial Headline
+                                </p>
+                            </legend>
+                            <div class="output">
+                                <form>
+                                   <div class="show-output content-edit">
+                                        <span class="short-quote edit" contenteditable="true"></span>
+                                        <span class="default-text hide-after" contenteditable="false"></span>
+                                        <span class="desirable-outcome edit none" contenteditable="true"></span>
+                                    </div>
+                                </form>
+                                <div class="tool-tip">
+                                    <svg class="copy-output" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="18" height="20" fill="#E5E5E5"/>
+                                        <g clip-path="url(#clip0)">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        <rect class="fill" opacity="0.05" x="-1337" y="-224" width="1440" height="2205" rx="4" fill="#F5F6F9"/>
+                                        <rect class="stroke" x="-1008.5" y="-197.5" width="1089" height="1997" rx="3.5" fill="white" stroke="#EFEFEF"/>
+                                        <path class="stroke" d="M-469.5 -20C-469.5 -24.1421 -466.142 -27.5 -462 -27.5H42C46.1422 -27.5 49.5 -24.1421 49.5 -20V40C49.5 44.1421 46.1422 47.5 42 47.5H-462C-466.142 47.5 -469.5 44.1421 -469.5 40V-20Z" stroke="#F5F6F9"/>
+                                        <path class="fill" d="M4 4V1C4 0.734784 4.10536 0.48043 4.29289 0.292893C4.48043 0.105357 4.73478 0 5 0H17C17.2652 0 17.5196 0.105357 17.7071 0.292893C17.8946 0.48043 18 0.734784 18 1V15C18 15.2652 17.8946 15.5196 17.7071 15.7071C17.5196 15.8946 17.2652 16 17 16H14V19C14 19.552 13.55 20 12.993 20H1.007C0.875127 20.0008 0.744397 19.9755 0.622322 19.9256C0.500247 19.8757 0.389233 19.8022 0.295659 19.7093C0.202084 19.6164 0.127793 19.5059 0.0770543 19.3841C0.0263156 19.2624 0.000129374 19.1319 0 19L0.00300002 5C0.00300002 4.448 0.453 4 1.01 4H4ZM2.003 6L2 18H12V6H2.003ZM6 4H14V14H16V2H6V4Z" fill="#F5F6F9"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="writer">
+                            <legend> <img src="./images/num3.svg" alt="">
+                                <p>
+                                    The Sneak Peek Headline
+                                </p>
+                            </legend>
+                            <div class="output">
+                                <form>
+                                   <div class="show-output content-edit">
+                                        <span class="default-text" contenteditable="false">Inside The</span>
+                                        <span class="industry edit" contenteditable="true"></span>
+                                        <span class="default-text" contenteditable="false">Industry</span>
+                                    </div>
+                                </form>
+                                <div class="tool-tip">
+                                    <svg class="copy-output" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="18" height="20" fill="#E5E5E5"/>
+                                        <g clip-path="url(#clip0)">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        <rect class="fill" opacity="0.05" x="-1337" y="-224" width="1440" height="2205" rx="4" fill="#F5F6F9"/>
+                                        <rect class="stroke" x="-1008.5" y="-197.5" width="1089" height="1997" rx="3.5" fill="white" stroke="#EFEFEF"/>
+                                        <path class="stroke" d="M-469.5 -20C-469.5 -24.1421 -466.142 -27.5 -462 -27.5H42C46.1422 -27.5 49.5 -24.1421 49.5 -20V40C49.5 44.1421 46.1422 47.5 42 47.5H-462C-466.142 47.5 -469.5 44.1421 -469.5 40V-20Z" stroke="#F5F6F9"/>
+                                        <path class="fill" d="M4 4V1C4 0.734784 4.10536 0.48043 4.29289 0.292893C4.48043 0.105357 4.73478 0 5 0H17C17.2652 0 17.5196 0.105357 17.7071 0.292893C17.8946 0.48043 18 0.734784 18 1V15C18 15.2652 17.8946 15.5196 17.7071 15.7071C17.5196 15.8946 17.2652 16 17 16H14V19C14 19.552 13.55 20 12.993 20H1.007C0.875127 20.0008 0.744397 19.9755 0.622322 19.9256C0.500247 19.8757 0.389233 19.8022 0.295659 19.7093C0.202084 19.6164 0.127793 19.5059 0.0770543 19.3841C0.0263156 19.2624 0.000129374 19.1319 0 19L0.00300002 5C0.00300002 4.448 0.453 4 1.01 4H4ZM2.003 6L2 18H12V6H2.003ZM6 4H14V14H16V2H6V4Z" fill="#F5F6F9"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                                </div>
+
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="writer">
+                            <legend> <img src="./images/num4.svg" alt="">
+                                <p>
+                                    The Branded Headline
+                                </p>
+                            </legend>
+                            <div class="output">
+                                <form>
+                                   <div class="show-output content-edit">
+                                        <span class="keyword edit" contenteditable="true"></span>
+                                        <span class="default-text hide-after" contenteditable="false"></span>
+                                        <span class="headline-branding edit" contenteditable="true"></span>
+                                    </div>
+                                </form>
+                                <div class="tool-tip">
+                                    <svg class="copy-output" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="18" height="20" fill="#E5E5E5"/>
+                                        <g clip-path="url(#clip0)">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        <rect class="fill" opacity="0.05" x="-1337" y="-224" width="1440" height="2205" rx="4" fill="#F5F6F9"/>
+                                        <rect class="stroke" x="-1008.5" y="-197.5" width="1089" height="1997" rx="3.5" fill="white" stroke="#EFEFEF"/>
+                                        <path class="stroke" d="M-469.5 -20C-469.5 -24.1421 -466.142 -27.5 -462 -27.5H42C46.1422 -27.5 49.5 -24.1421 49.5 -20V40C49.5 44.1421 46.1422 47.5 42 47.5H-462C-466.142 47.5 -469.5 44.1421 -469.5 40V-20Z" stroke="#F5F6F9"/>
+                                        <path class="fill" d="M4 4V1C4 0.734784 4.10536 0.48043 4.29289 0.292893C4.48043 0.105357 4.73478 0 5 0H17C17.2652 0 17.5196 0.105357 17.7071 0.292893C17.8946 0.48043 18 0.734784 18 1V15C18 15.2652 17.8946 15.5196 17.7071 15.7071C17.5196 15.8946 17.2652 16 17 16H14V19C14 19.552 13.55 20 12.993 20H1.007C0.875127 20.0008 0.744397 19.9755 0.622322 19.9256C0.500247 19.8757 0.389233 19.8022 0.295659 19.7093C0.202084 19.6164 0.127793 19.5059 0.0770543 19.3841C0.0263156 19.2624 0.000129374 19.1319 0 19L0.00300002 5C0.00300002 4.448 0.453 4 1.01 4H4ZM2.003 6L2 18H12V6H2.003ZM6 4H14V14H16V2H6V4Z" fill="#F5F6F9"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                                </div>
+
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="writer">
+                            <legend> <img src="./images/num5.svg" alt="">
+                                <p>
+                                    The Comparison Headline
+                                </p>
+                            </legend>
+                            <div class="output">
+                                <form>
+                                   <div class="show-output content-edit">
+                                        <span class="default-text" contenteditable="false">Are You More Like</span>
+                                        <span class="comparison-1 edit" contenteditable="true"></span>
+                                        <span class="default-text" contenteditable="false">Or</span>
+                                        <span class="comparison-2 edit" contenteditable="true"></span>
+                                    </div>
+                                </form>
+                                <div class="tool-tip">
+                                    <svg class="copy-output" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="18" height="20" fill="#E5E5E5"/>
+                                        <g clip-path="url(#clip0)">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        <rect class="fill" opacity="0.05" x="-1337" y="-224" width="1440" height="2205" rx="4" fill="#F5F6F9"/>
+                                        <rect class="stroke" x="-1008.5" y="-197.5" width="1089" height="1997" rx="3.5" fill="white" stroke="#EFEFEF"/>
+                                        <path class="stroke" d="M-469.5 -20C-469.5 -24.1421 -466.142 -27.5 -462 -27.5H42C46.1422 -27.5 49.5 -24.1421 49.5 -20V40C49.5 44.1421 46.1422 47.5 42 47.5H-462C-466.142 47.5 -469.5 44.1421 -469.5 40V-20Z" stroke="#F5F6F9"/>
+                                        <path class="fill" d="M4 4V1C4 0.734784 4.10536 0.48043 4.29289 0.292893C4.48043 0.105357 4.73478 0 5 0H17C17.2652 0 17.5196 0.105357 17.7071 0.292893C17.8946 0.48043 18 0.734784 18 1V15C18 15.2652 17.8946 15.5196 17.7071 15.7071C17.5196 15.8946 17.2652 16 17 16H14V19C14 19.552 13.55 20 12.993 20H1.007C0.875127 20.0008 0.744397 19.9755 0.622322 19.9256C0.500247 19.8757 0.389233 19.8022 0.295659 19.7093C0.202084 19.6164 0.127793 19.5059 0.0770543 19.3841C0.0263156 19.2624 0.000129374 19.1319 0 19L0.00300002 5C0.00300002 4.448 0.453 4 1.01 4H4ZM2.003 6L2 18H12V6H2.003ZM6 4H14V14H16V2H6V4Z" fill="#F5F6F9"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                                </div>
+
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="writer">
+                            <legend> <img src="./images/num6.svg" alt="">
+                                <p>
+                                    The Expert Round Up Headline
+                                </p>
+                            </legend>
+                            <div class="output">
+                                <form>
+                                   <div class="show-output content-edit">
+                                        <span class="expert-number edit" contenteditable="true"></span>
+                                        <span class="default-text" contenteditable="false">Experts Share</span>
+                                        <span class="expert-roundup edit" contenteditable="true"></span>
+                                    </div>
+                                </form>
+                                <div class="tool-tip">
+                                    <svg class="copy-output" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="18" height="20" fill="#E5E5E5"/>
+                                        <g clip-path="url(#clip0)">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        <rect class="fill" opacity="0.05" x="-1337" y="-224" width="1440" height="2205" rx="4" fill="#F5F6F9"/>
+                                        <rect class="stroke" x="-1008.5" y="-197.5" width="1089" height="1997" rx="3.5" fill="white" stroke="#EFEFEF"/>
+                                        <path class="stroke" d="M-469.5 -20C-469.5 -24.1421 -466.142 -27.5 -462 -27.5H42C46.1422 -27.5 49.5 -24.1421 49.5 -20V40C49.5 44.1421 46.1422 47.5 42 47.5H-462C-466.142 47.5 -469.5 44.1421 -469.5 40V-20Z" stroke="#F5F6F9"/>
+                                        <path class="fill" d="M4 4V1C4 0.734784 4.10536 0.48043 4.29289 0.292893C4.48043 0.105357 4.73478 0 5 0H17C17.2652 0 17.5196 0.105357 17.7071 0.292893C17.8946 0.48043 18 0.734784 18 1V15C18 15.2652 17.8946 15.5196 17.7071 15.7071C17.5196 15.8946 17.2652 16 17 16H14V19C14 19.552 13.55 20 12.993 20H1.007C0.875127 20.0008 0.744397 19.9755 0.622322 19.9256C0.500247 19.8757 0.389233 19.8022 0.295659 19.7093C0.202084 19.6164 0.127793 19.5059 0.0770543 19.3841C0.0263156 19.2624 0.000129374 19.1319 0 19L0.00300002 5C0.00300002 4.448 0.453 4 1.01 4H4ZM2.003 6L2 18H12V6H2.003ZM6 4H14V14H16V2H6V4Z" fill="#F5F6F9"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                                </div>
+
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="writer">
+                            <legend> <img src="./images/num7.svg" alt="">
+                                <p>
+                                    The Snackable Headline
+                                </p>
+                            </legend>
+                            <div class="output">
+                                <form>
+                                   <div class="show-output content-edit">
+                                        <span class="summary edit" contenteditable="true"></span>
+                                        <span class="default-text hide-after" contenteditable="false"></span>
+                                        <span class="desirable-outcome edit none" contenteditable="true"></span>
+                                    </div>
+                                </form>
+                                <div class="tool-tip">
+                                    <svg class="copy-output" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="18" height="20" fill="#E5E5E5"/>
+                                        <g clip-path="url(#clip0)">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        <rect class="fill" opacity="0.05" x="-1337" y="-224" width="1440" height="2205" rx="4" fill="#F5F6F9"/>
+                                        <rect class="stroke" x="-1008.5" y="-197.5" width="1089" height="1997" rx="3.5" fill="white" stroke="#EFEFEF"/>
+                                        <path class="stroke" d="M-469.5 -20C-469.5 -24.1421 -466.142 -27.5 -462 -27.5H42C46.1422 -27.5 49.5 -24.1421 49.5 -20V40C49.5 44.1421 46.1422 47.5 42 47.5H-462C-466.142 47.5 -469.5 44.1421 -469.5 40V-20Z" stroke="#F5F6F9"/>
+                                        <path class="fill" d="M4 4V1C4 0.734784 4.10536 0.48043 4.29289 0.292893C4.48043 0.105357 4.73478 0 5 0H17C17.2652 0 17.5196 0.105357 17.7071 0.292893C17.8946 0.48043 18 0.734784 18 1V15C18 15.2652 17.8946 15.5196 17.7071 15.7071C17.5196 15.8946 17.2652 16 17 16H14V19C14 19.552 13.55 20 12.993 20H1.007C0.875127 20.0008 0.744397 19.9755 0.622322 19.9256C0.500247 19.8757 0.389233 19.8022 0.295659 19.7093C0.202084 19.6164 0.127793 19.5059 0.0770543 19.3841C0.0263156 19.2624 0.000129374 19.1319 0 19L0.00300002 5C0.00300002 4.448 0.453 4 1.01 4H4ZM2.003 6L2 18H12V6H2.003ZM6 4H14V14H16V2H6V4Z" fill="#F5F6F9"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                                </div>
+
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="writer">
+                            <legend> <img src="./images/num8.svg" alt="">
+                                <p>
+                                    The WTF Headline
+                                </p>
+                            </legend>
+                            <div class="output">
+                                <form>
+                                   <div class="show-output content-edit">
+                                        <span class="ridiculous edit" contenteditable="true"></span>
+                                        <span class="default-text hide-after" contenteditable="false"></span>
+                                        <span class="desirable-outcome edit none" contenteditable="true"></span>
+                                    </div>
+                                </form>
+                                <div class="tool-tip">
+                                    <svg class="copy-output" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="18" height="20" fill="#E5E5E5"/>
+                                        <g clip-path="url(#clip0)">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        <rect class="fill" opacity="0.05" x="-1337" y="-224" width="1440" height="2205" rx="4" fill="#F5F6F9"/>
+                                        <rect class="stroke" x="-1008.5" y="-197.5" width="1089" height="1997" rx="3.5" fill="white" stroke="#EFEFEF"/>
+                                        <path class="stroke" d="M-469.5 -20C-469.5 -24.1421 -466.142 -27.5 -462 -27.5H42C46.1422 -27.5 49.5 -24.1421 49.5 -20V40C49.5 44.1421 46.1422 47.5 42 47.5H-462C-466.142 47.5 -469.5 44.1421 -469.5 40V-20Z" stroke="#F5F6F9"/>
+                                        <path class="fill" d="M4 4V1C4 0.734784 4.10536 0.48043 4.29289 0.292893C4.48043 0.105357 4.73478 0 5 0H17C17.2652 0 17.5196 0.105357 17.7071 0.292893C17.8946 0.48043 18 0.734784 18 1V15C18 15.2652 17.8946 15.5196 17.7071 15.7071C17.5196 15.8946 17.2652 16 17 16H14V19C14 19.552 13.55 20 12.993 20H1.007C0.875127 20.0008 0.744397 19.9755 0.622322 19.9256C0.500247 19.8757 0.389233 19.8022 0.295659 19.7093C0.202084 19.6164 0.127793 19.5059 0.0770543 19.3841C0.0263156 19.2624 0.000129374 19.1319 0 19L0.00300002 5C0.00300002 4.448 0.453 4 1.01 4H4ZM2.003 6L2 18H12V6H2.003ZM6 4H14V14H16V2H6V4Z" fill="#F5F6F9"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                                </div>
+
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="writer">
+                            <legend> <img src="./images/num9.svg" alt="">
+                                <p>
+                                    The Hot Button Headline
+                                </p>
+                            </legend>
+                            <div class="output">
+                                <form>
+                                   <div class="show-output content-edit">
+                                        <span class="hot-button edit" contenteditable="true"></span>
+                                        <span class="default-text hide-after" contenteditable="false"></span>
+                                        <span class="desirable-outcome edit none" contenteditable="true"></span>
+                                    </div>
+                                </form>
+                                <div class="tool-tip">
+                                    <svg class="copy-output" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="18" height="20" fill="#E5E5E5"/>
+                                        <g clip-path="url(#clip0)">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        <rect class="fill" opacity="0.05" x="-1337" y="-224" width="1440" height="2205" rx="4" fill="#F5F6F9"/>
+                                        <rect class="stroke" x="-1008.5" y="-197.5" width="1089" height="1997" rx="3.5" fill="white" stroke="#EFEFEF"/>
+                                        <path class="stroke" d="M-469.5 -20C-469.5 -24.1421 -466.142 -27.5 -462 -27.5H42C46.1422 -27.5 49.5 -24.1421 49.5 -20V40C49.5 44.1421 46.1422 47.5 42 47.5H-462C-466.142 47.5 -469.5 44.1421 -469.5 40V-20Z" stroke="#F5F6F9"/>
+                                        <path class="fill" d="M4 4V1C4 0.734784 4.10536 0.48043 4.29289 0.292893C4.48043 0.105357 4.73478 0 5 0H17C17.2652 0 17.5196 0.105357 17.7071 0.292893C17.8946 0.48043 18 0.734784 18 1V15C18 15.2652 17.8946 15.5196 17.7071 15.7071C17.5196 15.8946 17.2652 16 17 16H14V19C14 19.552 13.55 20 12.993 20H1.007C0.875127 20.0008 0.744397 19.9755 0.622322 19.9256C0.500247 19.8757 0.389233 19.8022 0.295659 19.7093C0.202084 19.6164 0.127793 19.5059 0.0770543 19.3841C0.0263156 19.2624 0.000129374 19.1319 0 19L0.00300002 5C0.00300002 4.448 0.453 4 1.01 4H4ZM2.003 6L2 18H12V6H2.003ZM6 4H14V14H16V2H6V4Z" fill="#F5F6F9"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                                </div>
+
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="writer">
+                            <legend> <img src="./images/num10.svg" alt="">
+                                <p>
+                                    The Breaking News Headline
+                                </p>
+                            </legend>
+                            <div class="output">
+                                <form>
+                                   <div class="show-output content-edit">
+                                        <span class="default-text" contenteditable="false">BREAKING:</span>
+                                        <span class="event edit" contenteditable="true"></span>
+                                        <span class="desirable-outcome edit none" contenteditable="true"></span>
+                                    </div>
+                                </form>
+                                <div class="tool-tip">
+                                    <svg class="copy-output" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="18" height="20" fill="#E5E5E5"/>
+                                        <g clip-path="url(#clip0)">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        <rect class="fill" opacity="0.05" x="-1337" y="-224" width="1440" height="2205" rx="4" fill="#F5F6F9"/>
+                                        <rect class="stroke" x="-1008.5" y="-197.5" width="1089" height="1997" rx="3.5" fill="white" stroke="#EFEFEF"/>
+                                        <path class="stroke" d="M-469.5 -20C-469.5 -24.1421 -466.142 -27.5 -462 -27.5H42C46.1422 -27.5 49.5 -24.1421 49.5 -20V40C49.5 44.1421 46.1422 47.5 42 47.5H-462C-466.142 47.5 -469.5 44.1421 -469.5 40V-20Z" stroke="#F5F6F9"/>
+                                        <path class="fill" d="M4 4V1C4 0.734784 4.10536 0.48043 4.29289 0.292893C4.48043 0.105357 4.73478 0 5 0H17C17.2652 0 17.5196 0.105357 17.7071 0.292893C17.8946 0.48043 18 0.734784 18 1V15C18 15.2652 17.8946 15.5196 17.7071 15.7071C17.5196 15.8946 17.2652 16 17 16H14V19C14 19.552 13.55 20 12.993 20H1.007C0.875127 20.0008 0.744397 19.9755 0.622322 19.9256C0.500247 19.8757 0.389233 19.8022 0.295659 19.7093C0.202084 19.6164 0.127793 19.5059 0.0770543 19.3841C0.0263156 19.2624 0.000129374 19.1319 0 19L0.00300002 5C0.00300002 4.448 0.453 4 1.01 4H4ZM2.003 6L2 18H12V6H2.003ZM6 4H14V14H16V2H6V4Z" fill="#F5F6F9"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                                </div>
+
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="writer">
+                            <legend> <img src="./images/num11.svg" alt="">
+                                <p>
+                                    The Keyword Headline
+                                </p>
+                            </legend>
+                            <div class="output">
+                                <form>
+                                   <div class="show-output content-edit">
+                                        <span class="keyword edit" contenteditable="true"></span>
+                                        <span class="default-text hide-after" contenteditable="false"></span>
+                                        <span class="support-keyword edit" contenteditable="true"></span>
+                                    </div>
+                                </form>
+                                <div class="tool-tip">
+                                    <svg class="copy-output" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="18" height="20" fill="#E5E5E5"/>
+                                        <g clip-path="url(#clip0)">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        <rect class="fill" opacity="0.05" x="-1337" y="-224" width="1440" height="2205" rx="4" fill="#F5F6F9"/>
+                                        <rect class="stroke" x="-1008.5" y="-197.5" width="1089" height="1997" rx="3.5" fill="white" stroke="#EFEFEF"/>
+                                        <path class="stroke" d="M-469.5 -20C-469.5 -24.1421 -466.142 -27.5 -462 -27.5H42C46.1422 -27.5 49.5 -24.1421 49.5 -20V40C49.5 44.1421 46.1422 47.5 42 47.5H-462C-466.142 47.5 -469.5 44.1421 -469.5 40V-20Z" stroke="#F5F6F9"/>
+                                        <path class="fill" d="M4 4V1C4 0.734784 4.10536 0.48043 4.29289 0.292893C4.48043 0.105357 4.73478 0 5 0H17C17.2652 0 17.5196 0.105357 17.7071 0.292893C17.8946 0.48043 18 0.734784 18 1V15C18 15.2652 17.8946 15.5196 17.7071 15.7071C17.5196 15.8946 17.2652 16 17 16H14V19C14 19.552 13.55 20 12.993 20H1.007C0.875127 20.0008 0.744397 19.9755 0.622322 19.9256C0.500247 19.8757 0.389233 19.8022 0.295659 19.7093C0.202084 19.6164 0.127793 19.5059 0.0770543 19.3841C0.0263156 19.2624 0.000129374 19.1319 0 19L0.00300002 5C0.00300002 4.448 0.453 4 1.01 4H4ZM2.003 6L2 18H12V6H2.003ZM6 4H14V14H16V2H6V4Z" fill="#F5F6F9"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                                </div>
+
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+
+            <!--Third Headline Main Content -->
+            <div class="headline-main-content third-content none">
+                <!-- Left hand side of the Main Content -->
+                <div class="left-main-content">
+                    <ul class="">
+                        <li>
+                            <p>Topic</p>
+                            <input  class="input-topic" type="text" placeholder="Label" value="Making Money Online">
+                            <span class="input-hint">
+                                <img src="./images/Vector.svg" alt="">
+                            </span>
+                        </li>
+
+                        <li>
+                            <p>Desired outcome</p>
+                            <input class="input-desired" type="text" placeholder="Label" value="Make Money Online">
+                            <span class="input-hint">
+                                <img src="./images/Vector.svg" alt="">
+                            </span>
+                        </li>
+
+                        <li>
+                            <p>Undesirable outcome</p>
+                            <input class="input-undesired" type="text" placeholder="Label" value="Feeling Broke">
+                            <span class="input-hint">
+                                <img src="./images/Vector.svg" alt="">
+                            </span>
+                        </li>
+
+                        <li>
+                            <p>Audience</p>
+                            <input class="input-audience" type="text" placeholder="Label" value="Entrepreneurs">
+                            <span class="input-hint">
+                                <img src="./images/Vector.svg" alt="">
+                            </span>
+                        </li>
+
+                        <li>
+                            <p>Points in Content</p>
+                            <input class="input-points" type="text" placeholder="Label" value="10">
+                            <span class="input-hint">
+                                <img src="./images/Vector.svg" alt="">
+                            </span>
+                        </li>
+
+                        <li>
+                            <p>Helpful Aide</p>
+                            <input class="input-help" type="text" placeholder="Label" value="Piggy Banks">
+                            <span class="input-hint">
+                                <img src="./images/Vector.svg" alt="">
+                            </span>
+                        </li>
+
+                        <li>
+                            <p>Seemingly inconsequential Action</p>
+                            <input class="input-action" type="text" placeholder="Label" value="Saving $1 A Day">
+                            <span class="input-hint">
+                                <img src="./images/Vector.svg" alt="">
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Right hand side of the Main Content -->
+                <div class="right-main-content">
+                    <div>
+                        <button class="save-project-btn">Save to project</button>
+                    </div>
+
+                    <div class="right-content">
+                        <fieldset class="writer">
+                            <legend> <img src="./images/num1.svg" alt="">
+                                <p>
+                                    The How / Result Headline
+                                </p>
+                            </legend>
+                            <div class="output">
+                                <form>
+                                   <div class="show-output content-edit">
+                                        <span class="default-text" contenteditable="false">How</span>
+                                        <span class="action edit" contenteditable="true"></span>
+                                        <span class="default-text" contenteditable="false">Can Stop You</span>
+                                        <span class="undesirable-outcome edit" contenteditable="true"></span>
+                                    </div>
+                                </form>
+                                <div class="tool-tip">
+                                    <svg class="copy-output" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="18" height="20" fill="#E5E5E5"/>
+                                        <g clip-path="url(#clip0)">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        <rect class="fill" opacity="0.05" x="-1337" y="-224" width="1440" height="2205" rx="4" fill="#F5F6F9"/>
+                                        <rect class="stroke" x="-1008.5" y="-197.5" width="1089" height="1997" rx="3.5" fill="white" stroke="#EFEFEF"/>
+                                        <path class="stroke" d="M-469.5 -20C-469.5 -24.1421 -466.142 -27.5 -462 -27.5H42C46.1422 -27.5 49.5 -24.1421 49.5 -20V40C49.5 44.1421 46.1422 47.5 42 47.5H-462C-466.142 47.5 -469.5 44.1421 -469.5 40V-20Z" stroke="#F5F6F9"/>
+                                        <path class="fill" d="M4 4V1C4 0.734784 4.10536 0.48043 4.29289 0.292893C4.48043 0.105357 4.73478 0 5 0H17C17.2652 0 17.5196 0.105357 17.7071 0.292893C17.8946 0.48043 18 0.734784 18 1V15C18 15.2652 17.8946 15.5196 17.7071 15.7071C17.5196 15.8946 17.2652 16 17 16H14V19C14 19.552 13.55 20 12.993 20H1.007C0.875127 20.0008 0.744397 19.9755 0.622322 19.9256C0.500247 19.8757 0.389233 19.8022 0.295659 19.7093C0.202084 19.6164 0.127793 19.5059 0.0770543 19.3841C0.0263156 19.2624 0.000129374 19.1319 0 19L0.00300002 5C0.00300002 4.448 0.453 4 1.01 4H4ZM2.003 6L2 18H12V6H2.003ZM6 4H14V14H16V2H6V4Z" fill="#F5F6F9"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                                </div>
+
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="writer">
+                            <legend> <img src="./images/num2.svg" alt="">
+                                <p>
+                                    The Explainer Headline
+                                </p>
+                            </legend>
+                            <div class="output">
+                                <form>
+                                    <div class="show-output content-edit">
+                                        <span class="default-text" contenteditable="false">How</span>
+                                        <span class="help edit" contenteditable="true"></span>
+                                        <span class="default-text" contenteditable="false">Help You</span>
+                                        <span class="desirable-outcome edit" contenteditable="true"></span>
+                                    </div>
+                                </form>
+                                <div class="tool-tip">
+                                    <svg class="copy-output" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="18" height="20" fill="#E5E5E5"/>
+                                        <g clip-path="url(#clip0)">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        <rect class="fill" opacity="0.05" x="-1337" y="-224" width="1440" height="2205" rx="4" fill="#F5F6F9"/>
+                                        <rect class="stroke" x="-1008.5" y="-197.5" width="1089" height="1997" rx="3.5" fill="white" stroke="#EFEFEF"/>
+                                        <path class="stroke" d="M-469.5 -20C-469.5 -24.1421 -466.142 -27.5 -462 -27.5H42C46.1422 -27.5 49.5 -24.1421 49.5 -20V40C49.5 44.1421 46.1422 47.5 42 47.5H-462C-466.142 47.5 -469.5 44.1421 -469.5 40V-20Z" stroke="#F5F6F9"/>
+                                        <path class="fill" d="M4 4V1C4 0.734784 4.10536 0.48043 4.29289 0.292893C4.48043 0.105357 4.73478 0 5 0H17C17.2652 0 17.5196 0.105357 17.7071 0.292893C17.8946 0.48043 18 0.734784 18 1V15C18 15.2652 17.8946 15.5196 17.7071 15.7071C17.5196 15.8946 17.2652 16 17 16H14V19C14 19.552 13.55 20 12.993 20H1.007C0.875127 20.0008 0.744397 19.9755 0.622322 19.9256C0.500247 19.8757 0.389233 19.8022 0.295659 19.7093C0.202084 19.6164 0.127793 19.5059 0.0770543 19.3841C0.0263156 19.2624 0.000129374 19.1319 0 19L0.00300002 5C0.00300002 4.448 0.453 4 1.01 4H4ZM2.003 6L2 18H12V6H2.003ZM6 4H14V14H16V2H6V4Z" fill="#F5F6F9"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                                </div>
+
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="writer">
+                            <legend> <img src="./images/num3.svg" alt="">
+                                <p>
+                                    The Ignorance Avoidance Headline
+                                </p>
+                            </legend>
+                            <div class="output">
+                                <form>
+                                    <div class="show-output content-edit">
+                                        <span class="default-text" contenteditable="false">What You Should Know About</span>
+                                        <span class="topic edit" contenteditable="true"></span>
+                                    </div>
+                                </form>
+                                <div class="tool-tip">
+                                    <svg class="copy-output" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="18" height="20" fill="#E5E5E5"/>
+                                        <g clip-path="url(#clip0)">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        <rect class="fill" opacity="0.05" x="-1337" y="-224" width="1440" height="2205" rx="4" fill="#F5F6F9"/>
+                                        <rect class="stroke" x="-1008.5" y="-197.5" width="1089" height="1997" rx="3.5" fill="white" stroke="#EFEFEF"/>
+                                        <path class="stroke" d="M-469.5 -20C-469.5 -24.1421 -466.142 -27.5 -462 -27.5H42C46.1422 -27.5 49.5 -24.1421 49.5 -20V40C49.5 44.1421 46.1422 47.5 42 47.5H-462C-466.142 47.5 -469.5 44.1421 -469.5 40V-20Z" stroke="#F5F6F9"/>
+                                        <path class="fill" d="M4 4V1C4 0.734784 4.10536 0.48043 4.29289 0.292893C4.48043 0.105357 4.73478 0 5 0H17C17.2652 0 17.5196 0.105357 17.7071 0.292893C17.8946 0.48043 18 0.734784 18 1V15C18 15.2652 17.8946 15.5196 17.7071 15.7071C17.5196 15.8946 17.2652 16 17 16H14V19C14 19.552 13.55 20 12.993 20H1.007C0.875127 20.0008 0.744397 19.9755 0.622322 19.9256C0.500247 19.8757 0.389233 19.8022 0.295659 19.7093C0.202084 19.6164 0.127793 19.5059 0.0770543 19.3841C0.0263156 19.2624 0.000129374 19.1319 0 19L0.00300002 5C0.00300002 4.448 0.453 4 1.01 4H4ZM2.003 6L2 18H12V6H2.003ZM6 4H14V14H16V2H6V4Z" fill="#F5F6F9"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                                </div>
+
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="writer">
+                            <legend> <img src="./images/num4.svg" alt="">
+                                <p>
+                                    The Solutions Headline
+                                </p>
+                            </legend>
+                            <div class="output">
+                                <form>
+                                    <div class="show-output content-edit">
+                                        <span class="default-text" contenteditable="false">Why You're Not</span>
+                                        <span class="desirable-outcome edit" contenteditable="true"></span>
+                                        <span class="default-text" contenteditable="false">(And What You Can Do About It)</span>
+                                    </div>
+                                </form>
+                                <div class="tool-tip">
+                                    <svg class="copy-output" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="18" height="20" fill="#E5E5E5"/>
+                                        <g clip-path="url(#clip0)">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        <rect class="fill" opacity="0.05" x="-1337" y="-224" width="1440" height="2205" rx="4" fill="#F5F6F9"/>
+                                        <rect class="stroke" x="-1008.5" y="-197.5" width="1089" height="1997" rx="3.5" fill="white" stroke="#EFEFEF"/>
+                                        <path class="stroke" d="M-469.5 -20C-469.5 -24.1421 -466.142 -27.5 -462 -27.5H42C46.1422 -27.5 49.5 -24.1421 49.5 -20V40C49.5 44.1421 46.1422 47.5 42 47.5H-462C-466.142 47.5 -469.5 44.1421 -469.5 40V-20Z" stroke="#F5F6F9"/>
+                                        <path class="fill" d="M4 4V1C4 0.734784 4.10536 0.48043 4.29289 0.292893C4.48043 0.105357 4.73478 0 5 0H17C17.2652 0 17.5196 0.105357 17.7071 0.292893C17.8946 0.48043 18 0.734784 18 1V15C18 15.2652 17.8946 15.5196 17.7071 15.7071C17.5196 15.8946 17.2652 16 17 16H14V19C14 19.552 13.55 20 12.993 20H1.007C0.875127 20.0008 0.744397 19.9755 0.622322 19.9256C0.500247 19.8757 0.389233 19.8022 0.295659 19.7093C0.202084 19.6164 0.127793 19.5059 0.0770543 19.3841C0.0263156 19.2624 0.000129374 19.1319 0 19L0.00300002 5C0.00300002 4.448 0.453 4 1.01 4H4ZM2.003 6L2 18H12V6H2.003ZM6 4H14V14H16V2H6V4Z" fill="#F5F6F9"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                                </div>
+
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="writer">
+                            <legend> <img src="./images/num5.svg" alt="">
+                                <p>
+                                    The Analysis Headline
+                                </p>
+                            </legend>
+                            <div class="output">
+                                <form>
+                                    <div class="show-output content-edit">
+                                        <span class="default-text" contenteditable="false">We Analysed</span>
+                                        <span class="points edit" contenteditable="true"></span>
+                                        <span class="audience edit" contenteditable="true"></span>
+                                        <span class="default-text" contenteditable="false">And Here's What We Found</span>
+                                    </div>
+                                </form>
+                                <div class="tool-tip">
+                                    <svg class="copy-output" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="18" height="20" fill="#E5E5E5"/>
+                                        <g clip-path="url(#clip0)">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        <rect class="fill" opacity="0.05" x="-1337" y="-224" width="1440" height="2205" rx="4" fill="#F5F6F9"/>
+                                        <rect class="stroke" x="-1008.5" y="-197.5" width="1089" height="1997" rx="3.5" fill="white" stroke="#EFEFEF"/>
+                                        <path class="stroke" d="M-469.5 -20C-469.5 -24.1421 -466.142 -27.5 -462 -27.5H42C46.1422 -27.5 49.5 -24.1421 49.5 -20V40C49.5 44.1421 46.1422 47.5 42 47.5H-462C-466.142 47.5 -469.5 44.1421 -469.5 40V-20Z" stroke="#F5F6F9"/>
+                                        <path class="fill" d="M4 4V1C4 0.734784 4.10536 0.48043 4.29289 0.292893C4.48043 0.105357 4.73478 0 5 0H17C17.2652 0 17.5196 0.105357 17.7071 0.292893C17.8946 0.48043 18 0.734784 18 1V15C18 15.2652 17.8946 15.5196 17.7071 15.7071C17.5196 15.8946 17.2652 16 17 16H14V19C14 19.552 13.55 20 12.993 20H1.007C0.875127 20.0008 0.744397 19.9755 0.622322 19.9256C0.500247 19.8757 0.389233 19.8022 0.295659 19.7093C0.202084 19.6164 0.127793 19.5059 0.0770543 19.3841C0.0263156 19.2624 0.000129374 19.1319 0 19L0.00300002 5C0.00300002 4.448 0.453 4 1.01 4H4ZM2.003 6L2 18H12V6H2.003ZM6 4H14V14H16V2H6V4Z" fill="#F5F6F9"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                                </div>
+
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="writer">
+                            <legend> <img src="./images/num6.svg" alt="">
+                                <p>
+                                    The Teaser Headline
+                                </p>
+                            </legend>
+                            <div class="output">
+                                <form>
+                                    <div class="show-output content-edit">
+                                        <span class="default-text" contenteditable="false">These</span>
+                                        <span class="points edit" contenteditable="true"></span>
+                                        <span class="help edit" contenteditable="true"></span>
+                                        <span class="default-text" contenteditable="false">Can Help You</span>
+                                        <span class="desirable-outcome edit" contenteditable="true"></span>
+                                    </div>
+                                </form>
+                                <div class="tool-tip">
+                                    <svg class="copy-output" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="18" height="20" fill="#E5E5E5"/>
+                                        <g clip-path="url(#clip0)">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        <rect class="fill" opacity="0.05" x="-1337" y="-224" width="1440" height="2205" rx="4" fill="#F5F6F9"/>
+                                        <rect class="stroke" x="-1008.5" y="-197.5" width="1089" height="1997" rx="3.5" fill="white" stroke="#EFEFEF"/>
+                                        <path class="stroke" d="M-469.5 -20C-469.5 -24.1421 -466.142 -27.5 -462 -27.5H42C46.1422 -27.5 49.5 -24.1421 49.5 -20V40C49.5 44.1421 46.1422 47.5 42 47.5H-462C-466.142 47.5 -469.5 44.1421 -469.5 40V-20Z" stroke="#F5F6F9"/>
+                                        <path class="fill" d="M4 4V1C4 0.734784 4.10536 0.48043 4.29289 0.292893C4.48043 0.105357 4.73478 0 5 0H17C17.2652 0 17.5196 0.105357 17.7071 0.292893C17.8946 0.48043 18 0.734784 18 1V15C18 15.2652 17.8946 15.5196 17.7071 15.7071C17.5196 15.8946 17.2652 16 17 16H14V19C14 19.552 13.55 20 12.993 20H1.007C0.875127 20.0008 0.744397 19.9755 0.622322 19.9256C0.500247 19.8757 0.389233 19.8022 0.295659 19.7093C0.202084 19.6164 0.127793 19.5059 0.0770543 19.3841C0.0263156 19.2624 0.000129374 19.1319 0 19L0.00300002 5C0.00300002 4.448 0.453 4 1.01 4H4ZM2.003 6L2 18H12V6H2.003ZM6 4H14V14H16V2H6V4Z" fill="#F5F6F9"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                                </div>
+
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+
+            <!--Fourth Headline Main Content -->
+            <div class="headline-main-content fourth-content none">
+                <!-- Left hand side of the Main Content -->
+                <div class="left-main-content">
+                    <ul class="">
+                        <li>
+                            <p>Desired Outcome (to)</p>
+                            <input class="input-desired" type="text" placeholder="Label" value="Make Money Online">
+                            <span class="input-hint">
+                                <img src="./images/Vector.svg" alt="">
+                            </span>
+                        </li>
+
+                        <li>
+                            <p>Action</p>
+                            <input class="input-action" type="text" placeholder="Label" value="Building Wealth">
+                            <span class="input-hint">
+                                <img src="./images/Vector.svg" alt="">
+                            </span>
+                        </li>
+
+                        <li>
+                            <p>Audience (Singular)</p>
+                            <input class="input-audience" type="text" placeholder="Label" value="Entrepreneur">
+                            <span class="input-hint">
+                                <img src="./images/Vector.svg" alt="">
+                            </span>
+                        </li>
+
+                        <li>
+                            <p>Time Frame</p>
+                            <input class="input-time" type="text" placeholder="Label" value="2 Weeks">
+                            <span class="input-hint">
+                                <img src="./images/Vector.svg" alt="">
+                            </span>
+                        </li>
+
+                        <li>
+                            <p>Past Tense</p>
+                            <input class="input-past" type="text" placeholder="Label" value="Spent $100">
+                            <span class="input-hint">
+                                <img src="./images/Vector.svg" alt="">
+                            </span>
+                        </li>
+
+                        <li>
+                            <p>Common Objection</p>
+                            <input class="input-objection" type="text" placeholder="Label" value="Work Long Hours">
+                            <span class="input-hint">
+                                <img src="./images/Vector.svg" alt="">
+                            </span>
+                        </li>
+
+                        <li>
+                            <p>Outrageous Claim</p>
+                            <input class="input-claim" type="text" placeholder="Label" value="All Rich People Are Evil">
+                            <span class="input-hint">
+                                <img src="./images/Vector.svg" alt="">
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Right hand side of the Main Content -->
+                <div class="right-main-content">
+                    <div>
+                        <button class="save-project-btn">Save to project</button>
+                    </div>
+
+                    <div class="right-content">
+                        <fieldset class="writer">
+                            <legend> <img src="./images/num1.svg" alt="">
+                                <p>
+                                    The See What Happened Headline
+                                </p>
+                            </legend>
+                            <div class="output">
+                                <form>
+                                     <div class="show-output content-edit">
+                                        <span class="default-text" contenteditable="false">I</span>
+                                        <span class="past edit" contenteditable="true"></span>
+                                        <span class="default-text" contenteditable="false">Every Day For</span>
+                                        <span class="time edit" contenteditable="true"></span>
+                                    </div>
+                                </form>
+                                <div class="tool-tip">
+                                    <svg class="copy-output" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="18" height="20" fill="#E5E5E5"/>
+                                        <g clip-path="url(#clip0)">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        <rect class="fill" opacity="0.05" x="-1337" y="-224" width="1440" height="2205" rx="4" fill="#F5F6F9"/>
+                                        <rect class="stroke" x="-1008.5" y="-197.5" width="1089" height="1997" rx="3.5" fill="white" stroke="#EFEFEF"/>
+                                        <path class="stroke" d="M-469.5 -20C-469.5 -24.1421 -466.142 -27.5 -462 -27.5H42C46.1422 -27.5 49.5 -24.1421 49.5 -20V40C49.5 44.1421 46.1422 47.5 42 47.5H-462C-466.142 47.5 -469.5 44.1421 -469.5 40V-20Z" stroke="#F5F6F9"/>
+                                        <path class="fill" d="M4 4V1C4 0.734784 4.10536 0.48043 4.29289 0.292893C4.48043 0.105357 4.73478 0 5 0H17C17.2652 0 17.5196 0.105357 17.7071 0.292893C17.8946 0.48043 18 0.734784 18 1V15C18 15.2652 17.8946 15.5196 17.7071 15.7071C17.5196 15.8946 17.2652 16 17 16H14V19C14 19.552 13.55 20 12.993 20H1.007C0.875127 20.0008 0.744397 19.9755 0.622322 19.9256C0.500247 19.8757 0.389233 19.8022 0.295659 19.7093C0.202084 19.6164 0.127793 19.5059 0.0770543 19.3841C0.0263156 19.2624 0.000129374 19.1319 0 19L0.00300002 5C0.00300002 4.448 0.453 4 1.01 4H4ZM2.003 6L2 18H12V6H2.003ZM6 4H14V14H16V2H6V4Z" fill="#F5F6F9"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                                </div>
+
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="writer">
+                            <legend> <img src="./images/num2.svg" alt="">
+                                <p>
+                                    The Outrageous Headline
+                                </p>
+                            </legend>
+                            <div class="output">
+                                <form>
+                                     <div class="show-output content-edit">
+                                        <span class="default-text" contenteditable="false">Why</span>
+                                        <span class="claim edit" contenteditable="true"></span>
+                                    </div>
+                                </form>
+                                <div class="tool-tip">
+                                    <svg class="copy-output" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="18" height="20" fill="#E5E5E5"/>
+                                        <g clip-path="url(#clip0)">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        <rect class="fill" opacity="0.05" x="-1337" y="-224" width="1440" height="2205" rx="4" fill="#F5F6F9"/>
+                                        <rect class="stroke" x="-1008.5" y="-197.5" width="1089" height="1997" rx="3.5" fill="white" stroke="#EFEFEF"/>
+                                        <path class="stroke" d="M-469.5 -20C-469.5 -24.1421 -466.142 -27.5 -462 -27.5H42C46.1422 -27.5 49.5 -24.1421 49.5 -20V40C49.5 44.1421 46.1422 47.5 42 47.5H-462C-466.142 47.5 -469.5 44.1421 -469.5 40V-20Z" stroke="#F5F6F9"/>
+                                        <path class="fill" d="M4 4V1C4 0.734784 4.10536 0.48043 4.29289 0.292893C4.48043 0.105357 4.73478 0 5 0H17C17.2652 0 17.5196 0.105357 17.7071 0.292893C17.8946 0.48043 18 0.734784 18 1V15C18 15.2652 17.8946 15.5196 17.7071 15.7071C17.5196 15.8946 17.2652 16 17 16H14V19C14 19.552 13.55 20 12.993 20H1.007C0.875127 20.0008 0.744397 19.9755 0.622322 19.9256C0.500247 19.8757 0.389233 19.8022 0.295659 19.7093C0.202084 19.6164 0.127793 19.5059 0.0770543 19.3841C0.0263156 19.2624 0.000129374 19.1319 0 19L0.00300002 5C0.00300002 4.448 0.453 4 1.01 4H4ZM2.003 6L2 18H12V6H2.003ZM6 4H14V14H16V2H6V4Z" fill="#F5F6F9"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                                </div>
+
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="writer">
+                            <legend> <img src="./images/num3.svg" alt="">
+                                <p>
+                                    Objection Preemptive Headline (Negative)
+                                </p>
+                            </legend>
+                            <div class="output">
+                                <form>
+                                     <div class="show-output content-edit">
+                                        <span class="default-text" contenteditable="false">No You Don't Need To</span>
+                                        <span class="objection edit" contenteditable="true"></span>
+                                        <span class="default-text" contenteditable="false">To</span>
+                                        <span class="desirable-outcome edit" contenteditable="true"></span>
+                                    </div>
+                                </form>
+                                <div class="tool-tip">
+                                    <svg class="copy-output" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="18" height="20" fill="#E5E5E5"/>
+                                        <g clip-path="url(#clip0)">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        <rect class="fill" opacity="0.05" x="-1337" y="-224" width="1440" height="2205" rx="4" fill="#F5F6F9"/>
+                                        <rect class="stroke" x="-1008.5" y="-197.5" width="1089" height="1997" rx="3.5" fill="white" stroke="#EFEFEF"/>
+                                        <path class="stroke" d="M-469.5 -20C-469.5 -24.1421 -466.142 -27.5 -462 -27.5H42C46.1422 -27.5 49.5 -24.1421 49.5 -20V40C49.5 44.1421 46.1422 47.5 42 47.5H-462C-466.142 47.5 -469.5 44.1421 -469.5 40V-20Z" stroke="#F5F6F9"/>
+                                        <path class="fill" d="M4 4V1C4 0.734784 4.10536 0.48043 4.29289 0.292893C4.48043 0.105357 4.73478 0 5 0H17C17.2652 0 17.5196 0.105357 17.7071 0.292893C17.8946 0.48043 18 0.734784 18 1V15C18 15.2652 17.8946 15.5196 17.7071 15.7071C17.5196 15.8946 17.2652 16 17 16H14V19C14 19.552 13.55 20 12.993 20H1.007C0.875127 20.0008 0.744397 19.9755 0.622322 19.9256C0.500247 19.8757 0.389233 19.8022 0.295659 19.7093C0.202084 19.6164 0.127793 19.5059 0.0770543 19.3841C0.0263156 19.2624 0.000129374 19.1319 0 19L0.00300002 5C0.00300002 4.448 0.453 4 1.01 4H4ZM2.003 6L2 18H12V6H2.003ZM6 4H14V14H16V2H6V4Z" fill="#F5F6F9"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                                </div>
+
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="writer">
+                            <legend> <img src="./images/num4.svg" alt="">
+                                <p>
+                                    Objection Preemptive Headline (Positive)
+                                </p>
+                            </legend>
+                            <div class="output">
+                                <form>
+                                     <div class="show-output content-edit">
+                                        <span class="default-text" contenteditable="false">Yes You Do Need To</span>
+                                        <span class="objection edit" contenteditable="true"></span>
+                                        <span class="default-text" contenteditable="false">To</span>
+                                        <span class="desirable-outcome edit" contenteditable="true"></span>
+                                    </div>
+                                </form>
+                                <div class="tool-tip">
+                                    <svg class="copy-output" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="18" height="20" fill="#E5E5E5"/>
+                                        <g clip-path="url(#clip0)">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        <rect class="fill" opacity="0.05" x="-1337" y="-224" width="1440" height="2205" rx="4" fill="#F5F6F9"/>
+                                        <rect class="stroke" x="-1008.5" y="-197.5" width="1089" height="1997" rx="3.5" fill="white" stroke="#EFEFEF"/>
+                                        <path class="stroke" d="M-469.5 -20C-469.5 -24.1421 -466.142 -27.5 -462 -27.5H42C46.1422 -27.5 49.5 -24.1421 49.5 -20V40C49.5 44.1421 46.1422 47.5 42 47.5H-462C-466.142 47.5 -469.5 44.1421 -469.5 40V-20Z" stroke="#F5F6F9"/>
+                                        <path class="fill" d="M4 4V1C4 0.734784 4.10536 0.48043 4.29289 0.292893C4.48043 0.105357 4.73478 0 5 0H17C17.2652 0 17.5196 0.105357 17.7071 0.292893C17.8946 0.48043 18 0.734784 18 1V15C18 15.2652 17.8946 15.5196 17.7071 15.7071C17.5196 15.8946 17.2652 16 17 16H14V19C14 19.552 13.55 20 12.993 20H1.007C0.875127 20.0008 0.744397 19.9755 0.622322 19.9256C0.500247 19.8757 0.389233 19.8022 0.295659 19.7093C0.202084 19.6164 0.127793 19.5059 0.0770543 19.3841C0.0263156 19.2624 0.000129374 19.1319 0 19L0.00300002 5C0.00300002 4.448 0.453 4 1.01 4H4ZM2.003 6L2 18H12V6H2.003ZM6 4H14V14H16V2H6V4Z" fill="#F5F6F9"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                                </div>
+
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="writer">
+                            <legend> <img src="./images/num5.svg" alt="">
+                                <p>
+                                    The Quiz Headline 1
+                                </p>
+                            </legend>
+                            <div class="output">
+                                <form>
+                                     <div class="show-output content-edit">
+                                        <span class="default-text" contenteditable="false">QUIZ: What Type Of</span>
+                                        <span class="audience edit" contenteditable="true"></span>
+                                        <span class="default-text" contenteditable="false">Are You?</span>
+                                    </div>
+                                </form>
+                                <div class="tool-tip">
+                                    <svg class="copy-output" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="18" height="20" fill="#E5E5E5"/>
+                                        <g clip-path="url(#clip0)">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        <rect class="fill" opacity="0.05" x="-1337" y="-224" width="1440" height="2205" rx="4" fill="#F5F6F9"/>
+                                        <rect class="stroke" x="-1008.5" y="-197.5" width="1089" height="1997" rx="3.5" fill="white" stroke="#EFEFEF"/>
+                                        <path class="stroke" d="M-469.5 -20C-469.5 -24.1421 -466.142 -27.5 -462 -27.5H42C46.1422 -27.5 49.5 -24.1421 49.5 -20V40C49.5 44.1421 46.1422 47.5 42 47.5H-462C-466.142 47.5 -469.5 44.1421 -469.5 40V-20Z" stroke="#F5F6F9"/>
+                                        <path class="fill" d="M4 4V1C4 0.734784 4.10536 0.48043 4.29289 0.292893C4.48043 0.105357 4.73478 0 5 0H17C17.2652 0 17.5196 0.105357 17.7071 0.292893C17.8946 0.48043 18 0.734784 18 1V15C18 15.2652 17.8946 15.5196 17.7071 15.7071C17.5196 15.8946 17.2652 16 17 16H14V19C14 19.552 13.55 20 12.993 20H1.007C0.875127 20.0008 0.744397 19.9755 0.622322 19.9256C0.500247 19.8757 0.389233 19.8022 0.295659 19.7093C0.202084 19.6164 0.127793 19.5059 0.0770543 19.3841C0.0263156 19.2624 0.000129374 19.1319 0 19L0.00300002 5C0.00300002 4.448 0.453 4 1.01 4H4ZM2.003 6L2 18H12V6H2.003ZM6 4H14V14H16V2H6V4Z" fill="#F5F6F9"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                                </div>
+
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="writer">
+                            <legend> <img src="./images/num6.svg" alt="">
+                                <p>
+                                    The Quiz Headline 2
+                                </p>
+                            </legend>
+                            <div class="output">
+                                <form>
+                                     <div class="show-output content-edit">
+                                        <span class="default-text" contenteditable="false">QUIZ: Which</span>
+                                        <span class="audience edit" contenteditable="true"></span>
+                                        <span class="default-text" contenteditable="false">Are You?</span>
+                                    </div>
+                                </form>
+                                <div class="tool-tip">
+                                    <svg class="copy-output" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="18" height="20" fill="#E5E5E5"/>
+                                        <g clip-path="url(#clip0)">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        <rect class="fill" opacity="0.05" x="-1337" y="-224" width="1440" height="2205" rx="4" fill="#F5F6F9"/>
+                                        <rect class="stroke" x="-1008.5" y="-197.5" width="1089" height="1997" rx="3.5" fill="white" stroke="#EFEFEF"/>
+                                        <path class="stroke" d="M-469.5 -20C-469.5 -24.1421 -466.142 -27.5 -462 -27.5H42C46.1422 -27.5 49.5 -24.1421 49.5 -20V40C49.5 44.1421 46.1422 47.5 42 47.5H-462C-466.142 47.5 -469.5 44.1421 -469.5 40V-20Z" stroke="#F5F6F9"/>
+                                        <path class="fill" d="M4 4V1C4 0.734784 4.10536 0.48043 4.29289 0.292893C4.48043 0.105357 4.73478 0 5 0H17C17.2652 0 17.5196 0.105357 17.7071 0.292893C17.8946 0.48043 18 0.734784 18 1V15C18 15.2652 17.8946 15.5196 17.7071 15.7071C17.5196 15.8946 17.2652 16 17 16H14V19C14 19.552 13.55 20 12.993 20H1.007C0.875127 20.0008 0.744397 19.9755 0.622322 19.9256C0.500247 19.8757 0.389233 19.8022 0.295659 19.7093C0.202084 19.6164 0.127793 19.5059 0.0770543 19.3841C0.0263156 19.2624 0.000129374 19.1319 0 19L0.00300002 5C0.00300002 4.448 0.453 4 1.01 4H4ZM2.003 6L2 18H12V6H2.003ZM6 4H14V14H16V2H6V4Z" fill="#F5F6F9"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                                </div>
+
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="writer">
+                            <legend> <img src="./images/num7.svg" alt="">
+                                <p>
+                                    The Promise Headline
+                                </p>
+                            </legend>
+                            <div class="output">
+                                <form>
+                                     <div class="show-output content-edit">
+                                        <span class="default-text" contenteditable="false">We Can Help You</span>
+                                        <span class="desirable-outcome edit" contenteditable="true"></span>
+                                    </div>
+                                </form>
+                                <div class="tool-tip">
+                                    <svg class="copy-output" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="18" height="20" fill="#E5E5E5"/>
+                                        <g clip-path="url(#clip0)">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        <rect class="fill" opacity="0.05" x="-1337" y="-224" width="1440" height="2205" rx="4" fill="#F5F6F9"/>
+                                        <rect class="stroke" x="-1008.5" y="-197.5" width="1089" height="1997" rx="3.5" fill="white" stroke="#EFEFEF"/>
+                                        <path class="stroke" d="M-469.5 -20C-469.5 -24.1421 -466.142 -27.5 -462 -27.5H42C46.1422 -27.5 49.5 -24.1421 49.5 -20V40C49.5 44.1421 46.1422 47.5 42 47.5H-462C-466.142 47.5 -469.5 44.1421 -469.5 40V-20Z" stroke="#F5F6F9"/>
+                                        <path class="fill" d="M4 4V1C4 0.734784 4.10536 0.48043 4.29289 0.292893C4.48043 0.105357 4.73478 0 5 0H17C17.2652 0 17.5196 0.105357 17.7071 0.292893C17.8946 0.48043 18 0.734784 18 1V15C18 15.2652 17.8946 15.5196 17.7071 15.7071C17.5196 15.8946 17.2652 16 17 16H14V19C14 19.552 13.55 20 12.993 20H1.007C0.875127 20.0008 0.744397 19.9755 0.622322 19.9256C0.500247 19.8757 0.389233 19.8022 0.295659 19.7093C0.202084 19.6164 0.127793 19.5059 0.0770543 19.3841C0.0263156 19.2624 0.000129374 19.1319 0 19L0.00300002 5C0.00300002 4.448 0.453 4 1.01 4H4ZM2.003 6L2 18H12V6H2.003ZM6 4H14V14H16V2H6V4Z" fill="#F5F6F9"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                                </div>
+
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="writer">
+                            <legend> <img src="./images/num8.svg" alt="">
+                                <p>
+                                    The Trivia Headline
+                                </p>
+                            </legend>
+                            <div class="output">
+                                <form>
+                                     <div class="show-output content-edit">
+                                        <span class="default-text" contenteditable="false">Can You Spot These Problems With</span>
+                                        <span class="action edit" contenteditable="true"></span>
+                                        <span class="default-text" contenteditable="false">?</span>
+                                    </div>
+                                </form>
+                                <div class="tool-tip">
+                                    <svg class="copy-output" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="18" height="20" fill="#E5E5E5"/>
+                                        <g clip-path="url(#clip0)">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        <rect class="fill" opacity="0.05" x="-1337" y="-224" width="1440" height="2205" rx="4" fill="#F5F6F9"/>
+                                        <rect class="stroke" x="-1008.5" y="-197.5" width="1089" height="1997" rx="3.5" fill="white" stroke="#EFEFEF"/>
+                                        <path class="stroke" d="M-469.5 -20C-469.5 -24.1421 -466.142 -27.5 -462 -27.5H42C46.1422 -27.5 49.5 -24.1421 49.5 -20V40C49.5 44.1421 46.1422 47.5 42 47.5H-462C-466.142 47.5 -469.5 44.1421 -469.5 40V-20Z" stroke="#F5F6F9"/>
+                                        <path class="fill" d="M4 4V1C4 0.734784 4.10536 0.48043 4.29289 0.292893C4.48043 0.105357 4.73478 0 5 0H17C17.2652 0 17.5196 0.105357 17.7071 0.292893C17.8946 0.48043 18 0.734784 18 1V15C18 15.2652 17.8946 15.5196 17.7071 15.7071C17.5196 15.8946 17.2652 16 17 16H14V19C14 19.552 13.55 20 12.993 20H1.007C0.875127 20.0008 0.744397 19.9755 0.622322 19.9256C0.500247 19.8757 0.389233 19.8022 0.295659 19.7093C0.202084 19.6164 0.127793 19.5059 0.0770543 19.3841C0.0263156 19.2624 0.000129374 19.1319 0 19L0.00300002 5C0.00300002 4.448 0.453 4 1.01 4H4ZM2.003 6L2 18H12V6H2.003ZM6 4H14V14H16V2H6V4Z" fill="#F5F6F9"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                                </div>
+
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+
+            <!--Fifth Headline Main Content -->
+            <div class="headline-main-content fifth-content none">
+                <!-- Left hand side of the Main Content -->
+                <div class="left-main-content">
+                    <ul class="">
+                        <li>
+                            <p>Topic</p>
+                            <input class="input-topic" type="text" placeholder="Label" value="Making Money Online">
+                            <span class="input-hint">
+                                <img src="./images/Vector.svg" alt="">
+                            </span>
+                        </li>
+
+                        <li>
+                            <p>Desired Outcome (to)</p>
+                            <input class="input-desired" type="text" placeholder="Label" value="Make Money Online">
+                            <span class="input-hint">
+                                <img src="./images/Vector.svg" alt="">
+                            </span>
+                        </li>
+
+                        <li>
+                            <p>Successful Outcome (Past Tense)</p>
+                            <input class="input-success" type="text" placeholder="Label" value="Made Money Online">
+                            <span class="input-hint">
+                                <img src="./images/Vector.svg" alt="">
+                            </span>
+                        </li>
+
+                        <li>
+                            <p>Time Frame</p>
+                            <input class="input-time" type="text" placeholder="Label" value="2 Weeks">
+                            <span class="input-hint">
+                                <img src="./images/Vector.svg" alt="">
+                            </span>
+                        </li>
+
+                        <li>
+                            <p>Well Known Celebrity</p>
+                            <input class="input-celeb" type="text" placeholder="Label" value="Bill Gates">
+                            <span class="input-hint">
+                                <img src="./images/Vector.svg" alt="">
+                            </span>
+                        </li>
+
+                        <li>
+                            <p>Biggest Frustration</p>
+                            <input class="input-frustrate" type="text" placeholder="Label" value="Causing Jealousy">
+                            <span class="input-hint">
+                                <img src="./images/Vector.svg" alt="">
+                            </span>
+                        </li>
+
+                        <li>
+                            <p>Descriptive Power Word</p>
+                            <input class="input-power" type="text" placeholder="Label" value="Comprehensive">
+                            <span class="input-hint">
+                                <img src="./images/Vector.svg" alt="">
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Right hand side of the Main Content -->
+                <div class="right-main-content">
+                    <div>
+                        <button class="save-project-btn">Save to project</button>
+                    </div>
+
+                    <div class="right-content">
+                        <fieldset class="writer">
+                            <legend> <img src="./images/num1.svg" alt="">
+                                <p>
+                                    The How to Headline
+                                </p>
+                            </legend>
+                            <div class="output">
+                                <form>
+                                    <div class="show-output content-edit">
+                                        <span class="default-text" contenteditable="false">How To</span>
+                                        <span class="desirable-outcome edit" contenteditable="true"></span>
+                                    </div>
+                                </form>
+                                <div class="tool-tip">
+                                    <svg class="copy-output" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="18" height="20" fill="#E5E5E5"/>
+                                        <g clip-path="url(#clip0)">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        <rect class="fill" opacity="0.05" x="-1337" y="-224" width="1440" height="2205" rx="4" fill="#F5F6F9"/>
+                                        <rect class="stroke" x="-1008.5" y="-197.5" width="1089" height="1997" rx="3.5" fill="white" stroke="#EFEFEF"/>
+                                        <path class="stroke" d="M-469.5 -20C-469.5 -24.1421 -466.142 -27.5 -462 -27.5H42C46.1422 -27.5 49.5 -24.1421 49.5 -20V40C49.5 44.1421 46.1422 47.5 42 47.5H-462C-466.142 47.5 -469.5 44.1421 -469.5 40V-20Z" stroke="#F5F6F9"/>
+                                        <path class="fill" d="M4 4V1C4 0.734784 4.10536 0.48043 4.29289 0.292893C4.48043 0.105357 4.73478 0 5 0H17C17.2652 0 17.5196 0.105357 17.7071 0.292893C17.8946 0.48043 18 0.734784 18 1V15C18 15.2652 17.8946 15.5196 17.7071 15.7071C17.5196 15.8946 17.2652 16 17 16H14V19C14 19.552 13.55 20 12.993 20H1.007C0.875127 20.0008 0.744397 19.9755 0.622322 19.9256C0.500247 19.8757 0.389233 19.8022 0.295659 19.7093C0.202084 19.6164 0.127793 19.5059 0.0770543 19.3841C0.0263156 19.2624 0.000129374 19.1319 0 19L0.00300002 5C0.00300002 4.448 0.453 4 1.01 4H4ZM2.003 6L2 18H12V6H2.003ZM6 4H14V14H16V2H6V4Z" fill="#F5F6F9"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                                </div>
+
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="writer">
+                            <legend> <img src="./images/num2.svg" alt="">
+                                <p>
+                                    The Ultimate Guide Headline
+                                </p>
+                            </legend>
+                            <div class="output">
+                                <form>
+                                    <div class="show-output content-edit">
+                                        <span class="default-text" contenteditable="false">The Ultimate Guide To</span>
+                                        <span class="topic edit" contenteditable="true"></span>
+                                    </div>
+                                </form>
+                                <div class="tool-tip">
+                                    <svg class="copy-output" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="18" height="20" fill="#E5E5E5"/>
+                                        <g clip-path="url(#clip0)">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        <rect class="fill" opacity="0.05" x="-1337" y="-224" width="1440" height="2205" rx="4" fill="#F5F6F9"/>
+                                        <rect class="stroke" x="-1008.5" y="-197.5" width="1089" height="1997" rx="3.5" fill="white" stroke="#EFEFEF"/>
+                                        <path class="stroke" d="M-469.5 -20C-469.5 -24.1421 -466.142 -27.5 -462 -27.5H42C46.1422 -27.5 49.5 -24.1421 49.5 -20V40C49.5 44.1421 46.1422 47.5 42 47.5H-462C-466.142 47.5 -469.5 44.1421 -469.5 40V-20Z" stroke="#F5F6F9"/>
+                                        <path class="fill" d="M4 4V1C4 0.734784 4.10536 0.48043 4.29289 0.292893C4.48043 0.105357 4.73478 0 5 0H17C17.2652 0 17.5196 0.105357 17.7071 0.292893C17.8946 0.48043 18 0.734784 18 1V15C18 15.2652 17.8946 15.5196 17.7071 15.7071C17.5196 15.8946 17.2652 16 17 16H14V19C14 19.552 13.55 20 12.993 20H1.007C0.875127 20.0008 0.744397 19.9755 0.622322 19.9256C0.500247 19.8757 0.389233 19.8022 0.295659 19.7093C0.202084 19.6164 0.127793 19.5059 0.0770543 19.3841C0.0263156 19.2624 0.000129374 19.1319 0 19L0.00300002 5C0.00300002 4.448 0.453 4 1.01 4H4ZM2.003 6L2 18H12V6H2.003ZM6 4H14V14H16V2H6V4Z" fill="#F5F6F9"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                                </div>
+
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="writer">
+                            <legend> <img src="./images/num3.svg" alt="">
+                                <p>
+                                    The Celebrity Headline
+                                </p>
+                            </legend>
+                            <div class="output">
+                                <form>
+                                    <div class="show-output content-edit">
+                                        <span class="default-text" contenteditable="false">How To</span>
+                                        <span class="desirable-outcome edit" contenteditable="true"></span>
+                                        <span class="default-text" contenteditable="false">Like</span>
+                                        <span class="celeb edit" contenteditable="true"></span>
+                                    </div>
+                                </form>
+                                <div class="tool-tip">
+                                    <svg class="copy-output" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="18" height="20" fill="#E5E5E5"/>
+                                        <g clip-path="url(#clip0)">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        <rect class="fill" opacity="0.05" x="-1337" y="-224" width="1440" height="2205" rx="4" fill="#F5F6F9"/>
+                                        <rect class="stroke" x="-1008.5" y="-197.5" width="1089" height="1997" rx="3.5" fill="white" stroke="#EFEFEF"/>
+                                        <path class="stroke" d="M-469.5 -20C-469.5 -24.1421 -466.142 -27.5 -462 -27.5H42C46.1422 -27.5 49.5 -24.1421 49.5 -20V40C49.5 44.1421 46.1422 47.5 42 47.5H-462C-466.142 47.5 -469.5 44.1421 -469.5 40V-20Z" stroke="#F5F6F9"/>
+                                        <path class="fill" d="M4 4V1C4 0.734784 4.10536 0.48043 4.29289 0.292893C4.48043 0.105357 4.73478 0 5 0H17C17.2652 0 17.5196 0.105357 17.7071 0.292893C17.8946 0.48043 18 0.734784 18 1V15C18 15.2652 17.8946 15.5196 17.7071 15.7071C17.5196 15.8946 17.2652 16 17 16H14V19C14 19.552 13.55 20 12.993 20H1.007C0.875127 20.0008 0.744397 19.9755 0.622322 19.9256C0.500247 19.8757 0.389233 19.8022 0.295659 19.7093C0.202084 19.6164 0.127793 19.5059 0.0770543 19.3841C0.0263156 19.2624 0.000129374 19.1319 0 19L0.00300002 5C0.00300002 4.448 0.453 4 1.01 4H4ZM2.003 6L2 18H12V6H2.003ZM6 4H14V14H16V2H6V4Z" fill="#F5F6F9"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                                </div>
+
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="writer">
+                            <legend> <img src="./images/num4.svg" alt="">
+                                <p>
+                                    The How To / Without Headline
+                                </p>
+                            </legend>
+                            <div class="output">
+                                <form>
+                                    <div class="show-output content-edit">
+                                        <span class="default-text" contenteditable="false">How To</span>
+                                        <span class="topic edit" contenteditable="true"></span>
+                                        <span class="default-text" contenteditable="false">How To</span>
+                                        <span class="frustrate edit" contenteditable="true"></span>
+                                    </div>
+                                </form>
+                                <div class="tool-tip">
+                                    <svg class="copy-output" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="18" height="20" fill="#E5E5E5"/>
+                                        <g clip-path="url(#clip0)">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        <rect class="fill" opacity="0.05" x="-1337" y="-224" width="1440" height="2205" rx="4" fill="#F5F6F9"/>
+                                        <rect class="stroke" x="-1008.5" y="-197.5" width="1089" height="1997" rx="3.5" fill="white" stroke="#EFEFEF"/>
+                                        <path class="stroke" d="M-469.5 -20C-469.5 -24.1421 -466.142 -27.5 -462 -27.5H42C46.1422 -27.5 49.5 -24.1421 49.5 -20V40C49.5 44.1421 46.1422 47.5 42 47.5H-462C-466.142 47.5 -469.5 44.1421 -469.5 40V-20Z" stroke="#F5F6F9"/>
+                                        <path class="fill" d="M4 4V1C4 0.734784 4.10536 0.48043 4.29289 0.292893C4.48043 0.105357 4.73478 0 5 0H17C17.2652 0 17.5196 0.105357 17.7071 0.292893C17.8946 0.48043 18 0.734784 18 1V15C18 15.2652 17.8946 15.5196 17.7071 15.7071C17.5196 15.8946 17.2652 16 17 16H14V19C14 19.552 13.55 20 12.993 20H1.007C0.875127 20.0008 0.744397 19.9755 0.622322 19.9256C0.500247 19.8757 0.389233 19.8022 0.295659 19.7093C0.202084 19.6164 0.127793 19.5059 0.0770543 19.3841C0.0263156 19.2624 0.000129374 19.1319 0 19L0.00300002 5C0.00300002 4.448 0.453 4 1.01 4H4ZM2.003 6L2 18H12V6H2.003ZM6 4H14V14H16V2H6V4Z" fill="#F5F6F9"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                                </div>
+
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="writer">
+                            <legend> <img src="./images/num5.svg" alt="">
+                                <p>
+                                    The Tutorial Headline
+                                </p>
+                            </legend>
+                            <div class="output">
+                                <form>
+                                    <div class="show-output content-edit">
+                                        <span class="default-text" contenteditable="false">The</span>
+                                        <span class="power edit" contenteditable="true"></span>
+                                        <span class="default-text" contenteditable="false">To</span>
+                                        <span class="topic edit" contenteditable="true"></span>
+                                    </div>
+                                </form>
+                                <div class="tool-tip">
+                                    <svg class="copy-output" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="18" height="20" fill="#E5E5E5"/>
+                                        <g clip-path="url(#clip0)">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        <rect class="fill" opacity="0.05" x="-1337" y="-224" width="1440" height="2205" rx="4" fill="#F5F6F9"/>
+                                        <rect class="stroke" x="-1008.5" y="-197.5" width="1089" height="1997" rx="3.5" fill="white" stroke="#EFEFEF"/>
+                                        <path class="stroke" d="M-469.5 -20C-469.5 -24.1421 -466.142 -27.5 -462 -27.5H42C46.1422 -27.5 49.5 -24.1421 49.5 -20V40C49.5 44.1421 46.1422 47.5 42 47.5H-462C-466.142 47.5 -469.5 44.1421 -469.5 40V-20Z" stroke="#F5F6F9"/>
+                                        <path class="fill" d="M4 4V1C4 0.734784 4.10536 0.48043 4.29289 0.292893C4.48043 0.105357 4.73478 0 5 0H17C17.2652 0 17.5196 0.105357 17.7071 0.292893C17.8946 0.48043 18 0.734784 18 1V15C18 15.2652 17.8946 15.5196 17.7071 15.7071C17.5196 15.8946 17.2652 16 17 16H14V19C14 19.552 13.55 20 12.993 20H1.007C0.875127 20.0008 0.744397 19.9755 0.622322 19.9256C0.500247 19.8757 0.389233 19.8022 0.295659 19.7093C0.202084 19.6164 0.127793 19.5059 0.0770543 19.3841C0.0263156 19.2624 0.000129374 19.1319 0 19L0.00300002 5C0.00300002 4.448 0.453 4 1.01 4H4ZM2.003 6L2 18H12V6H2.003ZM6 4H14V14H16V2H6V4Z" fill="#F5F6F9"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                                </div>
+
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="writer">
+                            <legend> <img src="./images/num6.svg" alt="">
+                                <p>
+                                    The Results Headline
+                                </p>
+                            </legend>
+                            <div class="output">
+                                <form>
+                                    <div class="show-output content-edit">
+                                        <span class="default-text" contenteditable="false">How We</span>
+                                        <span class="success edit" contenteditable="true"></span>
+                                        <span class="default-text" contenteditable="false">In Only</span>
+                                        <span class="time edit" contenteditable="true"></span>
+                                    </div>
+                                </form>
+                                <div class="tool-tip">
+                                    <svg class="copy-output" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="18" height="20" fill="#E5E5E5"/>
+                                        <g clip-path="url(#clip0)">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        <rect class="fill" opacity="0.05" x="-1337" y="-224" width="1440" height="2205" rx="4" fill="#F5F6F9"/>
+                                        <rect class="stroke" x="-1008.5" y="-197.5" width="1089" height="1997" rx="3.5" fill="white" stroke="#EFEFEF"/>
+                                        <path class="stroke" d="M-469.5 -20C-469.5 -24.1421 -466.142 -27.5 -462 -27.5H42C46.1422 -27.5 49.5 -24.1421 49.5 -20V40C49.5 44.1421 46.1422 47.5 42 47.5H-462C-466.142 47.5 -469.5 44.1421 -469.5 40V-20Z" stroke="#F5F6F9"/>
+                                        <path class="fill" d="M4 4V1C4 0.734784 4.10536 0.48043 4.29289 0.292893C4.48043 0.105357 4.73478 0 5 0H17C17.2652 0 17.5196 0.105357 17.7071 0.292893C17.8946 0.48043 18 0.734784 18 1V15C18 15.2652 17.8946 15.5196 17.7071 15.7071C17.5196 15.8946 17.2652 16 17 16H14V19C14 19.552 13.55 20 12.993 20H1.007C0.875127 20.0008 0.744397 19.9755 0.622322 19.9256C0.500247 19.8757 0.389233 19.8022 0.295659 19.7093C0.202084 19.6164 0.127793 19.5059 0.0770543 19.3841C0.0263156 19.2624 0.000129374 19.1319 0 19L0.00300002 5C0.00300002 4.448 0.453 4 1.01 4H4ZM2.003 6L2 18H12V6H2.003ZM6 4H14V14H16V2H6V4Z" fill="#F5F6F9"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                                </div>
+
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="writer">
+                            <legend> <img src="./images/num7.svg" alt="">
+                                <p>
+                                    The Like A Boss Headline
+                                </p>
+                            </legend>
+                            <div class="output">
+                                <form>
+                                    <div class="show-output content-edit">
+                                        <span class="default-text" contenteditable="false">How To</span>
+                                        <span class="desirable-outcome edit" contenteditable="true"></span>
+                                        <span class="default-text" contenteditable="false">Like A Boss</span>
+                                    </div>
+                                </form>
+                                <div class="tool-tip">
+                                    <svg class="copy-output" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="18" height="20" fill="#E5E5E5"/>
+                                        <g clip-path="url(#clip0)">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        <rect class="fill" opacity="0.05" x="-1337" y="-224" width="1440" height="2205" rx="4" fill="#F5F6F9"/>
+                                        <rect class="stroke" x="-1008.5" y="-197.5" width="1089" height="1997" rx="3.5" fill="white" stroke="#EFEFEF"/>
+                                        <path class="stroke" d="M-469.5 -20C-469.5 -24.1421 -466.142 -27.5 -462 -27.5H42C46.1422 -27.5 49.5 -24.1421 49.5 -20V40C49.5 44.1421 46.1422 47.5 42 47.5H-462C-466.142 47.5 -469.5 44.1421 -469.5 40V-20Z" stroke="#F5F6F9"/>
+                                        <path class="fill" d="M4 4V1C4 0.734784 4.10536 0.48043 4.29289 0.292893C4.48043 0.105357 4.73478 0 5 0H17C17.2652 0 17.5196 0.105357 17.7071 0.292893C17.8946 0.48043 18 0.734784 18 1V15C18 15.2652 17.8946 15.5196 17.7071 15.7071C17.5196 15.8946 17.2652 16 17 16H14V19C14 19.552 13.55 20 12.993 20H1.007C0.875127 20.0008 0.744397 19.9755 0.622322 19.9256C0.500247 19.8757 0.389233 19.8022 0.295659 19.7093C0.202084 19.6164 0.127793 19.5059 0.0770543 19.3841C0.0263156 19.2624 0.000129374 19.1319 0 19L0.00300002 5C0.00300002 4.448 0.453 4 1.01 4H4ZM2.003 6L2 18H12V6H2.003ZM6 4H14V14H16V2H6V4Z" fill="#F5F6F9"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                                </div>
+
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+
+            <!--Sixth Headline Main Content -->
+            <div class="headline-main-content sixth-content none">
+                <!-- Left hand side of the Main Content -->
+                <div class="left-main-content">
+                    <ul class="">
+                        <li>
+                            <p>Topic</p>
+                            <input type="text" placeholder="Label" class="input-topic" value="Making Money Online">
+                            <span class="input-hint">
+                                <img src="./images/Vector.svg" alt="">
+                            </span>
+                        </li>
+
+                        <li>
+                            <p>Desired Outcome (to)</p>
+                            <input type="text" placeholder="Label" class="input-desired" value="Make Money Online">
+                            <span class="input-hint">
+                                <img src="./images/Vector.svg" alt="">
+                            </span>
+                        </li>
+
+                        <li>
+                            <p>Undesirable Outcome</p>
+                            <input type="text" placeholder="Label" class="input-undesired" value="Feeling Broke">
+                            <span class="input-hint">
+                                <img src="./images/Vector.svg" alt="">
+                            </span>
+                        </li>
+
+                        <li>
+                            <p>Points in Content</p>
+                            <input type="text" placeholder="Label" class="input-points" value="19">
+                            <span class="input-hint">
+                                <img src="./images/Vector.svg" alt="">
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Right hand side of the Main Content -->
+                <div class="right-main-content">
+                    <div>
+                        <button class="save-project-btn">Save to project</button>
+                    </div>
+
+                    <div class="right-content">
+                        <fieldset class="writer">
+                            <legend> <img src="./images/num1.svg" alt="">
+                                <p>
+                                    The List Headline
+                                </p>
+                            </legend>
+                            <div class="output">
+                                <form>
+                                     <div class="show-output content-edit">
+                                        <span class="points edit" contenteditable="true"></span>
+                                        <span class="default-text" contenteditable="false">Ways To</span>
+                                        <span class="desirable-outcome edit" contenteditable="true"></span>
+                                    </div>
+                                </form>
+                                <div class="tool-tip">
+                                    <svg class="copy-output" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="18" height="20" fill="#E5E5E5"/>
+                                        <g clip-path="url(#clip0)">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        <rect class="fill" opacity="0.05" x="-1337" y="-224" width="1440" height="2205" rx="4" fill="#F5F6F9"/>
+                                        <rect class="stroke" x="-1008.5" y="-197.5" width="1089" height="1997" rx="3.5" fill="white" stroke="#EFEFEF"/>
+                                        <path class="stroke" d="M-469.5 -20C-469.5 -24.1421 -466.142 -27.5 -462 -27.5H42C46.1422 -27.5 49.5 -24.1421 49.5 -20V40C49.5 44.1421 46.1422 47.5 42 47.5H-462C-466.142 47.5 -469.5 44.1421 -469.5 40V-20Z" stroke="#F5F6F9"/>
+                                        <path class="fill" d="M4 4V1C4 0.734784 4.10536 0.48043 4.29289 0.292893C4.48043 0.105357 4.73478 0 5 0H17C17.2652 0 17.5196 0.105357 17.7071 0.292893C17.8946 0.48043 18 0.734784 18 1V15C18 15.2652 17.8946 15.5196 17.7071 15.7071C17.5196 15.8946 17.2652 16 17 16H14V19C14 19.552 13.55 20 12.993 20H1.007C0.875127 20.0008 0.744397 19.9755 0.622322 19.9256C0.500247 19.8757 0.389233 19.8022 0.295659 19.7093C0.202084 19.6164 0.127793 19.5059 0.0770543 19.3841C0.0263156 19.2624 0.000129374 19.1319 0 19L0.00300002 5C0.00300002 4.448 0.453 4 1.01 4H4ZM2.003 6L2 18H12V6H2.003ZM6 4H14V14H16V2H6V4Z" fill="#F5F6F9"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                                </div>
+
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="writer">
+                            <legend> <img src="./images/num2.svg" alt="">
+                                <p>
+                                    The Sidenote Headline
+                                </p>
+                            </legend>
+                            <div class="output">
+                                <form>
+                                     <div class="show-output content-edit">
+                                        <span class="points edit" contenteditable="true"></span>
+                                        <span class="default-text" contenteditable="false">Ways To</span>
+                                        <span class="desirable-outcome edit" contenteditable="true"></span>
+                                    </div>
+                                </form>
+                                <div class="tool-tip">
+                                    <svg class="copy-output" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="18" height="20" fill="#E5E5E5"/>
+                                        <g clip-path="url(#clip0)">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        <rect class="fill" opacity="0.05" x="-1337" y="-224" width="1440" height="2205" rx="4" fill="#F5F6F9"/>
+                                        <rect class="stroke" x="-1008.5" y="-197.5" width="1089" height="1997" rx="3.5" fill="white" stroke="#EFEFEF"/>
+                                        <path class="stroke" d="M-469.5 -20C-469.5 -24.1421 -466.142 -27.5 -462 -27.5H42C46.1422 -27.5 49.5 -24.1421 49.5 -20V40C49.5 44.1421 46.1422 47.5 42 47.5H-462C-466.142 47.5 -469.5 44.1421 -469.5 40V-20Z" stroke="#F5F6F9"/>
+                                        <path class="fill" d="M4 4V1C4 0.734784 4.10536 0.48043 4.29289 0.292893C4.48043 0.105357 4.73478 0 5 0H17C17.2652 0 17.5196 0.105357 17.7071 0.292893C17.8946 0.48043 18 0.734784 18 1V15C18 15.2652 17.8946 15.5196 17.7071 15.7071C17.5196 15.8946 17.2652 16 17 16H14V19C14 19.552 13.55 20 12.993 20H1.007C0.875127 20.0008 0.744397 19.9755 0.622322 19.9256C0.500247 19.8757 0.389233 19.8022 0.295659 19.7093C0.202084 19.6164 0.127793 19.5059 0.0770543 19.3841C0.0263156 19.2624 0.000129374 19.1319 0 19L0.00300002 5C0.00300002 4.448 0.453 4 1.01 4H4ZM2.003 6L2 18H12V6H2.003ZM6 4H14V14H16V2H6V4Z" fill="#F5F6F9"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                                </div>
+
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="writer">
+                            <legend> <img src="./images/num3.svg" alt="">
+                                <p>
+                                    The Proven Methods Headline
+                                </p>
+                            </legend>
+                            <div class="output">
+                                <form>
+                                     <div class="show-output content-edit">
+                                        <span class="points edit" contenteditable="true"></span>
+                                        <span class="default-text" contenteditable="false">Proven Methods For</span>
+                                        <span class="topic edit" contenteditable="true"></span>
+                                    </div>
+                                </form>
+                                <div class="tool-tip">
+                                    <svg class="copy-output" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="18" height="20" fill="#E5E5E5"/>
+                                        <g clip-path="url(#clip0)">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        <rect class="fill" opacity="0.05" x="-1337" y="-224" width="1440" height="2205" rx="4" fill="#F5F6F9"/>
+                                        <rect class="stroke" x="-1008.5" y="-197.5" width="1089" height="1997" rx="3.5" fill="white" stroke="#EFEFEF"/>
+                                        <path class="stroke" d="M-469.5 -20C-469.5 -24.1421 -466.142 -27.5 -462 -27.5H42C46.1422 -27.5 49.5 -24.1421 49.5 -20V40C49.5 44.1421 46.1422 47.5 42 47.5H-462C-466.142 47.5 -469.5 44.1421 -469.5 40V-20Z" stroke="#F5F6F9"/>
+                                        <path class="fill" d="M4 4V1C4 0.734784 4.10536 0.48043 4.29289 0.292893C4.48043 0.105357 4.73478 0 5 0H17C17.2652 0 17.5196 0.105357 17.7071 0.292893C17.8946 0.48043 18 0.734784 18 1V15C18 15.2652 17.8946 15.5196 17.7071 15.7071C17.5196 15.8946 17.2652 16 17 16H14V19C14 19.552 13.55 20 12.993 20H1.007C0.875127 20.0008 0.744397 19.9755 0.622322 19.9256C0.500247 19.8757 0.389233 19.8022 0.295659 19.7093C0.202084 19.6164 0.127793 19.5059 0.0770543 19.3841C0.0263156 19.2624 0.000129374 19.1319 0 19L0.00300002 5C0.00300002 4.448 0.453 4 1.01 4H4ZM2.003 6L2 18H12V6H2.003ZM6 4H14V14H16V2H6V4Z" fill="#F5F6F9"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                                </div>
+
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="writer">
+                            <legend> <img src="./images/num4.svg" alt="">
+                                <p>
+                                    The Mistakes Headline
+                                </p>
+                            </legend>
+                            <div class="output">
+                                <form>
+                                     <div class="show-output content-edit">
+                                        <span class="points edit" contenteditable="true"></span>
+                                        <span class="default-text" contenteditable="false">Mistakes Most People Make When</span>
+                                        <span class="topic edit" contenteditable="true"></span>
+                                    </div>
+                                </form>
+                                <div class="tool-tip">
+                                    <svg class="copy-output" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="18" height="20" fill="#E5E5E5"/>
+                                        <g clip-path="url(#clip0)">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        <rect class="fill" opacity="0.05" x="-1337" y="-224" width="1440" height="2205" rx="4" fill="#F5F6F9"/>
+                                        <rect class="stroke" x="-1008.5" y="-197.5" width="1089" height="1997" rx="3.5" fill="white" stroke="#EFEFEF"/>
+                                        <path class="stroke" d="M-469.5 -20C-469.5 -24.1421 -466.142 -27.5 -462 -27.5H42C46.1422 -27.5 49.5 -24.1421 49.5 -20V40C49.5 44.1421 46.1422 47.5 42 47.5H-462C-466.142 47.5 -469.5 44.1421 -469.5 40V-20Z" stroke="#F5F6F9"/>
+                                        <path class="fill" d="M4 4V1C4 0.734784 4.10536 0.48043 4.29289 0.292893C4.48043 0.105357 4.73478 0 5 0H17C17.2652 0 17.5196 0.105357 17.7071 0.292893C17.8946 0.48043 18 0.734784 18 1V15C18 15.2652 17.8946 15.5196 17.7071 15.7071C17.5196 15.8946 17.2652 16 17 16H14V19C14 19.552 13.55 20 12.993 20H1.007C0.875127 20.0008 0.744397 19.9755 0.622322 19.9256C0.500247 19.8757 0.389233 19.8022 0.295659 19.7093C0.202084 19.6164 0.127793 19.5059 0.0770543 19.3841C0.0263156 19.2624 0.000129374 19.1319 0 19L0.00300002 5C0.00300002 4.448 0.453 4 1.01 4H4ZM2.003 6L2 18H12V6H2.003ZM6 4H14V14H16V2H6V4Z" fill="#F5F6F9"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                                </div>
+
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="writer">
+                            <legend> <img src="./images/num5.svg" alt="">
+                                <p>
+                                    The Secrets Headline
+                                </p>
+                            </legend>
+                            <div class="output">
+                                <form>
+                                     <div class="show-output content-edit">
+                                        <span class="points edit" contenteditable="true"></span>
+                                        <span class="default-text" contenteditable="false">Secrets To</span>
+                                        <span class="topic edit" contenteditable="true"></span>
+                                    </div>
+                                </form>
+                                <div class="tool-tip">
+                                    <svg class="copy-output" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="18" height="20" fill="#E5E5E5"/>
+                                        <g clip-path="url(#clip0)">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        <rect class="fill" opacity="0.05" x="-1337" y="-224" width="1440" height="2205" rx="4" fill="#F5F6F9"/>
+                                        <rect class="stroke" x="-1008.5" y="-197.5" width="1089" height="1997" rx="3.5" fill="white" stroke="#EFEFEF"/>
+                                        <path class="stroke" d="M-469.5 -20C-469.5 -24.1421 -466.142 -27.5 -462 -27.5H42C46.1422 -27.5 49.5 -24.1421 49.5 -20V40C49.5 44.1421 46.1422 47.5 42 47.5H-462C-466.142 47.5 -469.5 44.1421 -469.5 40V-20Z" stroke="#F5F6F9"/>
+                                        <path class="fill" d="M4 4V1C4 0.734784 4.10536 0.48043 4.29289 0.292893C4.48043 0.105357 4.73478 0 5 0H17C17.2652 0 17.5196 0.105357 17.7071 0.292893C17.8946 0.48043 18 0.734784 18 1V15C18 15.2652 17.8946 15.5196 17.7071 15.7071C17.5196 15.8946 17.2652 16 17 16H14V19C14 19.552 13.55 20 12.993 20H1.007C0.875127 20.0008 0.744397 19.9755 0.622322 19.9256C0.500247 19.8757 0.389233 19.8022 0.295659 19.7093C0.202084 19.6164 0.127793 19.5059 0.0770543 19.3841C0.0263156 19.2624 0.000129374 19.1319 0 19L0.00300002 5C0.00300002 4.448 0.453 4 1.01 4H4ZM2.003 6L2 18H12V6H2.003ZM6 4H14V14H16V2H6V4Z" fill="#F5F6F9"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                                </div>
+
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="writer">
+                            <legend> <img src="./images/num6.svg" alt="">
+                                <p>
+                                    The Lessons Learned Headline
+                                </p>
+                            </legend>
+                            <div class="output">
+                                <form>
+                                     <div class="show-output content-edit">
+                                        <span class="points edit" contenteditable="true"></span>
+                                        <span class="default-text" contenteditable="false">Lessons I Learned</span>
+                                        <span class="topic edit" contenteditable="true"></span>
+                                    </div>
+                                </form>
+                                <div class="tool-tip">
+                                    <svg class="copy-output" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="18" height="20" fill="#E5E5E5"/>
+                                        <g clip-path="url(#clip0)">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        <rect class="fill" opacity="0.05" x="-1337" y="-224" width="1440" height="2205" rx="4" fill="#F5F6F9"/>
+                                        <rect class="stroke" x="-1008.5" y="-197.5" width="1089" height="1997" rx="3.5" fill="white" stroke="#EFEFEF"/>
+                                        <path class="stroke" d="M-469.5 -20C-469.5 -24.1421 -466.142 -27.5 -462 -27.5H42C46.1422 -27.5 49.5 -24.1421 49.5 -20V40C49.5 44.1421 46.1422 47.5 42 47.5H-462C-466.142 47.5 -469.5 44.1421 -469.5 40V-20Z" stroke="#F5F6F9"/>
+                                        <path class="fill" d="M4 4V1C4 0.734784 4.10536 0.48043 4.29289 0.292893C4.48043 0.105357 4.73478 0 5 0H17C17.2652 0 17.5196 0.105357 17.7071 0.292893C17.8946 0.48043 18 0.734784 18 1V15C18 15.2652 17.8946 15.5196 17.7071 15.7071C17.5196 15.8946 17.2652 16 17 16H14V19C14 19.552 13.55 20 12.993 20H1.007C0.875127 20.0008 0.744397 19.9755 0.622322 19.9256C0.500247 19.8757 0.389233 19.8022 0.295659 19.7093C0.202084 19.6164 0.127793 19.5059 0.0770543 19.3841C0.0263156 19.2624 0.000129374 19.1319 0 19L0.00300002 5C0.00300002 4.448 0.453 4 1.01 4H4ZM2.003 6L2 18H12V6H2.003ZM6 4H14V14H16V2H6V4Z" fill="#F5F6F9"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                                </div>
+
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="writer">
+                            <legend> <img src="./images/num7.svg" alt="">
+                                <p>
+                                    The Silver Platter Headline
+                                </p>
+                            </legend>
+                            <div class="output">
+                                <form>
+                                     <div class="show-output content-edit">
+                                        <span class="points edit" contenteditable="true"></span>
+                                        <span class="default-text" contenteditable="false">Easy Ways To</span>
+                                        <span class="desirable-outcome edit" contenteditable="true"></span>
+                                    </div>
+                                </form>
+                                <div class="tool-tip">
+                                    <svg class="copy-output" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="18" height="20" fill="#E5E5E5"/>
+                                        <g clip-path="url(#clip0)">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        <rect class="fill" opacity="0.05" x="-1337" y="-224" width="1440" height="2205" rx="4" fill="#F5F6F9"/>
+                                        <rect class="stroke" x="-1008.5" y="-197.5" width="1089" height="1997" rx="3.5" fill="white" stroke="#EFEFEF"/>
+                                        <path class="stroke" d="M-469.5 -20C-469.5 -24.1421 -466.142 -27.5 -462 -27.5H42C46.1422 -27.5 49.5 -24.1421 49.5 -20V40C49.5 44.1421 46.1422 47.5 42 47.5H-462C-466.142 47.5 -469.5 44.1421 -469.5 40V-20Z" stroke="#F5F6F9"/>
+                                        <path class="fill" d="M4 4V1C4 0.734784 4.10536 0.48043 4.29289 0.292893C4.48043 0.105357 4.73478 0 5 0H17C17.2652 0 17.5196 0.105357 17.7071 0.292893C17.8946 0.48043 18 0.734784 18 1V15C18 15.2652 17.8946 15.5196 17.7071 15.7071C17.5196 15.8946 17.2652 16 17 16H14V19C14 19.552 13.55 20 12.993 20H1.007C0.875127 20.0008 0.744397 19.9755 0.622322 19.9256C0.500247 19.8757 0.389233 19.8022 0.295659 19.7093C0.202084 19.6164 0.127793 19.5059 0.0770543 19.3841C0.0263156 19.2624 0.000129374 19.1319 0 19L0.00300002 5C0.00300002 4.448 0.453 4 1.01 4H4ZM2.003 6L2 18H12V6H2.003ZM6 4H14V14H16V2H6V4Z" fill="#F5F6F9"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                                </div>
+
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="writer">
+                            <legend> <img src="./images/num8.svg" alt="">
+                                <p>
+                                    The Hacks Headline
+                                </p>
+                            </legend>
+                            <div class="output">
+                                <form>
+                                     <div class="show-output content-edit">
+                                        <span class="points edit" contenteditable="true"></span>
+                                        <span class="default-text" contenteditable="false">Hacks To</span>
+                                        <span class="desirable-outcome edit" contenteditable="true"></span>
+                                    </div>
+                                </form>
+                                <div class="tool-tip">
+                                    <svg class="copy-output" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="18" height="20" fill="#E5E5E5"/>
+                                        <g clip-path="url(#clip0)">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        <rect class="fill" opacity="0.05" x="-1337" y="-224" width="1440" height="2205" rx="4" fill="#F5F6F9"/>
+                                        <rect class="stroke" x="-1008.5" y="-197.5" width="1089" height="1997" rx="3.5" fill="white" stroke="#EFEFEF"/>
+                                        <path class="stroke" d="M-469.5 -20C-469.5 -24.1421 -466.142 -27.5 -462 -27.5H42C46.1422 -27.5 49.5 -24.1421 49.5 -20V40C49.5 44.1421 46.1422 47.5 42 47.5H-462C-466.142 47.5 -469.5 44.1421 -469.5 40V-20Z" stroke="#F5F6F9"/>
+                                        <path class="fill" d="M4 4V1C4 0.734784 4.10536 0.48043 4.29289 0.292893C4.48043 0.105357 4.73478 0 5 0H17C17.2652 0 17.5196 0.105357 17.7071 0.292893C17.8946 0.48043 18 0.734784 18 1V15C18 15.2652 17.8946 15.5196 17.7071 15.7071C17.5196 15.8946 17.2652 16 17 16H14V19C14 19.552 13.55 20 12.993 20H1.007C0.875127 20.0008 0.744397 19.9755 0.622322 19.9256C0.500247 19.8757 0.389233 19.8022 0.295659 19.7093C0.202084 19.6164 0.127793 19.5059 0.0770543 19.3841C0.0263156 19.2624 0.000129374 19.1319 0 19L0.00300002 5C0.00300002 4.448 0.453 4 1.01 4H4ZM2.003 6L2 18H12V6H2.003ZM6 4H14V14H16V2H6V4Z" fill="#F5F6F9"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                                </div>
+
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="writer">
+                            <legend> <img src="./images/num9.svg" alt="">
+                                <p>
+                                    The Steps to Result Headline
+                                </p>
+                            </legend>
+                            <div class="output">
+                                <form>
+                                     <div class="show-output content-edit">
+                                        <span class="points edit" contenteditable="true"></span>
+                                        <span class="default-text" contenteditable="false">Steps To</span>
+                                        <span class="desirable-outcome edit" contenteditable="true"></span>
+                                    </div>
+                                </form>
+                                <div class="tool-tip">
+                                    <svg class="copy-output" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="18" height="20" fill="#E5E5E5"/>
+                                        <g clip-path="url(#clip0)">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        <rect class="fill" opacity="0.05" x="-1337" y="-224" width="1440" height="2205" rx="4" fill="#F5F6F9"/>
+                                        <rect class="stroke" x="-1008.5" y="-197.5" width="1089" height="1997" rx="3.5" fill="white" stroke="#EFEFEF"/>
+                                        <path class="stroke" d="M-469.5 -20C-469.5 -24.1421 -466.142 -27.5 -462 -27.5H42C46.1422 -27.5 49.5 -24.1421 49.5 -20V40C49.5 44.1421 46.1422 47.5 42 47.5H-462C-466.142 47.5 -469.5 44.1421 -469.5 40V-20Z" stroke="#F5F6F9"/>
+                                        <path class="fill" d="M4 4V1C4 0.734784 4.10536 0.48043 4.29289 0.292893C4.48043 0.105357 4.73478 0 5 0H17C17.2652 0 17.5196 0.105357 17.7071 0.292893C17.8946 0.48043 18 0.734784 18 1V15C18 15.2652 17.8946 15.5196 17.7071 15.7071C17.5196 15.8946 17.2652 16 17 16H14V19C14 19.552 13.55 20 12.993 20H1.007C0.875127 20.0008 0.744397 19.9755 0.622322 19.9256C0.500247 19.8757 0.389233 19.8022 0.295659 19.7093C0.202084 19.6164 0.127793 19.5059 0.0770543 19.3841C0.0263156 19.2624 0.000129374 19.1319 0 19L0.00300002 5C0.00300002 4.448 0.453 4 1.01 4H4ZM2.003 6L2 18H12V6H2.003ZM6 4H14V14H16V2H6V4Z" fill="#F5F6F9"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                                </div>
+
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="writer">
+                            <legend> <img src="./images/num10.svg" alt="">
+                                <p>
+                                    The Reasons Headline
+                                </p>
+                            </legend>
+                            <div class="output">
+                                <form>
+                                     <div class="show-output content-edit">
+                                        <span class="points edit" contenteditable="true"></span>
+                                        <span class="default-text" contenteditable="false">Reasons Why You're</span>
+                                        <span class="undesirable-outcome edit" contenteditable="true"></span>
+                                    </div>
+                                </form>
+                                <div class="tool-tip">
+                                    <svg class="copy-output" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="18" height="20" fill="#E5E5E5"/>
+                                        <g clip-path="url(#clip0)">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        <rect class="fill" opacity="0.05" x="-1337" y="-224" width="1440" height="2205" rx="4" fill="#F5F6F9"/>
+                                        <rect class="stroke" x="-1008.5" y="-197.5" width="1089" height="1997" rx="3.5" fill="white" stroke="#EFEFEF"/>
+                                        <path class="stroke" d="M-469.5 -20C-469.5 -24.1421 -466.142 -27.5 -462 -27.5H42C46.1422 -27.5 49.5 -24.1421 49.5 -20V40C49.5 44.1421 46.1422 47.5 42 47.5H-462C-466.142 47.5 -469.5 44.1421 -469.5 40V-20Z" stroke="#F5F6F9"/>
+                                        <path class="fill" d="M4 4V1C4 0.734784 4.10536 0.48043 4.29289 0.292893C4.48043 0.105357 4.73478 0 5 0H17C17.2652 0 17.5196 0.105357 17.7071 0.292893C17.8946 0.48043 18 0.734784 18 1V15C18 15.2652 17.8946 15.5196 17.7071 15.7071C17.5196 15.8946 17.2652 16 17 16H14V19C14 19.552 13.55 20 12.993 20H1.007C0.875127 20.0008 0.744397 19.9755 0.622322 19.9256C0.500247 19.8757 0.389233 19.8022 0.295659 19.7093C0.202084 19.6164 0.127793 19.5059 0.0770543 19.3841C0.0263156 19.2624 0.000129374 19.1319 0 19L0.00300002 5C0.00300002 4.448 0.453 4 1.01 4H4ZM2.003 6L2 18H12V6H2.003ZM6 4H14V14H16V2H6V4Z" fill="#F5F6F9"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                                </div>
+
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="writer">
+                            <legend> <img src="./images/num11.svg" alt="">
+                                <p>
+                                    The Little Known Methods Headline
+                                </p>
+                            </legend>
+                            <div class="output">
+                                <form>
+                                     <div class="show-output content-edit">
+                                        <span class="points edit" contenteditable="true"></span>
+                                        <span class="default-text" contenteditable="false">Little Known Ways To</span>
+                                        <span class="desirable-outcome edit" contenteditable="true"></span>
+                                    </div>
+                                </form>
+                                <div class="tool-tip">
+                                    <svg class="copy-output" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="18" height="20" fill="#E5E5E5"/>
+                                        <g clip-path="url(#clip0)">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        <rect class="fill" opacity="0.05" x="-1337" y="-224" width="1440" height="2205" rx="4" fill="#F5F6F9"/>
+                                        <rect class="stroke" x="-1008.5" y="-197.5" width="1089" height="1997" rx="3.5" fill="white" stroke="#EFEFEF"/>
+                                        <path class="stroke" d="M-469.5 -20C-469.5 -24.1421 -466.142 -27.5 -462 -27.5H42C46.1422 -27.5 49.5 -24.1421 49.5 -20V40C49.5 44.1421 46.1422 47.5 42 47.5H-462C-466.142 47.5 -469.5 44.1421 -469.5 40V-20Z" stroke="#F5F6F9"/>
+                                        <path class="fill" d="M4 4V1C4 0.734784 4.10536 0.48043 4.29289 0.292893C4.48043 0.105357 4.73478 0 5 0H17C17.2652 0 17.5196 0.105357 17.7071 0.292893C17.8946 0.48043 18 0.734784 18 1V15C18 15.2652 17.8946 15.5196 17.7071 15.7071C17.5196 15.8946 17.2652 16 17 16H14V19C14 19.552 13.55 20 12.993 20H1.007C0.875127 20.0008 0.744397 19.9755 0.622322 19.9256C0.500247 19.8757 0.389233 19.8022 0.295659 19.7093C0.202084 19.6164 0.127793 19.5059 0.0770543 19.3841C0.0263156 19.2624 0.000129374 19.1319 0 19L0.00300002 5C0.00300002 4.448 0.453 4 1.01 4H4ZM2.003 6L2 18H12V6H2.003ZM6 4H14V14H16V2H6V4Z" fill="#F5F6F9"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                                </div>
+
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+
+            <!--Seventh Headline Main Content -->
+            <div class="headline-main-content seventh-content none">
+                <!-- Left hand side of the Main Content -->
+                <div class="left-main-content">
+                    <ul class="">
+                        <li>
+                            <p>Topic</p>
+                            <input class="input-topic"  type="text" value="Making Money Online">
+                            <span class="input-hint">
+                                <img src="./images/Vector.svg" alt="">
+                            </span>
+                        </li>
+
+                        <li>
+                            <p>Desired Outcome (to)</p>
+                            <input class="input-desired"  type="text" placeholder="Label" value="Make Money Online">
+                            <span class="input-hint">
+                                <img src="./images/Vector.svg" alt="">
+                            </span>
+                        </li>
+
+                        <li>
+                            <p>Precious Thing/s</p>
+                            <input class="input-precious"  type="text" placeholder="Label" value="Wealth">
+                            <span class="input-hint">
+                                <img src="./images/Vector.svg" alt="">
+                            </span>
+                        </li>
+
+                        <li>
+                            <p>Undesirable Outcome</p>
+                            <input class="input-undesired"  type="text" placeholder="Label" value="Feeling Broke">
+                            <span class="input-hint">
+                                <img src="./images/Vector.svg" alt="">
+                            </span>
+                        </li>
+
+                        <li>
+                            <p>Audience</p>
+                            <input class="input-audience"  type="text" placeholder="Label" value="Entrepreneurs">
+                            <span class="input-hint">
+                                <img src="./images/Vector.svg" alt="">
+                            </span>
+                        </li>
+
+                        <li>
+                            <p>Something That Could Affect Outcome</p>
+                            <input class="input-affect"  type="text" placeholder="Label" value="Your Negotiating Skills">
+                            <span class="input-hint">
+                                <img src="./images/Vector.svg" alt="">
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Right hand side of the Main Content -->
+                <div class="right-main-content">
+                    <div>
+                        <button class="save-project-btn">Save to project</button>
+                    </div>
+
+                    <div class="right-content">
+                        <fieldset class="writer">
+                            <legend> <img src="./images/num1.svg" alt="">
+                                <p>
+                                    The Fearmonger Headline
+                                </p>
+                            </legend>
+                            <div class="output">
+                                <form>
+                                   <div class="show-output content-edit">
+                                        <span class="default-text" contenteditable="false">Warning! Are You Sabotaging Your</span>
+                                        <span class="precious edit" contenteditable="true"></span>
+                                    </div>
+                                </form>
+                                <div class="tool-tip">
+                                    <svg class="copy-output" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="18" height="20" fill="#E5E5E5"/>
+                                        <g clip-path="url(#clip0)">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        <rect class="fill" opacity="0.05" x="-1337" y="-224" width="1440" height="2205" rx="4" fill="#F5F6F9"/>
+                                        <rect class="stroke" x="-1008.5" y="-197.5" width="1089" height="1997" rx="3.5" fill="white" stroke="#EFEFEF"/>
+                                        <path class="stroke" d="M-469.5 -20C-469.5 -24.1421 -466.142 -27.5 -462 -27.5H42C46.1422 -27.5 49.5 -24.1421 49.5 -20V40C49.5 44.1421 46.1422 47.5 42 47.5H-462C-466.142 47.5 -469.5 44.1421 -469.5 40V-20Z" stroke="#F5F6F9"/>
+                                        <path class="fill" d="M4 4V1C4 0.734784 4.10536 0.48043 4.29289 0.292893C4.48043 0.105357 4.73478 0 5 0H17C17.2652 0 17.5196 0.105357 17.7071 0.292893C17.8946 0.48043 18 0.734784 18 1V15C18 15.2652 17.8946 15.5196 17.7071 15.7071C17.5196 15.8946 17.2652 16 17 16H14V19C14 19.552 13.55 20 12.993 20H1.007C0.875127 20.0008 0.744397 19.9755 0.622322 19.9256C0.500247 19.8757 0.389233 19.8022 0.295659 19.7093C0.202084 19.6164 0.127793 19.5059 0.0770543 19.3841C0.0263156 19.2624 0.000129374 19.1319 0 19L0.00300002 5C0.00300002 4.448 0.453 4 1.01 4H4ZM2.003 6L2 18H12V6H2.003ZM6 4H14V14H16V2H6V4Z" fill="#F5F6F9"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                                </div>
+
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="writer">
+                            <legend> <img src="./images/num2.svg" alt="">
+                                <p>
+                                    The Rally Cry Headline (Positive)
+                                </p>
+                            </legend>
+                            <div class="output">
+                                <form>
+                                   <div class="show-output content-edit">
+                                        <span class="default-text" contenteditable="false">Let's Start</span>
+                                        <span class="topic edit" contenteditable="true"></span>
+                                    </div>
+                                </form>
+                                <div class="tool-tip">
+                                    <svg class="copy-output" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="18" height="20" fill="#E5E5E5"/>
+                                        <g clip-path="url(#clip0)">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        <rect class="fill" opacity="0.05" x="-1337" y="-224" width="1440" height="2205" rx="4" fill="#F5F6F9"/>
+                                        <rect class="stroke" x="-1008.5" y="-197.5" width="1089" height="1997" rx="3.5" fill="white" stroke="#EFEFEF"/>
+                                        <path class="stroke" d="M-469.5 -20C-469.5 -24.1421 -466.142 -27.5 -462 -27.5H42C46.1422 -27.5 49.5 -24.1421 49.5 -20V40C49.5 44.1421 46.1422 47.5 42 47.5H-462C-466.142 47.5 -469.5 44.1421 -469.5 40V-20Z" stroke="#F5F6F9"/>
+                                        <path class="fill" d="M4 4V1C4 0.734784 4.10536 0.48043 4.29289 0.292893C4.48043 0.105357 4.73478 0 5 0H17C17.2652 0 17.5196 0.105357 17.7071 0.292893C17.8946 0.48043 18 0.734784 18 1V15C18 15.2652 17.8946 15.5196 17.7071 15.7071C17.5196 15.8946 17.2652 16 17 16H14V19C14 19.552 13.55 20 12.993 20H1.007C0.875127 20.0008 0.744397 19.9755 0.622322 19.9256C0.500247 19.8757 0.389233 19.8022 0.295659 19.7093C0.202084 19.6164 0.127793 19.5059 0.0770543 19.3841C0.0263156 19.2624 0.000129374 19.1319 0 19L0.00300002 5C0.00300002 4.448 0.453 4 1.01 4H4ZM2.003 6L2 18H12V6H2.003ZM6 4H14V14H16V2H6V4Z" fill="#F5F6F9"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                                </div>
+
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="writer">
+                            <legend> <img src="./images/num3.svg" alt="">
+                                <p>
+                                    The Rally Cry Headline (Negative)
+                                </p>
+                            </legend>
+                            <div class="output">
+                                <form>
+                                   <div class="show-output content-edit">
+                                        <span class="default-text" contenteditable="false">Let's Stop</span>
+                                        <span class="undesirable-outcome edit" contenteditable="true"></span>
+                                    </div>
+                                </form>
+                                <div class="tool-tip">
+                                    <svg class="copy-output" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="18" height="20" fill="#E5E5E5"/>
+                                        <g clip-path="url(#clip0)">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        <rect class="fill" opacity="0.05" x="-1337" y="-224" width="1440" height="2205" rx="4" fill="#F5F6F9"/>
+                                        <rect class="stroke" x="-1008.5" y="-197.5" width="1089" height="1997" rx="3.5" fill="white" stroke="#EFEFEF"/>
+                                        <path class="stroke" d="M-469.5 -20C-469.5 -24.1421 -466.142 -27.5 -462 -27.5H42C46.1422 -27.5 49.5 -24.1421 49.5 -20V40C49.5 44.1421 46.1422 47.5 42 47.5H-462C-466.142 47.5 -469.5 44.1421 -469.5 40V-20Z" stroke="#F5F6F9"/>
+                                        <path class="fill" d="M4 4V1C4 0.734784 4.10536 0.48043 4.29289 0.292893C4.48043 0.105357 4.73478 0 5 0H17C17.2652 0 17.5196 0.105357 17.7071 0.292893C17.8946 0.48043 18 0.734784 18 1V15C18 15.2652 17.8946 15.5196 17.7071 15.7071C17.5196 15.8946 17.2652 16 17 16H14V19C14 19.552 13.55 20 12.993 20H1.007C0.875127 20.0008 0.744397 19.9755 0.622322 19.9256C0.500247 19.8757 0.389233 19.8022 0.295659 19.7093C0.202084 19.6164 0.127793 19.5059 0.0770543 19.3841C0.0263156 19.2624 0.000129374 19.1319 0 19L0.00300002 5C0.00300002 4.448 0.453 4 1.01 4H4ZM2.003 6L2 18H12V6H2.003ZM6 4H14V14H16V2H6V4Z" fill="#F5F6F9"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                                </div>
+
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="writer">
+                            <legend> <img src="./images/num4.svg" alt="">
+                                <p>
+                                    The Question Headline 1
+                                </p>
+                            </legend>
+                            <div class="output">
+                                <form>
+                                   <div class="show-output content-edit">
+                                        <span class="default-text" contenteditable="false">Why Are You</span>
+                                        <span class="undesirable-outcome edit" contenteditable="true"></span>
+                                    </div>
+                                </form>
+                                <div class="tool-tip">
+                                    <svg class="copy-output" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="18" height="20" fill="#E5E5E5"/>
+                                        <g clip-path="url(#clip0)">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        <rect class="fill" opacity="0.05" x="-1337" y="-224" width="1440" height="2205" rx="4" fill="#F5F6F9"/>
+                                        <rect class="stroke" x="-1008.5" y="-197.5" width="1089" height="1997" rx="3.5" fill="white" stroke="#EFEFEF"/>
+                                        <path class="stroke" d="M-469.5 -20C-469.5 -24.1421 -466.142 -27.5 -462 -27.5H42C46.1422 -27.5 49.5 -24.1421 49.5 -20V40C49.5 44.1421 46.1422 47.5 42 47.5H-462C-466.142 47.5 -469.5 44.1421 -469.5 40V-20Z" stroke="#F5F6F9"/>
+                                        <path class="fill" d="M4 4V1C4 0.734784 4.10536 0.48043 4.29289 0.292893C4.48043 0.105357 4.73478 0 5 0H17C17.2652 0 17.5196 0.105357 17.7071 0.292893C17.8946 0.48043 18 0.734784 18 1V15C18 15.2652 17.8946 15.5196 17.7071 15.7071C17.5196 15.8946 17.2652 16 17 16H14V19C14 19.552 13.55 20 12.993 20H1.007C0.875127 20.0008 0.744397 19.9755 0.622322 19.9256C0.500247 19.8757 0.389233 19.8022 0.295659 19.7093C0.202084 19.6164 0.127793 19.5059 0.0770543 19.3841C0.0263156 19.2624 0.000129374 19.1319 0 19L0.00300002 5C0.00300002 4.448 0.453 4 1.01 4H4ZM2.003 6L2 18H12V6H2.003ZM6 4H14V14H16V2H6V4Z" fill="#F5F6F9"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                                </div>
+
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="writer">
+                            <legend> <img src="./images/num5.svg" alt="">
+                                <p>
+                                    The Question Headline 2
+                                </p>
+                            </legend>
+                            <div class="output">
+                                <form>
+                                   <div class="show-output content-edit">
+                                        <span class="default-text" contenteditable="false">Are You Still</span>
+                                        <span class="undesirable-outcome edit" contenteditable="true"></span>
+                                    </div>
+                                </form>
+                                <div class="tool-tip">
+                                    <svg class="copy-output" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="18" height="20" fill="#E5E5E5"/>
+                                        <g clip-path="url(#clip0)">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        <rect class="fill" opacity="0.05" x="-1337" y="-224" width="1440" height="2205" rx="4" fill="#F5F6F9"/>
+                                        <rect class="stroke" x="-1008.5" y="-197.5" width="1089" height="1997" rx="3.5" fill="white" stroke="#EFEFEF"/>
+                                        <path class="stroke" d="M-469.5 -20C-469.5 -24.1421 -466.142 -27.5 -462 -27.5H42C46.1422 -27.5 49.5 -24.1421 49.5 -20V40C49.5 44.1421 46.1422 47.5 42 47.5H-462C-466.142 47.5 -469.5 44.1421 -469.5 40V-20Z" stroke="#F5F6F9"/>
+                                        <path class="fill" d="M4 4V1C4 0.734784 4.10536 0.48043 4.29289 0.292893C4.48043 0.105357 4.73478 0 5 0H17C17.2652 0 17.5196 0.105357 17.7071 0.292893C17.8946 0.48043 18 0.734784 18 1V15C18 15.2652 17.8946 15.5196 17.7071 15.7071C17.5196 15.8946 17.2652 16 17 16H14V19C14 19.552 13.55 20 12.993 20H1.007C0.875127 20.0008 0.744397 19.9755 0.622322 19.9256C0.500247 19.8757 0.389233 19.8022 0.295659 19.7093C0.202084 19.6164 0.127793 19.5059 0.0770543 19.3841C0.0263156 19.2624 0.000129374 19.1319 0 19L0.00300002 5C0.00300002 4.448 0.453 4 1.01 4H4ZM2.003 6L2 18H12V6H2.003ZM6 4H14V14H16V2H6V4Z" fill="#F5F6F9"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                                </div>
+
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="writer">
+                            <legend> <img src="./images/num6.svg" alt="">
+                                <p>
+                                    The Fortune Teller Headline
+                                </p>
+                            </legend>
+                            <div class="output">
+                                <form>
+                                   <div class="show-output content-edit">
+                                        <span class="default-text" contenteditable="false">You Won't Be Able To</span>
+                                        <span class="desirable-outcome edit" contenteditable="true"></span>
+                                        <span class="default-text" contenteditable="false">In 2020</span>
+                                    </div>
+                                </form>
+                                <div class="tool-tip">
+                                    <svg class="copy-output" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="18" height="20" fill="#E5E5E5"/>
+                                        <g clip-path="url(#clip0)">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        <rect class="fill" opacity="0.05" x="-1337" y="-224" width="1440" height="2205" rx="4" fill="#F5F6F9"/>
+                                        <rect class="stroke" x="-1008.5" y="-197.5" width="1089" height="1997" rx="3.5" fill="white" stroke="#EFEFEF"/>
+                                        <path class="stroke" d="M-469.5 -20C-469.5 -24.1421 -466.142 -27.5 -462 -27.5H42C46.1422 -27.5 49.5 -24.1421 49.5 -20V40C49.5 44.1421 46.1422 47.5 42 47.5H-462C-466.142 47.5 -469.5 44.1421 -469.5 40V-20Z" stroke="#F5F6F9"/>
+                                        <path class="fill" d="M4 4V1C4 0.734784 4.10536 0.48043 4.29289 0.292893C4.48043 0.105357 4.73478 0 5 0H17C17.2652 0 17.5196 0.105357 17.7071 0.292893C17.8946 0.48043 18 0.734784 18 1V15C18 15.2652 17.8946 15.5196 17.7071 15.7071C17.5196 15.8946 17.2652 16 17 16H14V19C14 19.552 13.55 20 12.993 20H1.007C0.875127 20.0008 0.744397 19.9755 0.622322 19.9256C0.500247 19.8757 0.389233 19.8022 0.295659 19.7093C0.202084 19.6164 0.127793 19.5059 0.0770543 19.3841C0.0263156 19.2624 0.000129374 19.1319 0 19L0.00300002 5C0.00300002 4.448 0.453 4 1.01 4H4ZM2.003 6L2 18H12V6H2.003ZM6 4H14V14H16V2H6V4Z" fill="#F5F6F9"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                                </div>
+
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="writer">
+                            <legend> <img src="./images/num7.svg" alt="">
+                                <p>
+                                    The Imagination Headline
+                                </p>
+                            </legend>
+                            <div class="output">
+                                <form>
+                                   <div class="show-output content-edit">
+                                    <span class="default-text" contenteditable="false">Imagine</span>
+                                    <span class="topic edit" contenteditable="true"></span>
+                                    <span class="default-text" contenteditable="false">In 2020</span>
+                                    </div>
+                                </form>
+                                <div class="tool-tip">
+                                    <svg class="copy-output" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="18" height="20" fill="#E5E5E5"/>
+                                        <g clip-path="url(#clip0)">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        <rect class="fill" opacity="0.05" x="-1337" y="-224" width="1440" height="2205" rx="4" fill="#F5F6F9"/>
+                                        <rect class="stroke" x="-1008.5" y="-197.5" width="1089" height="1997" rx="3.5" fill="white" stroke="#EFEFEF"/>
+                                        <path class="stroke" d="M-469.5 -20C-469.5 -24.1421 -466.142 -27.5 -462 -27.5H42C46.1422 -27.5 49.5 -24.1421 49.5 -20V40C49.5 44.1421 46.1422 47.5 42 47.5H-462C-466.142 47.5 -469.5 44.1421 -469.5 40V-20Z" stroke="#F5F6F9"/>
+                                        <path class="fill" d="M4 4V1C4 0.734784 4.10536 0.48043 4.29289 0.292893C4.48043 0.105357 4.73478 0 5 0H17C17.2652 0 17.5196 0.105357 17.7071 0.292893C17.8946 0.48043 18 0.734784 18 1V15C18 15.2652 17.8946 15.5196 17.7071 15.7071C17.5196 15.8946 17.2652 16 17 16H14V19C14 19.552 13.55 20 12.993 20H1.007C0.875127 20.0008 0.744397 19.9755 0.622322 19.9256C0.500247 19.8757 0.389233 19.8022 0.295659 19.7093C0.202084 19.6164 0.127793 19.5059 0.0770543 19.3841C0.0263156 19.2624 0.000129374 19.1319 0 19L0.00300002 5C0.00300002 4.448 0.453 4 1.01 4H4ZM2.003 6L2 18H12V6H2.003ZM6 4H14V14H16V2H6V4Z" fill="#F5F6F9"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                                </div>
+
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="writer">
+                            <legend> <img src="./images/num8.svg" alt="">
+                                <p>
+                                    The Reminder Headline
+                                </p>
+                            </legend>
+                            <div class="output">
+                                <form>
+                                   <div class="show-output content-edit">
+                                       <span class="default-text" contenteditable="false">Reminder:</span>
+                                        <span class="topic edit" contenteditable="true"></span>
+                                        <span class="default-text" contenteditable="false">Is NOT A Reflection Of</span>
+                                        <span class="affect edit" contenteditable="true"></span>
+                                    </div>
+                                </form>
+                                <div class="tool-tip">
+                                    <svg class="copy-output" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="18" height="20" fill="#E5E5E5"/>
+                                        <g clip-path="url(#clip0)">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        <rect class="fill" opacity="0.05" x="-1337" y="-224" width="1440" height="2205" rx="4" fill="#F5F6F9"/>
+                                        <rect class="stroke" x="-1008.5" y="-197.5" width="1089" height="1997" rx="3.5" fill="white" stroke="#EFEFEF"/>
+                                        <path class="stroke" d="M-469.5 -20C-469.5 -24.1421 -466.142 -27.5 -462 -27.5H42C46.1422 -27.5 49.5 -24.1421 49.5 -20V40C49.5 44.1421 46.1422 47.5 42 47.5H-462C-466.142 47.5 -469.5 44.1421 -469.5 40V-20Z" stroke="#F5F6F9"/>
+                                        <path class="fill" d="M4 4V1C4 0.734784 4.10536 0.48043 4.29289 0.292893C4.48043 0.105357 4.73478 0 5 0H17C17.2652 0 17.5196 0.105357 17.7071 0.292893C17.8946 0.48043 18 0.734784 18 1V15C18 15.2652 17.8946 15.5196 17.7071 15.7071C17.5196 15.8946 17.2652 16 17 16H14V19C14 19.552 13.55 20 12.993 20H1.007C0.875127 20.0008 0.744397 19.9755 0.622322 19.9256C0.500247 19.8757 0.389233 19.8022 0.295659 19.7093C0.202084 19.6164 0.127793 19.5059 0.0770543 19.3841C0.0263156 19.2624 0.000129374 19.1319 0 19L0.00300002 5C0.00300002 4.448 0.453 4 1.01 4H4ZM2.003 6L2 18H12V6H2.003ZM6 4H14V14H16V2H6V4Z" fill="#F5F6F9"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                                </div>
+
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="writer">
+                            <legend> <img src="./images/num9.svg" alt="">
+                                <p>
+                                    The Urgency Headline 2
+                                </p>
+                            </legend>
+                            <div class="output">
+                                <form>
+                                   <div class="show-output content-edit">
+                                       <span class="default-text" contenteditable="false">Start</span>
+                                        <span class="topic edit" contenteditable="true"></span>
+                                        <span class="default-text" contenteditable="false">NOW!</span>
+                                    </div>
+                                </form>
+                                <div class="tool-tip">
+                                    <svg class="copy-output" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="18" height="20" fill="#E5E5E5"/>
+                                        <g clip-path="url(#clip0)">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        <rect class="fill" opacity="0.05" x="-1337" y="-224" width="1440" height="2205" rx="4" fill="#F5F6F9"/>
+                                        <rect class="stroke" x="-1008.5" y="-197.5" width="1089" height="1997" rx="3.5" fill="white" stroke="#EFEFEF"/>
+                                        <path class="stroke" d="M-469.5 -20C-469.5 -24.1421 -466.142 -27.5 -462 -27.5H42C46.1422 -27.5 49.5 -24.1421 49.5 -20V40C49.5 44.1421 46.1422 47.5 42 47.5H-462C-466.142 47.5 -469.5 44.1421 -469.5 40V-20Z" stroke="#F5F6F9"/>
+                                        <path class="fill" d="M4 4V1C4 0.734784 4.10536 0.48043 4.29289 0.292893C4.48043 0.105357 4.73478 0 5 0H17C17.2652 0 17.5196 0.105357 17.7071 0.292893C17.8946 0.48043 18 0.734784 18 1V15C18 15.2652 17.8946 15.5196 17.7071 15.7071C17.5196 15.8946 17.2652 16 17 16H14V19C14 19.552 13.55 20 12.993 20H1.007C0.875127 20.0008 0.744397 19.9755 0.622322 19.9256C0.500247 19.8757 0.389233 19.8022 0.295659 19.7093C0.202084 19.6164 0.127793 19.5059 0.0770543 19.3841C0.0263156 19.2624 0.000129374 19.1319 0 19L0.00300002 5C0.00300002 4.448 0.453 4 1.01 4H4ZM2.003 6L2 18H12V6H2.003ZM6 4H14V14H16V2H6V4Z" fill="#F5F6F9"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                                </div>
+
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="writer">
+                            <legend> <img src="./images/num10.svg" alt="">
+                                <p>
+                                    The Audience Headline
+                                </p>
+                            </legend>
+                            <div class="output">
+                                <form>
+                                   <div class="show-output content-edit">
+                                        <span class="audience edit" contenteditable="true"></span>
+                                        <span class="default-text" contenteditable="false">Are You</span>
+                                        <span class="undesirable-outcome edit" contenteditable="true"></span>
+                                    </div>
+                                </form>
+                                <div class="tool-tip">
+                                    <svg class="copy-output" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="18" height="20" fill="#E5E5E5"/>
+                                        <g clip-path="url(#clip0)">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        <rect class="fill" opacity="0.05" x="-1337" y="-224" width="1440" height="2205" rx="4" fill="#F5F6F9"/>
+                                        <rect class="stroke" x="-1008.5" y="-197.5" width="1089" height="1997" rx="3.5" fill="white" stroke="#EFEFEF"/>
+                                        <path class="stroke" d="M-469.5 -20C-469.5 -24.1421 -466.142 -27.5 -462 -27.5H42C46.1422 -27.5 49.5 -24.1421 49.5 -20V40C49.5 44.1421 46.1422 47.5 42 47.5H-462C-466.142 47.5 -469.5 44.1421 -469.5 40V-20Z" stroke="#F5F6F9"/>
+                                        <path class="fill" d="M4 4V1C4 0.734784 4.10536 0.48043 4.29289 0.292893C4.48043 0.105357 4.73478 0 5 0H17C17.2652 0 17.5196 0.105357 17.7071 0.292893C17.8946 0.48043 18 0.734784 18 1V15C18 15.2652 17.8946 15.5196 17.7071 15.7071C17.5196 15.8946 17.2652 16 17 16H14V19C14 19.552 13.55 20 12.993 20H1.007C0.875127 20.0008 0.744397 19.9755 0.622322 19.9256C0.500247 19.8757 0.389233 19.8022 0.295659 19.7093C0.202084 19.6164 0.127793 19.5059 0.0770543 19.3841C0.0263156 19.2624 0.000129374 19.1319 0 19L0.00300002 5C0.00300002 4.448 0.453 4 1.01 4H4ZM2.003 6L2 18H12V6H2.003ZM6 4H14V14H16V2H6V4Z" fill="#F5F6F9"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                                </div>
+
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="writer">
+                            <legend> <img src="./images/num11.svg" alt="">
+                                <p>
+                                    The Command Headline
+                                </p>
+                            </legend>
+                            <div class="output">
+                                <form>
+                                   <div class="show-output content-edit">
+                                        <span class="desirable-outcome edit" contenteditable="true"></span>
+                                        <span class="default-text" contenteditable="false">!</span>
+                                    </div>
+                                </form>
+                                <div class="tool-tip">
+                                    <svg class="copy-output" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="18" height="20" fill="#E5E5E5"/>
+                                        <g clip-path="url(#clip0)">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        <rect class="fill" opacity="0.05" x="-1337" y="-224" width="1440" height="2205" rx="4" fill="#F5F6F9"/>
+                                        <rect class="stroke" x="-1008.5" y="-197.5" width="1089" height="1997" rx="3.5" fill="white" stroke="#EFEFEF"/>
+                                        <path class="stroke" d="M-469.5 -20C-469.5 -24.1421 -466.142 -27.5 -462 -27.5H42C46.1422 -27.5 49.5 -24.1421 49.5 -20V40C49.5 44.1421 46.1422 47.5 42 47.5H-462C-466.142 47.5 -469.5 44.1421 -469.5 40V-20Z" stroke="#F5F6F9"/>
+                                        <path class="fill" d="M4 4V1C4 0.734784 4.10536 0.48043 4.29289 0.292893C4.48043 0.105357 4.73478 0 5 0H17C17.2652 0 17.5196 0.105357 17.7071 0.292893C17.8946 0.48043 18 0.734784 18 1V15C18 15.2652 17.8946 15.5196 17.7071 15.7071C17.5196 15.8946 17.2652 16 17 16H14V19C14 19.552 13.55 20 12.993 20H1.007C0.875127 20.0008 0.744397 19.9755 0.622322 19.9256C0.500247 19.8757 0.389233 19.8022 0.295659 19.7093C0.202084 19.6164 0.127793 19.5059 0.0770543 19.3841C0.0263156 19.2624 0.000129374 19.1319 0 19L0.00300002 5C0.00300002 4.448 0.453 4 1.01 4H4ZM2.003 6L2 18H12V6H2.003ZM6 4H14V14H16V2H6V4Z" fill="#F5F6F9"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0">
+                                        <rect x="-1337" y="-487" width="1440" height="2302" rx="12" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                                </div>
+
+                            </div>
+                        </fieldset>
                     </div>
                 </div>
             </div>
