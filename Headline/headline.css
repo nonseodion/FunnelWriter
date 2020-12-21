@@ -126,7 +126,8 @@
 }
 
 .right-content .writer {
-    border: 1px solid #F5F6F9;
+
+    border: 2px solid #ffffff;
     width: 520px;
     max-width: 520px;
     height: 70px;
