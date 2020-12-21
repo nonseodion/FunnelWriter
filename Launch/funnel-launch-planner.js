@@ -9,7 +9,6 @@ const body = document.querySelector('body');
 
 window.addEventListener('load', () => {
     document.querySelectorAll('input').forEach(input => input.checked = false);
-    console.log('me');
 })
 
 // Add active links
