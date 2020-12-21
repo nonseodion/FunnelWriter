@@ -94,10 +94,8 @@ function updateStatus(e, parentIndex){
 function fillTemplates(){
 
   const inputs = document.querySelectorAll(".questions .question>input");
-  console.log(inputs);
   inputs.forEach(input => {
     const adPlaceholders = [...adTemplates.querySelectorAll(`.${input.id}`)];
-    console.log(adPlaceholders);
     adPlaceholders.forEach(placeholder => {
       placeholder.innerHTML = input.value;
       const hider = placeholder.closest(".hide");
@@ -106,7 +104,6 @@ function fillTemplates(){
   })
   const adsClone = adTemplates.cloneNode(true);
   adsClone.classList.remove("hide");
-  console.log(adsClone);
   document.querySelector(".note-editable").innerHTML = adsClone.innerHTML;
 }
 
